@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a922916423b945d5b8e85d3405a620da" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="LMC_020505Model.AbnormalFlagDesc" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Admin_ShippingValues" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.AdminManagementProgramFee" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.AppointmentResult" Width="1.5" PointX="5.75" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Appointment" Width="1.5" PointX="8" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.AppointmentType" Width="1.5" PointX="19.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.apt_BloodWork" Width="1.5" PointX="10.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.apt_diag" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.apt_FollowUp_types" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.apt_FollowUps" Width="1.5" PointX="21.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.apt_Goals" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.apt_LisfeStyle" Width="1.5" PointX="12.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.apt_Misc" Width="1.5" PointX="22.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.apt_plan" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.apt_rec" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.apt_Symtpoms" Width="1.5" PointX="23.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Autoship_Discounts" Width="1.5" PointX="24.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.AutoshipCancelReason" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.AutoShipEmailTEmplate" Width="1.5" PointX="24.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.AutoshipProductGroup" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.AutoshipProduct" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.AutoTicket" Width="1.5" PointX="25.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.AutoTicketAlert" Width="1.5" PointX="5.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CallBackQuestion" Width="1.5" PointX="7.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CallBackRespons" Width="1.5" PointX="25.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CallBack" Width="1.5" PointX="25.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Callbacks_old" Width="1.5" PointX="20.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Client_log_tbl" Width="1.5" PointX="25.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Clinic" Width="1.5" PointX="0.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Confirm" Width="1.5" PointX="2.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Contact_tbl" Width="1.5" PointX="9.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Contact_tbl_archive" Width="1.5" PointX="26.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Contact_Type_tbl" Width="1.5" PointX="22.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_Attendees" Width="1.5" PointX="17.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_Campaigns" Width="1.5" PointX="15.75" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_CampaignType" Width="1.5" PointX="24.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_Events" Width="1.5" PointX="18" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_Log" Width="1.5" PointX="17.25" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_MarketingActivity" Width="1.5" PointX="20.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_MarketingSource_Campaigns" Width="1.5" PointX="23.25" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_MarketingSource_Prospects" Width="1.5" PointX="20.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_MarketingSources" Width="1.5" PointX="18" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_MarketsourceID" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_Prospects" Width="1.5" PointX="15" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_Registrants" Width="1.5" PointX="20.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRM_Status" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.CRMWufooLink" Width="1.5" PointX="27.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Department" Width="1.5" PointX="5.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.DepartmentStaff" Width="1.5" PointX="8" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Diagnosis_tbl" Width="1.5" PointX="27.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.DiagnosisLab" Width="1.5" PointX="27.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.DiagnosisSupplement" Width="1.5" PointX="27.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Dictation_Diagnosis" Width="1.5" PointX="28.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Dictation_Plan" Width="1.5" PointX="28.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Dictation_PlanDiagnosis" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Drug" Width="1.5" PointX="29.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.EmailTemplate" Width="1.5" PointX="4.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.EventProspect" Width="1.5" PointX="6.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Event" Width="1.5" PointX="11.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ExceptionArchive" Width="1.5" PointX="13.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Exception" Width="1.5" PointX="10.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ExternalLabList" Width="1.5" PointX="29.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ExternalLab" Width="1.5" PointX="29.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ExternalPanel" Width="1.5" PointX="26.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.FollowUp_Cat" Width="1.5" PointX="20.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Frequency" Width="1.5" PointX="29.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.GoalItem" Width="1.5" PointX="0.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.GroupRange" Width="1.5" PointX="30.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.GroupRangeSupplement" Width="1.5" PointX="30.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Hospitalization" Width="1.5" PointX="15.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_allergies" Width="1.5" PointX="17.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_goals" Width="1.5" PointX="8.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_habits" Width="1.5" PointX="31.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_hormone_review" Width="1.5" PointX="31.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_master_index" Width="1.5" PointX="2.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_medical_history" Width="1.5" PointX="4.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_personal_info" Width="1.5" PointX="32.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_prescriptions" Width="1.5" PointX="10.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_recent_tests" Width="1.5" PointX="33.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_supplements" Width="1.5" PointX="33.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_surgeries" Width="1.5" PointX="12.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.intake_form_symptoms" Width="1.5" PointX="14.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.IVRTemplate" Width="1.5" PointX="33.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Journal_Main" Width="1.5" PointX="33.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_AcknowledgementSegments" Width="1.5" PointX="23" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_AddressDetails" Width="1.5" PointX="29.75" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_CommonOrderSegments" Width="1.5" PointX="25.25" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_DiagnosisSegments" Width="1.5" PointX="29.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_GuarantorSegments" Width="1.5" PointX="25.25" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_InsuranceSegments" Width="1.5" PointX="25.25" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_Messages" Width="1.5" PointX="20.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_NotesAndCommentsSegments" Width="1.5" PointX="33.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_ObservationResultDetailSegments" Width="1.5" PointX="29.75" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_OrderSegmentDetails" Width="1.5" PointX="27.5" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.lab_Patients" Width="1.5" PointX="23" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabLog" Width="1.5" PointX="33.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabReports_ConditionDetails" Width="1.5" PointX="19.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabReports_Conditions" Width="1.5" PointX="17.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabReports_Data" Width="1.5" PointX="34.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabReports_Groups" Width="1.5" PointX="15" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabReports_Panels" Width="1.5" PointX="12.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabReports_Tests" Width="1.5" PointX="16.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabReports_Triggers" Width="1.5" PointX="15" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabReports_TriggersGroups" Width="1.5" PointX="17.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabRequest_Panels" Width="1.5" PointX="33.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabRequest_Tests" Width="1.5" PointX="35.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabRequests_RequestPanels" Width="1.5" PointX="0.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabRequests_Requests" Width="1.5" PointX="35.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabRequests_RequestTests" Width="1.5" PointX="35.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabScehdule_Groups" Width="1.5" PointX="35.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabSchedule_Tests" Width="1.5" PointX="35.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabTicketLog" Width="1.5" PointX="35.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ModifiedSupp" Width="1.5" PointX="19.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.NoMail" Width="1.5" PointX="35.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.OfficeLocations_tbl" Width="1.5" PointX="35.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.OneTimeSale" Width="1.5" PointX="35.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.OrderItem" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Order" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Patient_GoalItems" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Patient_GoalItemType" Width="1.5" PointX="3" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Patient_Goals" Width="1.5" PointX="3" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Patient_Vitals" Width="1.5" PointX="35.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.PatientPackage" Width="1.5" PointX="36.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.PatientQuestionAnwerSurvey" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Patient" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Patients_CriticalTasks" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Patients_CriticalTaskType" Width="1.5" PointX="7.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.PatientsurveyQuestion" Width="1.5" PointX="36.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Potential" Width="1.5" PointX="37.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Prescription" Width="1.5" PointX="37.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.PresscriptionSupp" Width="1.5" PointX="16.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Problem_Diagnosis_Appointment" Width="1.5" PointX="37.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Problem_Diagnosis_join" Width="1.5" PointX="37.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Problem_MiscDiagnosis_join" Width="1.5" PointX="37.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Problem_Symptom_join" Width="1.5" PointX="27.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Product" Width="1.5" PointX="37.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ProfileException" Width="1.5" PointX="3" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ProfileItem" Width="1.5" PointX="8" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Prospect" Width="1.5" PointX="37.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Protocol" Width="1.5" PointX="37.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Protocols_diagn_join" Width="1.5" PointX="0.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Protocols_sympt_join" Width="1.5" PointX="38.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Provider" Width="1.5" PointX="39.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.QB_CreditMemoLine" Width="1.5" PointX="6.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.QB_Customers" Width="1.5" PointX="8.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.QB_Invoices" Width="1.5" PointX="39.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.QB_Item" Width="1.5" PointX="39.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.QB_Match" Width="1.5" PointX="39.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.QB_NoMatch" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.QBEmrSetting" Width="1.5" PointX="18.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Recur" Width="1.5" PointX="39.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ResellerContact" Width="1.5" PointX="39.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ResellerEvent" Width="1.5" PointX="39.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ResellerMarketingSource" Width="1.5" PointX="39.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Reseller" Width="1.5" PointX="39.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.ResellerStatu" Width="1.5" PointX="40.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.SalesAccountCode" Width="1.5" PointX="21.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Sat_Survey" Width="1.5" PointX="41.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Seminar_list" Width="1.5" PointX="0.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Staff" Width="1.5" PointX="41.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Status" Width="1.5" PointX="41.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Symptom_Diagn_join" Width="1.5" PointX="41.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.SymptomLab" Width="1.5" PointX="41.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Symptom" Width="1.5" PointX="41.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.SymptomSupplement" Width="1.5" PointX="27.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Test" Width="1.5" PointX="41.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Tickets_Manage" Width="1.5" PointX="41.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Trace_092007" Width="1.5" PointX="41.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.train_module" Width="1.5" PointX="41.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.train_profile" Width="1.5" PointX="42.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.train_profile2module" Width="1.5" PointX="10.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.train_user_completed" Width="1.5" PointX="18.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.train_user2profile" Width="1.5" PointX="20.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Transcription" Width="1.5" PointX="33.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Upload_tbl" Width="1.5" PointX="35.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.UploadTag" Width="1.5" PointX="37.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.XeroCredential" Width="1.5" PointX="43.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.XeroLog" Width="1.5" PointX="43.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Admin" Width="1.5" PointX="12.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.AutoshipBundleProduct" Width="1.5" PointX="14.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.dtproperty" Width="1.5" PointX="43.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.DUPES1" Width="1.5" PointX="43.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Journal_tags" Width="1.5" PointX="43.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.LabReports_Results" Width="1.5" PointX="43.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.MedicalHistory" Width="1.5" PointX="43.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Patient_mrkting_src" Width="1.5" PointX="0.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.PatientList" Width="1.5" PointX="44.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.PatientProgramManagementFee" Width="1.5" PointX="27.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.QB_Invoice1" Width="1.5" PointX="43.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Result" Width="1.5" PointX="45.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Supplement_RX" Width="1.5" PointX="45.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Supplement" Width="1.5" PointX="6.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.TEMP" Width="1.5" PointX="8.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.Visit" Width="1.5" PointX="45.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.wellness_quotient" Width="1.5" PointX="45.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMC_020505Model.XeroAccount" Width="1.5" PointX="16.75" PointY="45.75" IsExpanded="true" />
+        <AssociationConnector Association="LMC_020505Model.FK_Appointments_AppointmentResults" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_OrderItems_products" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_ProfileItems_products" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_Attendees_CRM_Events" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_Attendees_CRM_Prospects" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_Events_CRM_Campaigns" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_MarketingActivity_CRM_Campaigns" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_MarketingSource_Campaigns_CRM_Campaigns" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_Registrants_CRM_Events" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_Log_CRM_Prospects" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_MarketingActivity_CRM_MarketingSources" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_MarketingSource_Campaigns_CRM_MarketingSources" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_MarketingSource_Prospects_CRM_MarketingSources" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_MarketingSource_Prospects_CRM_Prospects" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_Prospects_CRM_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_CRM_Registrants_CRM_Prospects" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_DeparmentStaff_DeparmentStaff" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_Exceptions_ProfileItems" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_lab_AcknowledgementSegments_Messages" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_lab_AddressDetails_OrderSegmentId" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_lab_CommonOrderSegments_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_lab_OrderSegmentDetails_CommonOrderSegments" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_lab_DiagnosisSegments_OrderSegmentDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_lab_GuarantorSegments_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_lab_InsuranceSegments_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_lab_Patients_Messages" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_lab_ObservationResultDetailSegments_OrderSegmentDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_LabReports_ConditionDetails_LabReports_Conditions" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_LabReports_ConditionDetails_LabReports_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_LabReports_Conditions_LabReports_Triggers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_LabReports_Groups_LabReports_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_LabReports_Groups_LabReports_Groups1" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_LabReports_TriggersGroups_LabReports_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_LabReports_Triggers_LabReports_Panels" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_LabReports_TriggersGroups_LabReports_Triggers" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_OrderItems_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_Orders_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_Patient_GoalItems_Patient_GoalItemType" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_Patient_GoalItems_Patient_Goals" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_Patient_GoalItems_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_Patient_Goals_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_PatientQuestionAnwerSurvey_PatientQuestionAnwerSurvey" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_ProfileExceptions_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_ProfileItems_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="LMC_020505Model.FK_Patients_CriticalTasks_Patients_CriticalTaskType" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LMC_020505Model.XeroPatient" Width="1.5" PointX="19.375" PointY="45.75" />
+        <EntityTypeShape EntityType="LMC_020505Model.ReportList" Width="1.5" PointX="21.375" PointY="45.75" />
+        <EntityTypeShape EntityType="LMC_020505Model.AcuityScheduling" Width="1.5" PointX="38.375" PointY="45.75" />
+        <EntityTypeShape EntityType="LMC_020505Model.SpecialAttentionFlag" Width="1.5" PointX="40.375" PointY="45.75" />
+        <EntityTypeShape EntityType="LMC_020505Model.SharePointPatients" Width="1.5" PointX="46.375" PointY="20.75" />
+        <EntityTypeShape EntityType="LMC_020505Model.StatusProvider" Width="1.5" PointX="46.375" PointY="24.75" />
+        <EntityTypeShape EntityType="LMC_020505Model.ShareFile" Width="1.5" PointX="46.375" PointY="27.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

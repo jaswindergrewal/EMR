@@ -1,0 +1,35 @@
+﻿.MainContainer
+{ 
+	background-color: #E4E4E4;
+	min-height:400px;
+	margin:20px;
+	padding:20px;
+	border:solid 1px silver;
+}
+
+.Input
+{
+	border: 1px solid #666666;
+	margin:20px;
+	padding:20px;
+}
+Table
+{
+}
+.table 
+{
+	border:solid 1px gray;
+	margin:20px;
+}
+
+.table td
+{
+	border:solid 1px gray;
+}
+
+.Command
+{
+	cursor:pointer;
+	color:Blue;
+	text-decoration:underline;
+}

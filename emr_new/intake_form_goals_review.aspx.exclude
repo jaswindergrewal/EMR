@@ -1,0 +1,138 @@
+﻿<%@ Page Title="Intake Form Goals Review" Language="C#" MasterPageFile="~/sub.master" AutoEventWireup="true" CodeFile="intake_form_goals_review.aspx.cs" Inherits="intake_form_goals_review" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+    <p><span style="font-size: 14px; font-weight: bold;">Your Goals from <%=DateTime.Now.ToShortTimeString()%></span></p>
+    <table style="width: 900px; background-color: white;" border="0" cellpadding="10" cellspacing="0" class="border">
+        <tr>
+            <td style="width: 25px">
+                <asp:CheckBox ID="Chkbalance_hormones_YN" runat="server" /></td>
+            <td>Balance Hormones</td>
+
+            <td style="width: 25px">
+                <asp:CheckBox ID="Chkweight_loss_YN" runat="server" /></td>
+            <td>Weight Loss </td>
+
+            <td style="width: 25px">
+                <asp:CheckBox ID="Chkimprove_muscle_YN" runat="server" /></td>
+            <td>Improve Muscle</td>
+        </tr>
+
+        <tr>
+            <td>
+                <asp:CheckBox ID="Chkstart_hormones_YN" runat="server" /></td>
+            <td>Start Hormones</td>
+
+            <td>
+                <asp:CheckBox ID="Chkstabalize_PMS_YN" runat="server" /></td>
+            <td>Stabalize PMS</td>
+
+            <td>
+                <asp:CheckBox ID="Chkimprove_memory_YN" runat="server" /></td>
+            <td>Improve Memory</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:CheckBox ID="Chkimprove_energy_YN" runat="server" /></td>
+            <td>Improve Energy</td>
+
+            <td>
+                <asp:CheckBox ID="Chkstop_hair_loss_YN" runat="server" /></td>
+            <td>Stop Hair Loss</td>
+
+            <td>
+                <asp:CheckBox ID="Chkbladder_control_YN" runat="server" /></td>
+            <td>Bladder Control </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:CheckBox ID="Chkfeel_better_YN" runat="server" /></td>
+            <td>Feel Better</td>
+
+            <td>
+                <asp:CheckBox ID="Chksense_of_well_being_YN" runat="server" /></td>
+            <td>Sense of Well Being</td>
+
+            <td>
+                <asp:CheckBox ID="Chkimprove_skin_YN" runat="server" /></td>
+            <td>Improve Skin</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:CheckBox ID="Chkfeel_stronger_YN" runat="server" /></td>
+            <td>Feel Stronger</td>
+
+            <td>
+                <asp:CheckBox ID="Chkenhance_immune_sys_YN" runat="server" /></td>
+            <td>Enhance Immune System</td>
+
+            <td>
+                <asp:CheckBox ID="Chkbetter_stamina_YN" runat="server" /></td>
+            <td>Better Stamina</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:CheckBox ID="Chkimprove_sleep_YN" runat="server" /></td>
+            <td>Improve Sleep</td>
+
+            <td>
+                <asp:CheckBox ID="Chkless_pain_YN" runat="server" /></td>
+            <td>Less Pain - where :<asp:TextBox ID="txtless_pain_where" runat="server" CssClass="FormField"></asp:TextBox></td>
+
+            <td>
+                <asp:CheckBox ID="Chkgeneral_wellness_YN" runat="server" /></td>
+            <td>General Wellness</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:CheckBox ID="Chkeliminate_hot_flashes_YN" runat="server" /></td>
+            <td>Get Rid of Hot Flashes</td>
+
+            <td>
+                <asp:CheckBox ID="Chkimprove_libido_YN" runat="server" /></td>
+            <td>Improve Libido</td>
+
+            <td>
+                <asp:CheckBox ID="Chkreduce_stress_YN" runat="server" /></td>
+            <td>Reduce Stress</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:CheckBox ID="Chkeliminate_prescriptions_YN" runat="server" /></td>
+            <td>Get off Prescriptions</td>
+
+            <td>
+                <asp:CheckBox ID="Chkimprove_sex_life_YN" runat="server" /></td>
+            <td>Improve Sex Life</td>
+
+            <td>
+                <asp:CheckBox ID="Chkimprove_metabolism_YN" runat="server" /></td>
+            <td>Improve Metabolism</td>
+        </tr>
+        <%-- <tr>
+            <td colspan="5">
+               
+            </td>
+        </tr>--%>
+    </table>
+    <table style="width: 900px" border="0" cellpadding="10" cellspacing="0">
+        <tr>
+            <td style="width: 25px; font-weight: bold;" class="regText">Other</td>
+            <td>
+                <asp:TextBox ID="txtOther" runat="server" class="FormField" Width="300px"></asp:TextBox></td>
+        </tr>
+    </table>
+    <table style="width: 900px" border="0" cellpadding="10" cellspacing="0">
+        <tr>
+            <td>
+                <div align="center">
+                    <asp:Button ID="ButtonCancel" runat="server" CssClass="button" Text="Back To Review" />&nbsp;
+                    <asp:Button ID="ButtonSubmit" runat="server" CssClass="button" Text="Submit Revised Form" OnClick="ButtonSubmit_Click" />
+
+                </div>
+            </td>
+        </tr>
+    </table>
+</asp:Content>
+

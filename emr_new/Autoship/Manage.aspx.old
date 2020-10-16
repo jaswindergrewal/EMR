@@ -1,0 +1,459 @@
+﻿<%@ Page Title="Autoship" Language="C#" MasterPageFile="Site.master" AutoEventWireup="true"
+	CodeFile="Manage.aspx.cs" Inherits="_Manage" %>
+
+<%@ Register Assembly="NineRays.WebControls.FlyTreeView" Namespace="NineRays.WebControls"
+	TagPrefix="NineRays" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register TagName="PatientTree" TagPrefix="Longevity" Src="~/Controls/PatientTree.ascx" %>
+<%@ Register Assembly="Flan.Controls" Namespace="Flan.Controls" TagPrefix="flan" %>
+<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+</asp:Content>
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+
+	<Longevity:PatientTree ID="pat" runat="server" />
+	<cc1:TabContainer ID="Container" runat="server" CssClass="lmc_tab">
+		<cc1:TabPanel ID="SkedPanel" runat="server" HeaderText="Standing Orders" CssClass="TabPanel">
+			<ContentTemplate>
+				<asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="1" 
+					AssociatedUpdatePanelID="upPpanel1">
+					<ProgressTemplate>
+						<img src="~/images/indicator.gif" alt="Loading" />
+						<strong>Please Wait . . .</strong></ProgressTemplate>
+				</asp:UpdateProgress>
+				<flan:UpdateProgressOverlayExtender ID="UpdateProgressOverlayExtender1" runat="server"
+					ControlToOverlayID="SkedDiv" CssClass="updateProgress" TargetControlID="UpdateProgress1" />
+				<asp:UpdatePanel ID="upPpanel1" runat="server">
+					<ContentTemplate>
+						<div id="Layer16" style="background-image: url(images/export/beige_back.gif);
+							border: 1px none #000000; width: 898px;">
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" class="MenuBox">
+								<tr>
+									<td width="100%">
+										<asp:Button ID="btnCreateGroup" runat="server" Text="Create Shipment Group" CssClass="CreateButon" />
+										<asp:Button ID="btnCancelChanges" runat="server" Text="Cancel changes" OnClick="btnCancelChanges_Click"
+											CssClass="CancelButon" />
+										<asp:Button ID="btnSaveChanges" runat="server" Text="Save changes" OnClick="btnSaveChanges_Click"
+											CssClass="SaveButon" />
+										<asp:Button ID="btnEmail" runat="server" Text="Send Email" OnClick="btnEmail_Click"
+											CssClass="button" />
+										<input id="btnPrint" value="Print" style="font-family: Verdana, Arial, Helvetica, sans-serif;
+											font-size: 10px; color: #FFFFFF; background-color: #003366; border: 1px solid #003366;
+											width: 35px; text-align: center" onclick="window.open('PrintOrder.aspx?PatientID=<%= Request.QueryString["PatientID"] %>')"
+											width="30px" />
+										<input id="btnHistory" value="History" style="font-family: Verdana, Arial, Helvetica, sans-serif;
+											font-size: 10px; color: #FFFFFF; background-color: #003366; border: 1px solid #003366;
+											width: 35px; text-align: center" onclick="window.open('OrderHistory.aspx?PatientID=<%= Request.QueryString["PatientID"] %>')"
+											width="30px" />
+										&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Back to Patient Details" class="button"
+											onclick="window.navigate('../patient_details.asp?PatientID=<%= Request.QueryString["PatientID"] %>')" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<table cellpadding="2" cellspacing="2" style="background-image: url(../images/export/beige_back.gif);">
+							<tr>
+								<th class="largeheading">
+									Available items
+								</th>
+								<th class="largeheading">
+									Current orders<br />
+									<asp:Label ID="lblNotSaved" runat="server" Text="Changes not saved!" ForeColor="Red"
+										Visible="false" />
+								</th>
+							</tr>
+							<tr>
+								<td valign="top">
+									<div class="ProductList">
+										<NineRays:FlyTreeView ID="Tester" runat="server" Padding="3px" FadeEffect="True"
+											BackColor="White" DragDropName="" DragDropMode="Copy" BackgroundImage="~/images/export/beige_back.gif"
+											ExpandLevel="2" CssClass="regText">
+											<HoverStyle Font-Underline="True" />
+										</NineRays:FlyTreeView>
+									</div>
+								</td>
+								<td valign="top">
+									<div class="ProductList" id="SkedDiv" runat="server">
+										<NineRays:FlyTreeView ID="Sked" runat="server" Padding="3px" FadeEffect="True" BackColor="White"
+											DragDropAcceptNames="Product" PostBackOnDropAccept="true" OnNodeInserted="OnNodeMoved"
+											BackgroundImage="~/images/export/beige_back.gif" CssClass="regText">
+											<HoverStyle Font-Underline="True" />
+										</NineRays:FlyTreeView>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<NineRays:FlyContextMenu ID="ItemMenu" runat="server" OnCommand="ItemMenu_Command">
+							<Items>
+								<NineRays:FlyMenuItem Text="Remove" CommandName="Remove" AutoPostBack="true" />
+								<NineRays:FlyMenuItem Text="Reduce Quantity" CommandName="Reduce" AutoPostBack="true" />
+								<NineRays:FlyMenuItem Text="Increase Quantity" CommandName="Increase" AutoPostBack="true" />
+								<NineRays:FlyMenuItem Text="Change Discount" CommandName="Discount" AutoPostBack="true" />
+							</Items>
+						</NineRays:FlyContextMenu>
+						<NineRays:FlyContextMenu ID="GroupMenu" runat="server" OnCommand="GroupMenu_Command">
+							<Items>
+								<NineRays:FlyMenuItem Text="Cancel the entire shipment" CommandName="Cancel" AutoPostBack="true" />
+								<NineRays:FlyMenuItem Text="Modify Frequency or Due Date" CommandName="Modify" AutoPostBack="true" />
+							</Items>
+						</NineRays:FlyContextMenu>
+						<NineRays:FlyContextMenu ID="AllGroups" runat="server" OnCommand="AllGroups_Command">
+							<Items>
+								<NineRays:FlyMenuItem Text="Create a new group" CommandName="Create" AutoPostBack="true" />
+							</Items>
+						</NineRays:FlyContextMenu>
+						<NineRays:FlyContextMenu ID="NoEdit" runat="server">
+							<Items>
+								<NineRays:FlyMenuItem Text="Cannot edit when order is pending." />
+							</Items>
+						</NineRays:FlyContextMenu>
+						<asp:Button ID="dummy5" runat="server" Style="display: none" />
+						<cc1:ModalPopupExtender ID="modGetAdress" BackgroundCssClass="ModalPopupBG" runat="server"
+							CancelControlID="btnCancelEmail" TargetControlID="dummy5" PopupControlID="pnlGetEmailAddress"  Y="200"/>
+						<asp:Panel ID="pnlGetEmailAddress" runat="server" CssClass="modalPopup" Width="300px" DefaultButton="btnOkEmail">
+							<div class="popup_Container">
+								<div class="popup_Titlebar" id="Div4">
+									<div class="TitlebarLeft" id="Div5" runat="server">
+										Email Address Missing
+									</div>
+								</div>
+								<div class="popup_Body">
+									<asp:Label ID="lblEmailAddress" runat="server" Text="Email address: " /><asp:TextBox
+										ID="txtEmailAddress" runat="server" CausesValidation="true" />
+								</div>
+								<div class="popup_Buttons">
+									<asp:Button ID="btnCancelEmail" Text="Cancel" CssClass="button" runat="server" />
+									<asp:Button ID="btnOkEmail" Text="Ok" CssClass="button" runat="server" OnClick="btnOkEmail_Click"
+										CausesValidation="true" AutoPostBack="true" />
+								</div>
+							</div>
+						</asp:Panel>
+						<asp:Button ID="dummy4" runat="server" Style="display: none" />
+						<cc1:ModalPopupExtender ID="modSentMail" BackgroundCssClass="ModalPopupBG" runat="server"
+							CancelControlID="btnOkMail" TargetControlID="dummy4" PopupControlID="pnlSentMail"
+							OkControlID="btnOkMail" Y="200" />
+						<asp:Panel ID="pnlSentMail" CssClass="modalPopup" Width="250px" runat="server">
+							<div class="popup_Container">
+								<div class="popup_Titlebar" id="Div2">
+									<div class="TitlebarLeft" id="Div3" runat="server">
+										Email
+									</div>
+								</div>
+								<div class="popup_Body">
+									<%= PopMessage %>
+								</div>
+								<div class="popup_Buttons">
+									<asp:Button ID="btnOkMail" Text="Ok" CssClass="button" runat="server" />
+								</div>
+							</div>
+						</asp:Panel>
+						<cc1:ModalPopupExtender ID="modCreateGroup" BackgroundCssClass="ModalPopupBG" runat="server"
+							CancelControlID="btnCancelCreate" TargetControlID="btnCreateGroup" PopupControlID="pnlCreateGroup"  Y="200"/>
+						<asp:Panel ID="pnlCreateGroup" CssClass="modalPopup" Width="250px" runat="server" DefaultButton="btnOkayCreate">
+							<div class="popup_Container">
+								<div class="popup_Titlebar" id="PopupHeader">
+									<div class="TitlebarLeft" id="GroupPopUpTitle" runat="server">
+										Create Group
+									</div>
+								</div>
+								<div class="popup_Body">
+									Frequency:
+									<asp:TextBox ID="txtFreq" Width="10" runat="server" CausesValidation="true" />
+									Months<br />
+									Next Due Date:
+									<asp:TextBox ID="txtNextDue" runat="server" Text='' CausesValidation="true" />
+									<cc1:CalendarExtender ID="extCal" runat="server" TargetControlID="txtNextDue" PopupPosition="TopLeft" />
+									<br />
+								</div>
+								<div class="popup_Buttons">
+									<asp:Button ID="btnOkayCreate" Text="Done" CssClass="button" runat="server" OnClick="btnOkayCreate_Click"
+										CausesValidation="true" />
+									<asp:Button ID="btnCancelCreate" Text="Cancel" CssClass="button" runat="server" CausesValidation="false" />
+									<br />
+									<asp:CompareValidator ID="valFreq" runat="server" Operator="DataTypeCheck" Type="Integer"
+										ErrorMessage="Frequency must be a whole number" ControlToValidate="txtFreq" EnableClientScript="true"
+										Display="Dynamic" ForeColor="Red" />
+									<br />
+									<asp:CompareValidator ID="valDate" runat="server" Operator="DataTypeCheck" Type="Date"
+										ErrorMessage="Not a valid date" ControlToValidate="txtNextDue" EnableClientScript="true"
+										Display="Dynamic" ForeColor="Red" />
+									<br />
+									<asp:CompareValidator ID="valFuture" runat="server" Operator="GreaterThan" ValueToCompare=""
+										ErrorMessage="Next Due Date must be more than 3 days in the future." ControlToValidate="txtNextDue"
+										Type="Date" EnableClientScript="true" Display="Dynamic" ForeColor="Red" />
+								</div>
+							</div>
+						</asp:Panel>
+						<asp:Button ID="btnDummy" runat="server" Style="display: none" />
+						<cc1:ModalPopupExtender ID="modConfirmDelete" runat="server" BackgroundCssClass="ModalPopupBG"
+							CancelControlID="btnCancelDelete" TargetControlID="btnDummy" PopupControlID="pnlDeleteGroup"  Y="200"/>
+						<asp:Panel ID="pnlDeleteGroup" runat="server" CssClass="modalPopup" Width="250px" DefaultButton="btnOkDelete">
+							<div class="popup_Container">
+								<div class="popup_Titlebar">
+									<div class="TitlebarLeft">
+										Delete Group
+									</div>
+								</div>
+								<div class="popup_Body">
+									Are you sure you wish to delete this group and ALL items in the group?
+								</div>
+								<div class="popup_Buttons">
+									<asp:Button ID="btnOkDelete" Text="Yes" CssClass="button" runat="server" OnClick="btnOkayDelete_Click"
+										CausesValidation="true" />
+									<asp:Button ID="btnCancelDelete" Text="No" CssClass="button" runat="server" CausesValidation="false" />
+								</div>
+							</div>
+						</asp:Panel>
+					</ContentTemplate>
+				</asp:UpdatePanel>
+			</ContentTemplate>
+		</cc1:TabPanel>
+		<cc1:TabPanel ID="FuturePanel" runat="server" HeaderText="Upcoming Shipments" CssClass="TabPanel">
+			<ContentTemplate>
+				<asp:UpdatePanel ID="upPpanel2" runat="server">
+					<ContentTemplate>
+						<asp:UpdateProgress ID="UpdateProgress2" runat="server" DisplayAfter="1" AssociatedUpdatePanelID="upPpanel2"
+							DynamicLayout="true">
+							<ProgressTemplate>
+								<img src="~/images/indicator.gif" alt="Loading" />
+								<strong>Please Wait . . .</strong></ProgressTemplate>
+						</asp:UpdateProgress>
+						<flan:UpdateProgressOverlayExtender ID="UpdateProgressOverlayExtender2" runat="server"
+							ControlToOverlayID="FutureDiv" CssClass="updateProgress" TargetControlID="UpdateProgress2" />
+						<div id="Div1" style="background-image: url(../images/export/boxmenu_large.gif);
+							layer-background-image: url(../images/export/boxmenu_large.gif); border: 1px none #000000;
+							width: 600px;">
+							<table width="100%" height="20" border="0" cellpadding="0" cellspacing="0" background="~/images/export/boxmenu_large.gif"
+								class="MenuBox">
+								<tr>
+									<td>
+										<asp:Button ID="Button2" runat="server" Text="Cancel all changes since last save"
+											OnClick="btnCancelChanges_Click" CssClass="CancelButon" />
+										&nbsp;<asp:Button ID="btnSaveFuture" runat="server" Text="Save all changes" OnClick="btnSaveChanges_Click"
+											CssClass="SaveButon" />
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											type="button" value="Back to Patient Details" class="button" onclick="window.navigate('../patient_details.asp?PatientID=<%= Request.QueryString["PatientID"] %>')" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<table cellpadding="2" cellspacing="2" style="background-image: url(../images/export/beige_back.gif);">
+							<tr>
+								<th class="largeheading">
+									Available items
+								</th>
+								<th class="largeheading">
+									Upcoming shipments<br />
+									<asp:Label ID="lblNotSaved1" runat="server" Text="Changes not saved!" ForeColor="Red"
+										Visible="false" />
+								</th>
+							</tr>
+							<tr>
+								<td valign="top">
+									<div class="ProductList">
+										<NineRays:FlyTreeView ID="Products" runat="server" Padding="3px" FadeEffect="True"
+											BackColor="White" DragDropName="" DragDropMode="Copy" BackgroundImage="~/images/export/beige_back.gif"
+											ExpandLevel="2" CssClass="regText">
+											<HoverStyle Font-Underline="True" />
+										</NineRays:FlyTreeView>
+									</div>
+								</td>
+								<td valign="top">
+									<div class="ProductList" id="FutureDiv" runat="server">
+										<NineRays:FlyTreeView ID="Future" runat="server" Padding="3px" FadeEffect="True"
+											BackColor="White" DragDropAcceptNames="Product" PostBackOnDropAccept="true" OnNodeInserted="OnNodeMoved"
+											BackgroundImage="~/images/export/beige_back.gif" CssClass="regText">
+											<Nodes>
+												<NineRays:FlyTreeNode Text="Shipments for the next 12 months" Expanded="true" ImageUrl="$vista_folder" />
+											</Nodes>
+											<HoverStyle Font-Underline="True" />
+										</NineRays:FlyTreeView>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<NineRays:FlyContextMenu ID="ItemAddressMenu" runat="server" OnCommand="ItemMenu_Command">
+							<Items>
+								<NineRays:FlyMenuItem Text="Skip" CommandName="Remove" AutoPostBack="true" />
+								<NineRays:FlyMenuItem Text="Reduce Quantity" CommandName="Reduce" AutoPostBack="true" />
+								<NineRays:FlyMenuItem Text="Increase Quantity" CommandName="Increase" AutoPostBack="true" />
+								<NineRays:FlyMenuItem Text="Change Discount" CommandName="Discount" AutoPostBack="true" />
+								<NineRays:FlyMenuItem Text="Revert to Standing Order values" CommandName="Revert"
+									AutoPostBack="true" />
+							</Items>
+						</NineRays:FlyContextMenu>
+						<NineRays:FlyContextMenu ID="Shipments" runat="server" OnCommand="Shipments_Command">
+							<Items>
+								<NineRays:FlyMenuItem Text="Change Address" CommandName="Address" AutoPostBack="true" />
+								<NineRays:FlyMenuItem Text="Change Ship Date" CommandName="Ship" AutoPostBack="true" />
+								<NineRays:FlyMenuItem Text="Revert to Standing Order values" CommandName="RevertGroup"
+									AutoPostBack="true" />
+							</Items>
+						</NineRays:FlyContextMenu>
+						<asp:Button ID="dummy6" runat="server" Style="display: none" />
+						<cc1:ModalPopupExtender ID="modShipDate" BackgroundCssClass="ModalPopupBG" runat="server"
+							CancelControlID="btnCancelShip" TargetControlID="dummy6" PopupControlID="pnlShipDate" Y="200" />
+						<asp:Panel ID="pnlShipDate" CssClass="modalPopup" Width="200px" runat="server" DefaultButton="btnOkShip">
+							<div class="popup_Container">
+								<div class="popup_Titlebar" id="Div6">
+									<div class="TitlebarLeft" id="Div7" runat="server">
+										Change Ship Date
+									</div>
+								</div>
+								<div class="popup_Body">
+									Old Ship Date:
+									<asp:Label ID="lblOldShip" runat="server" /><br />
+									New Ship Date:
+									<asp:TextBox ID="txtNewShip" Columns="10" runat="server" CausesValidation="true"
+										AutoPostBack="false" />
+									<cc1:CalendarExtender ID="calShip" runat="server" TargetControlID="txtNewShip" />
+								</div>
+								<div class="popup_Buttons">
+									<asp:Button ID="btnOkShip" Text="Done" CssClass="button" runat="server" OnClick="btnOkShip_Click"
+										CausesValidation="true" />
+									<asp:Button ID="btnCancelShip" Text="Cancel" CssClass="button" runat="server" CausesValidation="false" /><br />
+									<asp:CompareValidator ID="valShipDate" runat="server" Operator="GreaterThan" ValueToCompare="1/1/2001"
+										ErrorMessage="The new ship date must be later than previous shipment." ControlToValidate="txtNewShip"
+										Type="Date" EnableClientScript="true" Display="Dynamic" ForeColor="Red" />
+									<asp:CompareValidator ID="valShipAfter" runat="server" Operator="LessThan" ValueToCompare="1/1/2001"
+										ErrorMessage="The new ship date must be before the next shipment." ControlToValidate="txtNewShip"
+										Type="Date" EnableClientScript="true" Display="Dynamic" ForeColor="Red" />
+								</div>
+							</div>
+						</asp:Panel>
+						<asp:Button ID="dummy3" runat="server" Style="display: none" />
+						<cc1:ModalPopupExtender ID="modAddress" BackgroundCssClass="ModalPopupBG" runat="server"
+							CancelControlID="btnCancelAddress" TargetControlID="dummy3" PopupControlID="pnlAddress"  Y="200"/>
+						<asp:Panel ID="pnlAddress" CssClass="modalPopup" Width="700px" runat="server" DefaultButton="btnOkAddress">
+							<div class="popup_Container">
+								<div class="popup_Titlebar">
+									<div class="TitlebarLeft">
+										Temporary Address change
+									</div>
+								</div>
+								<div class="popup_Body">
+									<table>
+										<tr>
+											<td valign="top">
+												<table>
+													<tr>
+														<td colspan="2" align="center">
+															<strong>EMR Shipping Address</strong>
+														</td>
+													</tr>
+													<tr>
+														<td align="right">
+															Street Address
+														</td>
+														<td>
+															<asp:TextBox ID="txtEMRStreet" runat="server" Columns="15" Enabled="false" />
+														</td>
+													</tr>
+													<tr>
+														<td align="right">
+															City
+														</td>
+														<td>
+															<asp:TextBox ID="txtEMRCity" runat="server" Columns="10" Enabled="false" />
+														</td>
+													</tr>
+													<tr>
+														<td align="right">
+															State:
+														</td>
+														<td>
+															<asp:TextBox ID="txtEMRState" runat="server" Columns="2" Enabled="false" />
+														</td>
+													</tr>
+													<tr>
+														<td align="right">
+															Zip:
+														</td>
+														<td>
+															<asp:TextBox ID="txtEMRZip" runat="server" Columns="9" Enabled="false" />
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td valign="middle">
+												<asp:CheckBox ID="cboRestore" runat="server" Text="Use EMR Address" Checked="false" />
+											</td>
+											<td valign="top">
+												<table summary="Current Shipping Address">
+													<tr>
+														<tr>
+															<td colspan="2" align="center">
+																<strong>Current address for this shipment</strong>
+															</td>
+														</tr>
+														<td align="right">
+															Street Address
+														</td>
+														<td>
+															<asp:TextBox ID="txtStreetAddress" runat="server" Columns="15" />
+														</td>
+													</tr>
+													<tr>
+														<td align="right">
+															City
+														</td>
+														<td>
+															<asp:TextBox ID="txtCity" runat="server" Columns="10" />
+														</td>
+													</tr>
+													<tr>
+														<td align="right">
+															State:
+														</td>
+														<td>
+															<asp:TextBox ID="txtState" runat="server" Columns="2" />
+														</td>
+													</tr>
+													<tr>
+														<td align="right">
+															Zip:
+														</td>
+														<td>
+															<asp:TextBox ID="txtZip" runat="server" Columns="9" />
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div class="popup_Buttons">
+									<asp:Button ID="btnOkAddress" Text="Done" CssClass="button" runat="server" OnClick="btnOkayAddress_Click" />
+									<asp:Button ID="btnCancelAddress" Text="Cancel" CssClass="button" runat="server"
+										CausesValidation="false" />
+								</div>
+							</div>
+						</asp:Panel>
+					</ContentTemplate>
+				</asp:UpdatePanel>
+			</ContentTemplate>
+		</cc1:TabPanel>
+	</cc1:TabContainer>
+	<asp:SqlDataSource runat="server" ID="DiscountSource" SelectCommand="Select DiscountID,DiscountName from Autoship_Discounts order by DiscountID"
+		ConnectionString="<%$ ConnectionStrings:db %>" />
+	<asp:Button ID="btnDummy1" runat="server" Style="display: none" />
+	<cc1:ModalPopupExtender ID="modDiscount" runat="server" BackgroundCssClass="ModalPopupBG"
+		CancelControlID="btnCancelDiscount" TargetControlID="btnDummy1" PopupControlID="pnlDiscount"  Y="200"/>
+	<asp:Panel ID="pnlDiscount" runat="server" CssClass="modalPopup" Width="250px" DefaultButton="btnOkDiscount">
+		<div class="popup_Container">
+			<div class="popup_Titlebar">
+				<div class="TitlebarLeft">
+					Modify Discount
+				</div>
+			</div>
+			<div class="popup_Body">
+				New Discount:
+				<asp:DropDownList ID="ddDiscount" runat="server" DataSourceID="DiscountSource" DataTextField="DiscountName"
+					DataValueField="DiscountID" />
+			</div>
+			<div class="popup_Buttons">
+				<asp:Button ID="btnOkDiscount" Text="Done" CssClass="button" runat="server" OnClick="btnOkDiscount_Click" />
+				<asp:Button ID="btnCancelDiscount" Text="Cancel" CssClass="button" runat="server" />
+			</div>
+		</div>
+	</asp:Panel>
+</asp:Content>

@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="sub.master.cs" Inherits="SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+	<title></title>
+	<link href="../css/lmc_style.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="EXPIRES" content="0"/>
+	<asp:ContentPlaceHolder ID="HeadContent" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body background="../images/export/beige_back.gif">
+	<form id="Form1" runat="server">
+	<div class="main">
+	<cc1:ToolkitScriptManager ID="ScriptManager" runat="Server" EnablePartialRendering="true"
+		ScriptMode="Release" CombineScriptsHandlerUrl="~/CombineScriptsHandler.ashx"
+		LoadScriptsBeforeUI="false" />	
+	<asp:ContentPlaceHolder ID="MainContent" runat="server" />
+	</div>
+	<div class="clear">
+	</div>
+	</form>
+</body>
+</html>

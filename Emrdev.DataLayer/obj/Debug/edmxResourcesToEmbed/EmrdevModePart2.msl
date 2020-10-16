@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DevBackupModel1StoreContainer" CdmEntityContainer="devbackupEntitiesPart2">
+    <FunctionImportMapping FunctionImportName="ssp_InsertLabReportGroups" FunctionName="DevBackupModel1.Store.ssp_InsertLabReportGroups" />
+    <FunctionImportMapping FunctionImportName="ssp_UpdateGroups" FunctionName="DevBackupModel1.Store.ssp_UpdateGroups" />
+    <FunctionImportMapping FunctionImportName="Orders_GetOrderbystatus" FunctionName="DevBackupModel1.Store.Orders_GetOrderbystatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.Orders_GetOrderbystatus_Result">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Date_Prepared" ColumnName="Date Prepared" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_Orders_UpdateStatus" FunctionName="DevBackupModel1.Store.ssp_Orders_UpdateStatus" />
+    <FunctionImportMapping FunctionImportName="Orders_GetOrderForShipped" FunctionName="DevBackupModel1.Store.Orders_GetOrderForShipped">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.Orders_GetOrderForShipped_Result">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+          <ScalarProperty Name="orderStatus" ColumnName="orderStatus" />
+          <ScalarProperty Name="orderKey" ColumnName="orderKey" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="street1" ColumnName="street1" />
+          <ScalarProperty Name="street2" ColumnName="street2" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_UpdatePatientChinapatient" FunctionName="DevBackupModel1.Store.ssp_UpdatePatientChinapatient" />
+    <FunctionImportMapping FunctionImportName="ssp_PatientInfoByPatientId" FunctionName="DevBackupModel1.Store.ssp_PatientInfoByPatientId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_PatientInfoByPatientId_Result">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="BillingStreet" ColumnName="BillingStreet" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingZip" ColumnName="BillingZip" />
+          <ScalarProperty Name="ShippingStreet" ColumnName="ShippingStreet" />
+          <ScalarProperty Name="ShippingCity" ColumnName="ShippingCity" />
+          <ScalarProperty Name="ShippingState" ColumnName="ShippingState" />
+          <ScalarProperty Name="ShippingZip" ColumnName="ShippingZip" />
+          <ScalarProperty Name="Work_Detailed_info" ColumnName="Work_Detailed_info" />
+          <ScalarProperty Name="Work_CB_only" ColumnName="Work_CB_only" />
+          <ScalarProperty Name="Work_NoMessage" ColumnName="Work_NoMessage" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="Cell_Detailed_info" ColumnName="Cell_Detailed_info" />
+          <ScalarProperty Name="Cell_CB_Only" ColumnName="Cell_CB_Only" />
+          <ScalarProperty Name="Cell_NoMessage" ColumnName="Cell_NoMessage" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="Home_detailed_info" ColumnName="Home_detailed_info" />
+          <ScalarProperty Name="Home_CB_only" ColumnName="Home_CB_only" />
+          <ScalarProperty Name="Home_NoMessage" ColumnName="Home_NoMessage" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="FaxPone" ColumnName="FaxPone" />
+          <ScalarProperty Name="Fax_auth_detailed_info" ColumnName="Fax_auth_detailed_info" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Email_auth_detailed_info" ColumnName="Email_auth_detailed_info" />
+          <ScalarProperty Name="HIPPA_signed" ColumnName="HIPPA_signed" />
+          <ScalarProperty Name="HIPPA_signed_date" ColumnName="HIPPA_signed_date" />
+          <ScalarProperty Name="Prefered_Pharm" ColumnName="Prefered_Pharm" />
+          <ScalarProperty Name="Pager" ColumnName="Pager" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Clinic" ColumnName="Clinic" />
+          <ScalarProperty Name="EmergencyFirstName" ColumnName="EmergencyFirstName" />
+          <ScalarProperty Name="EmergencyLastName" ColumnName="EmergencyLastName" />
+          <ScalarProperty Name="EmergencyPhone" ColumnName="EmergencyPhone" />
+          <ScalarProperty Name="EmergencyRelationship" ColumnName="EmergencyRelationship" />
+          <ScalarProperty Name="EmergencyState" ColumnName="EmergencyState" />
+          <ScalarProperty Name="ContactPreference" ColumnName="ContactPreference" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="SpecialAttention" ColumnName="SpecialAttention" />
+          <ScalarProperty Name="ActivityRating" ColumnName="ActivityRating" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="MedicalHistory" ColumnName="MedicalHistory" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="PCP" ColumnName="PCP" />
+          <ScalarProperty Name="LMC_CP" ColumnName="LMC_CP" />
+          <ScalarProperty Name="ProvID" ColumnName="ProvID" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="NameAlert" ColumnName="NameAlert" />
+          <ScalarProperty Name="ConciergeID" ColumnName="ConciergeID" />
+          <ScalarProperty Name="Aesthetic_YN" ColumnName="Aesthetic_YN" />
+          <ScalarProperty Name="NoShowPol_Signed_YN" ColumnName="NoShowPol_Signed_YN" />
+          <ScalarProperty Name="Cancel_NoShow_frm_signed" ColumnName="Cancel_NoShow_frm_signed" />
+          <ScalarProperty Name="Allergies" ColumnName="Allergies" />
+          <ScalarProperty Name="AllowApptReassign" ColumnName="AllowApptReassign" />
+          <ScalarProperty Name="Medical" ColumnName="Medical" />
+          <ScalarProperty Name="Aesthetics" ColumnName="Aesthetics" />
+          <ScalarProperty Name="Autoship" ColumnName="Autoship" />
+          <ScalarProperty Name="Retail" ColumnName="Retail" />
+          <ScalarProperty Name="Affiliate" ColumnName="Affiliate" />
+          <ScalarProperty Name="SOC" ColumnName="SOC" />
+          <ScalarProperty Name="DiabetesSOC" ColumnName="DiabetesSOC" />
+          <ScalarProperty Name="HeartSOC" ColumnName="HeartSOC" />
+          <ScalarProperty Name="EmergencyContact" ColumnName="EmergencyContact" />
+          <ScalarProperty Name="Marketing_source" ColumnName="Marketing_source" />
+          <ScalarProperty Name="Seminar_attended" ColumnName="Seminar_attended" />
+          <ScalarProperty Name="Seminar_status" ColumnName="Seminar_status" />
+          <ScalarProperty Name="AutoShipAlerts" ColumnName="AutoShipAlerts" />
+          <ScalarProperty Name="AutoshipNote" ColumnName="AutoshipNote" />
+          <ScalarProperty Name="MedicareOptOut_YN" ColumnName="MedicareOptOut_YN" />
+          <ScalarProperty Name="MedicareOptOut_Date" ColumnName="MedicareOptOut_Date" />
+          <ScalarProperty Name="EatingPlanReceived_YN" ColumnName="EatingPlanReceived_YN" />
+          <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+          <ScalarProperty Name="RenewalMonth" ColumnName="RenewalMonth" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="BalanceDueDate" ColumnName="BalanceDueDate" />
+          <ScalarProperty Name="AutoshipEmail" ColumnName="AutoshipEmail" />
+          <ScalarProperty Name="AutoshipCancelReasonID" ColumnName="AutoshipCancelReasonID" />
+          <ScalarProperty Name="AutoshipCancelOther" ColumnName="AutoshipCancelOther" />
+          <ScalarProperty Name="PaymentDue" ColumnName="PaymentDue" />
+          <ScalarProperty Name="TermsInMonths" ColumnName="TermsInMonths" />
+          <ScalarProperty Name="StartMedical" ColumnName="StartMedical" />
+          <ScalarProperty Name="EndMedical" ColumnName="EndMedical" />
+          <ScalarProperty Name="InvoiceDueDate" ColumnName="InvoiceDueDate" />
+          <ScalarProperty Name="InvoicePaid" ColumnName="InvoicePaid" />
+          <ScalarProperty Name="InvoiceDue" ColumnName="InvoiceDue" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="MedicareB" ColumnName="MedicareB" />
+          <ScalarProperty Name="RenewalException" ColumnName="RenewalException" />
+          <ScalarProperty Name="RenewalExcExpire" ColumnName="RenewalExcExpire" />
+          <ScalarProperty Name="AffiliateID" ColumnName="AffiliateID" />
+          <ScalarProperty Name="AffiliateDate" ColumnName="AffiliateDate" />
+          <ScalarProperty Name="IsAffiliate" ColumnName="IsAffiliate" />
+          <ScalarProperty Name="LabsMailed" ColumnName="LabsMailed" />
+          <ScalarProperty Name="ChinaPatientId" ColumnName="ChinaPatientId" />
+          <ScalarProperty Name="BillingCountry" ColumnName="BillingCountry" />
+          <ScalarProperty Name="ShippingCountry" ColumnName="ShippingCountry" />
+          <ScalarProperty Name="RenewalDate" ColumnName="RenewalDate" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="AffiliatePatient" ColumnName="AffiliatePatient" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_XEROGetpatientsnotMatch" FunctionName="DevBackupModel1.Store.ssp_XEROGetpatientsnotMatch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_XEROGetpatientsnotMatch_Result">
+          <ScalarProperty Name="Row" ColumnName="Row" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="BillingStreet" ColumnName="BillingStreet" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingCountry" ColumnName="BillingCountry" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingZip" ColumnName="BillingZip" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="RecordCount" ColumnName="RecordCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_XEROpatientsMatchedSearch" FunctionName="DevBackupModel1.Store.ssp_XEROpatientsMatchedSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_XEROpatientsMatchedSearch_Result">
+          <ScalarProperty Name="Row" ColumnName="Row" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="BillingStreet" ColumnName="BillingStreet" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingCountry" ColumnName="BillingCountry" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingZip" ColumnName="BillingZip" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="RecordCount" ColumnName="RecordCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="XeroLog">
+      <EntityTypeMapping TypeName="DevBackupModel1.XeroLog">
+        <MappingFragment StoreEntitySet="XeroLog">
+          <ScalarProperty Name="LogFor" ColumnName="LogFor" />
+          <ScalarProperty Name="UpdatedDateUTC" ColumnName="UpdatedDateUTC" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XeroPatients">
+      <EntityTypeMapping TypeName="DevBackupModel1.XeroPatients">
+        <MappingFragment StoreEntitySet="XeroPatients">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingCountry" ColumnName="BillingCountry" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingStreet" ColumnName="BillingStreet" />
+          <ScalarProperty Name="BillingZip" ColumnName="BillingZip" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="DevBackupModel1.Patients">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="AuthorisedPerson" ColumnName="AuthorisedPerson" />
+          <ScalarProperty Name="XeropatientId" ColumnName="XeropatientId" />
+          <ScalarProperty Name="RenewalDate" ColumnName="RenewalDate" />
+          <ScalarProperty Name="ShippingCountry" ColumnName="ShippingCountry" />
+          <ScalarProperty Name="BillingCountry" ColumnName="BillingCountry" />
+          <ScalarProperty Name="ChinaPatientId" ColumnName="ChinaPatientId" />
+          <ScalarProperty Name="LabsMailed" ColumnName="LabsMailed" />
+          <ScalarProperty Name="IsAffiliate" ColumnName="IsAffiliate" />
+          <ScalarProperty Name="AffiliateDate" ColumnName="AffiliateDate" />
+          <ScalarProperty Name="AffiliateID" ColumnName="AffiliateID" />
+          <ScalarProperty Name="RenewalExcExpire" ColumnName="RenewalExcExpire" />
+          <ScalarProperty Name="RenewalException" ColumnName="RenewalException" />
+          <ScalarProperty Name="MedicareB" ColumnName="MedicareB" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="InvoiceDue" ColumnName="InvoiceDue" />
+          <ScalarProperty Name="InvoicePaid" ColumnName="InvoicePaid" />
+          <ScalarProperty Name="InvoiceDueDate" ColumnName="InvoiceDueDate" />
+          <ScalarProperty Name="EndMedical" ColumnName="EndMedical" />
+          <ScalarProperty Name="StartMedical" ColumnName="StartMedical" />
+          <ScalarProperty Name="TermsInMonths" ColumnName="TermsInMonths" />
+          <ScalarProperty Name="PaymentDue" ColumnName="PaymentDue" />
+          <ScalarProperty Name="AutoshipCancelOther" ColumnName="AutoshipCancelOther" />
+          <ScalarProperty Name="AutoshipCancelReasonID" ColumnName="AutoshipCancelReasonID" />
+          <ScalarProperty Name="AutoshipEmail" ColumnName="AutoshipEmail" />
+          <ScalarProperty Name="BalanceDueDate" ColumnName="BalanceDueDate" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="RenewalMonth" ColumnName="RenewalMonth" />
+          <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+          <ScalarProperty Name="EatingPlanReceived_YN" ColumnName="EatingPlanReceived_YN" />
+          <ScalarProperty Name="MedicareOptOut_Date" ColumnName="MedicareOptOut_Date" />
+          <ScalarProperty Name="MedicareOptOut_YN" ColumnName="MedicareOptOut_YN" />
+          <ScalarProperty Name="AutoshipNote" ColumnName="AutoshipNote" />
+          <ScalarProperty Name="AutoShipAlerts" ColumnName="AutoShipAlerts" />
+          <ScalarProperty Name="Seminar_status" ColumnName="Seminar_status" />
+          <ScalarProperty Name="Seminar_attended" ColumnName="Seminar_attended" />
+          <ScalarProperty Name="Marketing_source" ColumnName="Marketing_source" />
+          <ScalarProperty Name="EmergencyContact" ColumnName="EmergencyContact" />
+          <ScalarProperty Name="HeartSOC" ColumnName="HeartSOC" />
+          <ScalarProperty Name="DiabetesSOC" ColumnName="DiabetesSOC" />
+          <ScalarProperty Name="SOC" ColumnName="SOC" />
+          <ScalarProperty Name="Affiliate" ColumnName="Affiliate" />
+          <ScalarProperty Name="Retail" ColumnName="Retail" />
+          <ScalarProperty Name="Autoship" ColumnName="Autoship" />
+          <ScalarProperty Name="Aesthetics" ColumnName="Aesthetics" />
+          <ScalarProperty Name="Medical" ColumnName="Medical" />
+          <ScalarProperty Name="AllowApptReassign" ColumnName="AllowApptReassign" />
+          <ScalarProperty Name="Allergies" ColumnName="Allergies" />
+          <ScalarProperty Name="Cancel_NoShow_frm_signed" ColumnName="Cancel_NoShow_frm_signed" />
+          <ScalarProperty Name="NoShowPol_Signed_YN" ColumnName="NoShowPol_Signed_YN" />
+          <ScalarProperty Name="Aesthetic_YN" ColumnName="Aesthetic_YN" />
+          <ScalarProperty Name="ConciergeID" ColumnName="ConciergeID" />
+          <ScalarProperty Name="NameAlert" ColumnName="NameAlert" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="ProvID" ColumnName="ProvID" />
+          <ScalarProperty Name="LMC_CP" ColumnName="LMC_CP" />
+          <ScalarProperty Name="PCP" ColumnName="PCP" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="MedicalHistory" ColumnName="MedicalHistory" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="ActivityRating" ColumnName="ActivityRating" />
+          <ScalarProperty Name="SpecialAttention" ColumnName="SpecialAttention" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="ContactPreference" ColumnName="ContactPreference" />
+          <ScalarProperty Name="EmergencyState" ColumnName="EmergencyState" />
+          <ScalarProperty Name="EmergencyRelationship" ColumnName="EmergencyRelationship" />
+          <ScalarProperty Name="EmergencyPhone" ColumnName="EmergencyPhone" />
+          <ScalarProperty Name="EmergencyLastName" ColumnName="EmergencyLastName" />
+          <ScalarProperty Name="EmergencyFirstName" ColumnName="EmergencyFirstName" />
+          <ScalarProperty Name="Clinic" ColumnName="Clinic" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Pager" ColumnName="Pager" />
+          <ScalarProperty Name="Prefered_Pharm" ColumnName="Prefered_Pharm" />
+          <ScalarProperty Name="HIPPA_signed_date" ColumnName="HIPPA_signed_date" />
+          <ScalarProperty Name="HIPPA_signed" ColumnName="HIPPA_signed" />
+          <ScalarProperty Name="Email_auth_detailed_info" ColumnName="Email_auth_detailed_info" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax_auth_detailed_info" ColumnName="Fax_auth_detailed_info" />
+          <ScalarProperty Name="FaxPone" ColumnName="FaxPone" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="Home_NoMessage" ColumnName="Home_NoMessage" />
+          <ScalarProperty Name="Home_CB_only" ColumnName="Home_CB_only" />
+          <ScalarProperty Name="Home_detailed_info" ColumnName="Home_detailed_info" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="Cell_NoMessage" ColumnName="Cell_NoMessage" />
+          <ScalarProperty Name="Cell_CB_Only" ColumnName="Cell_CB_Only" />
+          <ScalarProperty Name="Cell_Detailed_info" ColumnName="Cell_Detailed_info" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="Work_NoMessage" ColumnName="Work_NoMessage" />
+          <ScalarProperty Name="Work_CB_only" ColumnName="Work_CB_only" />
+          <ScalarProperty Name="Work_Detailed_info" ColumnName="Work_Detailed_info" />
+          <ScalarProperty Name="ShippingZip" ColumnName="ShippingZip" />
+          <ScalarProperty Name="ShippingState" ColumnName="ShippingState" />
+          <ScalarProperty Name="ShippingCity" ColumnName="ShippingCity" />
+          <ScalarProperty Name="ShippingStreet" ColumnName="ShippingStreet" />
+          <ScalarProperty Name="BillingZip" ColumnName="BillingZip" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingStreet" ColumnName="BillingStreet" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ssp_GetPatientDetailById" FunctionName="DevBackupModel1.Store.ssp_GetPatientDetailById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetPatientDetailById_Result">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="BillingStreet" ColumnName="BillingStreet" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingZip" ColumnName="BillingZip" />
+          <ScalarProperty Name="ShippingStreet" ColumnName="ShippingStreet" />
+          <ScalarProperty Name="ShippingCity" ColumnName="ShippingCity" />
+          <ScalarProperty Name="ShippingState" ColumnName="ShippingState" />
+          <ScalarProperty Name="ShippingZip" ColumnName="ShippingZip" />
+          <ScalarProperty Name="Work_Detailed_info" ColumnName="Work_Detailed_info" />
+          <ScalarProperty Name="Work_CB_only" ColumnName="Work_CB_only" />
+          <ScalarProperty Name="Work_NoMessage" ColumnName="Work_NoMessage" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="Cell_Detailed_info" ColumnName="Cell_Detailed_info" />
+          <ScalarProperty Name="Cell_CB_Only" ColumnName="Cell_CB_Only" />
+          <ScalarProperty Name="Cell_NoMessage" ColumnName="Cell_NoMessage" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="Home_detailed_info" ColumnName="Home_detailed_info" />
+          <ScalarProperty Name="Home_CB_only" ColumnName="Home_CB_only" />
+          <ScalarProperty Name="Home_NoMessage" ColumnName="Home_NoMessage" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="FaxPone" ColumnName="FaxPone" />
+          <ScalarProperty Name="Fax_auth_detailed_info" ColumnName="Fax_auth_detailed_info" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Email_auth_detailed_info" ColumnName="Email_auth_detailed_info" />
+          <ScalarProperty Name="HIPPA_signed" ColumnName="HIPPA_signed" />
+          <ScalarProperty Name="HIPPA_signed_date" ColumnName="HIPPA_signed_date" />
+          <ScalarProperty Name="Prefered_Pharm" ColumnName="Prefered_Pharm" />
+          <ScalarProperty Name="Pager" ColumnName="Pager" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Clinic" ColumnName="Clinic" />
+          <ScalarProperty Name="EmergencyFirstName" ColumnName="EmergencyFirstName" />
+          <ScalarProperty Name="EmergencyLastName" ColumnName="EmergencyLastName" />
+          <ScalarProperty Name="EmergencyPhone" ColumnName="EmergencyPhone" />
+          <ScalarProperty Name="EmergencyRelationship" ColumnName="EmergencyRelationship" />
+          <ScalarProperty Name="EmergencyState" ColumnName="EmergencyState" />
+          <ScalarProperty Name="ContactPreference" ColumnName="ContactPreference" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="SpecialAttention" ColumnName="SpecialAttention" />
+          <ScalarProperty Name="ActivityRating" ColumnName="ActivityRating" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="MedicalHistory" ColumnName="MedicalHistory" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="PCP" ColumnName="PCP" />
+          <ScalarProperty Name="LMC_CP" ColumnName="LMC_CP" />
+          <ScalarProperty Name="ProvID" ColumnName="ProvID" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="NameAlert" ColumnName="NameAlert" />
+          <ScalarProperty Name="ConciergeID" ColumnName="ConciergeID" />
+          <ScalarProperty Name="Aesthetic_YN" ColumnName="Aesthetic_YN" />
+          <ScalarProperty Name="NoShowPol_Signed_YN" ColumnName="NoShowPol_Signed_YN" />
+          <ScalarProperty Name="Cancel_NoShow_frm_signed" ColumnName="Cancel_NoShow_frm_signed" />
+          <ScalarProperty Name="Allergies" ColumnName="Allergies" />
+          <ScalarProperty Name="AllowApptReassign" ColumnName="AllowApptReassign" />
+          <ScalarProperty Name="Medical" ColumnName="Medical" />
+          <ScalarProperty Name="Aesthetics" ColumnName="Aesthetics" />
+          <ScalarProperty Name="Autoship" ColumnName="Autoship" />
+          <ScalarProperty Name="Retail" ColumnName="Retail" />
+          <ScalarProperty Name="Affiliate" ColumnName="Affiliate" />
+          <ScalarProperty Name="SOC" ColumnName="SOC" />
+          <ScalarProperty Name="DiabetesSOC" ColumnName="DiabetesSOC" />
+          <ScalarProperty Name="HeartSOC" ColumnName="HeartSOC" />
+          <ScalarProperty Name="EmergencyContact" ColumnName="EmergencyContact" />
+          <ScalarProperty Name="Marketing_source" ColumnName="Marketing_source" />
+          <ScalarProperty Name="Seminar_attended" ColumnName="Seminar_attended" />
+          <ScalarProperty Name="Seminar_status" ColumnName="Seminar_status" />
+          <ScalarProperty Name="AutoShipAlerts" ColumnName="AutoShipAlerts" />
+          <ScalarProperty Name="AutoshipNote" ColumnName="AutoshipNote" />
+          <ScalarProperty Name="MedicareOptOut_YN" ColumnName="MedicareOptOut_YN" />
+          <ScalarProperty Name="MedicareOptOut_Date" ColumnName="MedicareOptOut_Date" />
+          <ScalarProperty Name="EatingPlanReceived_YN" ColumnName="EatingPlanReceived_YN" />
+          <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+          <ScalarProperty Name="RenewalMonth" ColumnName="RenewalMonth" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="BalanceDueDate" ColumnName="BalanceDueDate" />
+          <ScalarProperty Name="AutoshipEmail" ColumnName="AutoshipEmail" />
+          <ScalarProperty Name="AutoshipCancelReasonID" ColumnName="AutoshipCancelReasonID" />
+          <ScalarProperty Name="AutoshipCancelOther" ColumnName="AutoshipCancelOther" />
+          <ScalarProperty Name="PaymentDue" ColumnName="PaymentDue" />
+          <ScalarProperty Name="TermsInMonths" ColumnName="TermsInMonths" />
+          <ScalarProperty Name="StartMedical" ColumnName="StartMedical" />
+          <ScalarProperty Name="EndMedical" ColumnName="EndMedical" />
+          <ScalarProperty Name="InvoiceDueDate" ColumnName="InvoiceDueDate" />
+          <ScalarProperty Name="InvoicePaid" ColumnName="InvoicePaid" />
+          <ScalarProperty Name="InvoiceDue" ColumnName="InvoiceDue" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="MedicareB" ColumnName="MedicareB" />
+          <ScalarProperty Name="RenewalException" ColumnName="RenewalException" />
+          <ScalarProperty Name="RenewalExcExpire" ColumnName="RenewalExcExpire" />
+          <ScalarProperty Name="AffiliateID" ColumnName="AffiliateID" />
+          <ScalarProperty Name="AffiliateDate" ColumnName="AffiliateDate" />
+          <ScalarProperty Name="IsAffiliate" ColumnName="IsAffiliate" />
+          <ScalarProperty Name="LabsMailed" ColumnName="LabsMailed" />
+          <ScalarProperty Name="ChinaPatientId" ColumnName="ChinaPatientId" />
+          <ScalarProperty Name="BillingCountry" ColumnName="BillingCountry" />
+          <ScalarProperty Name="ShippingCountry" ColumnName="ShippingCountry" />
+          <ScalarProperty Name="RenewalDate" ColumnName="RenewalDate" />
+          <ScalarProperty Name="XeropatientId" ColumnName="XeropatientId" />
+          <ScalarProperty Name="AuthorisedPerson" ColumnName="AuthorisedPerson" />
+          <ScalarProperty Name="PatientPackage" ColumnName="PatientPackage" />
+          <ScalarProperty Name="PackageDuration" ColumnName="PackageDuration" />
+          <ScalarProperty Name="PackageDateentered" ColumnName="PackageDateentered" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="UploadTags">
+      <EntityTypeMapping TypeName="DevBackupModel1.UploadTags">
+        <MappingFragment StoreEntitySet="UploadTags">
+          <ScalarProperty Name="Disabled" ColumnName="Disabled" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Upload_tbl">
+      <EntityTypeMapping TypeName="DevBackupModel1.Upload_tbl">
+        <MappingFragment StoreEntitySet="Upload_tbl">
+          <ScalarProperty Name="otherFormats_Binary" ColumnName="otherFormats_Binary" />
+          <ScalarProperty Name="Pdf_Binary" ColumnName="Pdf_Binary" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="DateEntered" ColumnName="DateEntered" />
+          <ScalarProperty Name="Upload_Title" ColumnName="Upload_Title" />
+          <ScalarProperty Name="Upload_Path" ColumnName="Upload_Path" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="UploadID" ColumnName="UploadID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailTemplate">
+      <EntityTypeMapping TypeName="DevBackupModel1.EmailTemplate">
+        <MappingFragment StoreEntitySet="EmailTemplate">
+          <ScalarProperty Name="AppointmentId" ColumnName="AppointmentId" />
+          <ScalarProperty Name="TemplateDesc" ColumnName="TemplateDesc" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CRMWufooLink">
+      <EntityTypeMapping TypeName="DevBackupModel1.CRMWufooLink">
+        <MappingFragment StoreEntitySet="CRMWufooLink">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EmailDescription" ColumnName="EmailDescription" />
+          <ScalarProperty Name="WufooFormLink" ColumnName="WufooFormLink" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ssp_GetMedNotesDetailsByContactType" FunctionName="DevBackupModel1.Store.ssp_GetMedNotesDetailsByContactType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetMedNotesDetailsByContactType_Result">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+          <ScalarProperty Name="AptTypeDesc" ColumnName="AptTypeDesc" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="MessageBody" ColumnName="MessageBody" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AutoShipEmailTEmplate">
+      <EntityTypeMapping TypeName="DevBackupModel1.AutoShipEmailTEmplate">
+        <MappingFragment StoreEntitySet="AutoShipEmailTEmplate">
+          <ScalarProperty Name="TemplateDesc" ColumnName="TemplateDesc" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ssp_GetPatientListForAppointmentDate" FunctionName="DevBackupModel1.Store.ssp_GetPatientListForAppointmentDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetPatientListForAppointmentDate_Result">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ContactPreference" ColumnName="ContactPreference" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="Work_CB_Only" ColumnName="Work_CB_Only" />
+          <ScalarProperty Name="Work_Nomessage" ColumnName="Work_Nomessage" />
+          <ScalarProperty Name="Cell_CB_Only" ColumnName="Cell_CB_Only" />
+          <ScalarProperty Name="Cell_NoMessage" ColumnName="Cell_NoMessage" />
+          <ScalarProperty Name="Home_CB_Only" ColumnName="Home_CB_Only" />
+          <ScalarProperty Name="Home_NoMessage" ColumnName="Home_NoMessage" />
+          <ScalarProperty Name="ApptStart" ColumnName="ApptStart" />
+          <ScalarProperty Name="ApptEnd" ColumnName="ApptEnd" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_DeleteOrder" FunctionName="DevBackupModel1.Store.ssp_DeleteOrder" />
+    <FunctionImportMapping FunctionImportName="ssp_DeleteOrderItem" FunctionName="DevBackupModel1.Store.ssp_DeleteOrderItem" />
+    <FunctionImportMapping FunctionImportName="ssp_UpdateAutoShipNote" FunctionName="DevBackupModel1.Store.ssp_UpdateAutoShipNote" />
+    <FunctionImportMapping FunctionImportName="OrderItem_Update" FunctionName="DevBackupModel1.Store.OrderItem_Update" />
+    <FunctionImportMapping FunctionImportName="ssp_GetProductDetailsForOrderitems" FunctionName="DevBackupModel1.Store.ssp_GetProductDetailsForOrderitems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetProductDetailsForOrderitems_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="AutoshipPrice" ColumnName="AutoshipPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_AddNewOrderItem" FunctionName="DevBackupModel1.Store.ssp_AddNewOrderItem" />
+    <FunctionImportMapping FunctionImportName="ssp_Orders_UpdateStatusToggle" FunctionName="DevBackupModel1.Store.ssp_Orders_UpdateStatusToggle" />
+    <EntitySetMapping Name="IVRTemplate">
+      <EntityTypeMapping TypeName="DevBackupModel1.IVRTemplate">
+        <MappingFragment StoreEntitySet="IVRTemplate">
+          <ScalarProperty Name="AppointmentId" ColumnName="AppointmentId" />
+          <ScalarProperty Name="TemplateDesc" ColumnName="TemplateDesc" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Orders_GetOrderbystatusAutoship" FunctionName="DevBackupModel1.Store.Orders_GetOrderbystatusAutoship">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.Orders_GetOrderbystatusAutoship_Result">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+          <ScalarProperty Name="DatePrep" ColumnName="DatePrep" />
+          <ScalarProperty Name="ShipAddress1" ColumnName="ShipAddress1" />
+          <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+          <ScalarProperty Name="ShipState" ColumnName="ShipState" />
+          <ScalarProperty Name="ShipZip" ColumnName="ShipZip" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ShipDate" ColumnName="ShipDate" />
+          <ScalarProperty Name="BillingStreet" ColumnName="BillingStreet" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingZip" ColumnName="BillingZip" />
+          <ScalarProperty Name="AutoshipNote" ColumnName="AutoshipNote" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Invoiced" ColumnName="Invoiced" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="XeropatientId" ColumnName="XeropatientId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_XEROGetOrdersbyOrderIDnew" FunctionName="DevBackupModel1.Store.ssp_XEROGetOrdersbyOrderIDnew">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_XEROGetOrdersbyOrderIDnew_Result">
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="DatePrep" ColumnName="DatePrep" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="ShipAddress1" ColumnName="ShipAddress1" />
+          <ScalarProperty Name="ShipAddress2" ColumnName="ShipAddress2" />
+          <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+          <ScalarProperty Name="ShipDate" ColumnName="ShipDate" />
+          <ScalarProperty Name="ShipState" ColumnName="ShipState" />
+          <ScalarProperty Name="ShipZip" ColumnName="ShipZip" />
+          <ScalarProperty Name="QBInvID" ColumnName="QBInvID" />
+          <ScalarProperty Name="XeropatientId" ColumnName="XeropatientId" />
+          <ScalarProperty Name="ShippingFee" ColumnName="ShippingFee" />
+          <ScalarProperty Name="OrderLimit" ColumnName="OrderLimit" />
+          <ScalarProperty Name="SalesAccountCode" ColumnName="SalesAccountCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="QB_Invoice1">
+      <EntityTypeMapping TypeName="DevBackupModel1.QB_Invoice1">
+        <MappingFragment StoreEntitySet="QB_Invoice1">
+          <ScalarProperty Name="IsRecUpdate" ColumnName="IsRecUpdate" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="QBInvID" ColumnName="QBInvID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ssp_XEROUpdateInvoice" FunctionName="DevBackupModel1.Store.ssp_XEROUpdateInvoice" />
+    <FunctionImportMapping FunctionImportName="ssp_InsertXeroAccounts" FunctionName="DevBackupModel1.Store.ssp_InsertXeroAccounts" />
+    <FunctionImportMapping FunctionImportName="ssp_GetXeroaccounts" FunctionName="DevBackupModel1.Store.ssp_GetXeroaccounts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetXeroaccounts_Result">
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AutoshipProducts">
+      <EntityTypeMapping TypeName="DevBackupModel1.AutoshipProducts">
+        <MappingFragment StoreEntitySet="AutoshipProducts">
+          <ScalarProperty Name="Bundle" ColumnName="Bundle" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Reviewed" ColumnName="Reviewed" />
+          <ScalarProperty Name="Viewable" ColumnName="Viewable" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="QBId" ColumnName="QBId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="AutoshipPrice" ColumnName="AutoshipPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ssp_AddBundleProducts" FunctionName="DevBackupModel1.Store.ssp_AddBundleProducts" />
+    <FunctionImportMapping FunctionImportName="ssp_GetBundleProducts" FunctionName="DevBackupModel1.Store.ssp_GetBundleProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetBundleProducts_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="AutoshipPrice" ColumnName="AutoshipPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_GetOrderById" FunctionName="DevBackupModel1.Store.ssp_GetOrderById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetOrderById_Result">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+          <ScalarProperty Name="DatePrep" ColumnName="DatePrep" />
+          <ScalarProperty Name="ShipAddress1" ColumnName="ShipAddress1" />
+          <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+          <ScalarProperty Name="ShipState" ColumnName="ShipState" />
+          <ScalarProperty Name="ShipZip" ColumnName="ShipZip" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ShipDate" ColumnName="ShipDate" />
+          <ScalarProperty Name="BillingStreet" ColumnName="BillingStreet" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingZip" ColumnName="BillingZip" />
+          <ScalarProperty Name="AutoshipNote" ColumnName="AutoshipNote" />
+          <ScalarProperty Name="OrderItemID" ColumnName="OrderItemID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="XeropatientId" ColumnName="XeropatientId" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Invoiced" ColumnName="Invoiced" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FreeShipping" ColumnName="FreeShipping" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_XEROUpdateInvoicePaid" FunctionName="DevBackupModel1.Store.ssp_XEROUpdateInvoicePaid" />
+    <EntitySetMapping Name="Admin_ShippingValues">
+      <EntityTypeMapping TypeName="DevBackupModel1.Admin_ShippingValues">
+        <MappingFragment StoreEntitySet="Admin_ShippingValues">
+          <ScalarProperty Name="OrderTotalLimit" ColumnName="OrderTotalLimit" />
+          <ScalarProperty Name="ShippingFee" ColumnName="ShippingFee" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ssp_UpdateOrderNote" FunctionName="DevBackupModel1.Store.ssp_UpdateOrderNote" />
+    <FunctionImportMapping FunctionImportName="ssp_GetManagementPrograms" FunctionName="DevBackupModel1.Store.ssp_GetManagementPrograms">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetManagementPrograms_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="DateEdited" ColumnName="DateEdited" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AdminManagementProgramFee">
+      <EntityTypeMapping TypeName="DevBackupModel1.AdminManagementProgramFee">
+        <MappingFragment StoreEntitySet="AdminManagementProgramFee">
+          <ScalarProperty Name="DateEdited" ColumnName="DateEdited" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ssp_SavePatientManagementPrograms" FunctionName="DevBackupModel1.Store.ssp_SavePatientManagementPrograms" />
+    <FunctionImportMapping FunctionImportName="ssp_GetPatientManagementProgramById" FunctionName="DevBackupModel1.Store.ssp_GetPatientManagementProgramById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetPatientManagementProgramById_Result">
+          <ScalarProperty Name="PatientManagementProgramId" ColumnName="PatientManagementProgramId" />
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_UpdateFreeShipping" FunctionName="DevBackupModel1.Store.ssp_UpdateFreeShipping" />
+    <FunctionImportMapping FunctionImportName="ssp_GetSalesAccountCode" FunctionName="DevBackupModel1.Store.ssp_GetSalesAccountCode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetSalesAccountCode_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="salesAccountCode" ColumnName="salesAccountCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_SaveSalesAccountCode" FunctionName="DevBackupModel1.Store.ssp_SaveSalesAccountCode" />
+    <FunctionImportMapping FunctionImportName="ssp_GetMailChimpCampaign" FunctionName="DevBackupModel1.Store.ssp_GetMailChimpCampaign">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_GetMailChimpCampaign_Result">
+          <ScalarProperty Name="MailChimpCampaignId" ColumnName="MailChimpCampaignId" />
+          <ScalarProperty Name="MailChimpCampaignName" ColumnName="MailChimpCampaignName" />
+          <ScalarProperty Name="MailChimpCampaignListId" ColumnName="MailChimpCampaignListId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ssp_SaveMailChimpCampaign" FunctionName="DevBackupModel1.Store.ssp_SaveMailChimpCampaign" />
+    <FunctionImportMapping FunctionImportName="ssp_DeleteOrderWithReason" FunctionName="DevBackupModel1.Store.ssp_DeleteOrderWithReason" />
+    <FunctionImportMapping FunctionImportName="ssp_XEROGetOrderItemsbyOrderID" FunctionName="DevBackupModel1.Store.ssp_XEROGetOrderItemsbyOrderID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DevBackupModel1.ssp_XEROGetOrderItemsbyOrderID_Result">
+          <ScalarProperty Name="OrderItemID" ColumnName="OrderItemID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DiscountID" ColumnName="DiscountID" />
+          <ScalarProperty Name="DiscountName" ColumnName="DiscountName" />
+          <ScalarProperty Name="Dollar" ColumnName="Dollar" />
+          <ScalarProperty Name="Percent" ColumnName="Percent" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

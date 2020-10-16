@@ -1,0 +1,36 @@
+D:\CodeBase\Emr_Dev_New\CalendarLib\bin\Debug\CalendarLib.dll
+D:\CodeBase\Emr_Dev_New\CalendarLib\bin\Debug\CalendarLib.pdb
+D:\CodeBase\Emr_Dev_New\CalendarLib\bin\Debug\Emrdev.DataLayer.dll
+D:\CodeBase\Emr_Dev_New\CalendarLib\bin\Debug\Emrdev.ViewModelLayer.dll
+D:\CodeBase\Emr_Dev_New\CalendarLib\bin\Debug\EntityFramework.dll
+D:\CodeBase\Emr_Dev_New\CalendarLib\bin\Debug\AutoMapper.dll
+D:\CodeBase\Emr_Dev_New\CalendarLib\bin\Debug\Emrdev.DataLayer.pdb
+D:\CodeBase\Emr_Dev_New\CalendarLib\bin\Debug\Emrdev.DataLayer.dll.config
+D:\CodeBase\Emr_Dev_New\CalendarLib\bin\Debug\Emrdev.ViewModelLayer.pdb
+D:\CodeBase\Emr_Dev_New\CalendarLib\obj\Debug\CalendarLib.csprojResolveAssemblyReference.cache
+D:\CodeBase\Emr_Dev_New\CalendarLib\obj\Debug\CalendarLib.dll
+D:\CodeBase\Emr_Dev_New\CalendarLib\obj\Debug\CalendarLib.pdb
+D:\CodeBase\EMR_Staging\CalendarLib\bin\Debug\CalendarLib.dll
+D:\CodeBase\EMR_Staging\CalendarLib\bin\Debug\CalendarLib.pdb
+D:\CodeBase\EMR_Staging\CalendarLib\bin\Debug\Emrdev.DataLayer.dll
+D:\CodeBase\EMR_Staging\CalendarLib\bin\Debug\Emrdev.ViewModelLayer.dll
+D:\CodeBase\EMR_Staging\CalendarLib\bin\Debug\EntityFramework.dll
+D:\CodeBase\EMR_Staging\CalendarLib\bin\Debug\AutoMapper.dll
+D:\CodeBase\EMR_Staging\CalendarLib\bin\Debug\Emrdev.DataLayer.pdb
+D:\CodeBase\EMR_Staging\CalendarLib\bin\Debug\Emrdev.DataLayer.dll.config
+D:\CodeBase\EMR_Staging\CalendarLib\bin\Debug\Emrdev.ViewModelLayer.pdb
+D:\CodeBase\EMR_Staging\CalendarLib\obj\Debug\CalendarLib.csprojResolveAssemblyReference.cache
+D:\CodeBase\EMR_Staging\CalendarLib\obj\Debug\CalendarLib.dll
+D:\CodeBase\EMR_Staging\CalendarLib\obj\Debug\CalendarLib.pdb
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\bin\Debug\CalendarLib.dll
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\bin\Debug\CalendarLib.pdb
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\bin\Debug\Emrdev.DataLayer.dll
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\bin\Debug\Emrdev.ViewModelLayer.dll
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\bin\Debug\EntityFramework.dll
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\bin\Debug\AutoMapper.dll
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\bin\Debug\Emrdev.DataLayer.pdb
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\bin\Debug\Emrdev.DataLayer.dll.config
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\bin\Debug\Emrdev.ViewModelLayer.pdb
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\obj\Debug\CalendarLib.csprojResolveAssemblyReference.cache
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\obj\Debug\CalendarLib.dll
+D:\CodeBase\Emr_Dev_New - Copy\CalendarLib\obj\Debug\CalendarLib.pdb

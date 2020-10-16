@@ -1,0 +1,1796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8597D4CF-30CD-44AA-8F00-9DE0C18CEAF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Emrdev.DataLayer</RootNamespace>
+    <AssemblyName>Emrdev.DataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=1.0.0.155, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbnormalFlagDesc.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AcuityScheduling.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminManagementProgramFee.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ShippingValues.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AestheticNotes_All_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AffiliatNoMatch_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentResult.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentsSchedule_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentType.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentType_GetByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentType_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment_FollowUp_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment_GetByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment_GetByPatientID_3798_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment_GetByPatientID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApptsByProviderID_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apts_SalesMade_IsNull_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_99_special_detailed_patient_list_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_BloodWork.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_diag.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_FollowUps.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_FollowUp_types.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_GetAllForPatient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_Goals.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_LisfeStyle.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apt_list_per_patient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_Misc.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingAesFollowUps_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingBloodDraws_Kirkland_RangeStrt_asc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingBloodDraws_Kirkland_RangeStrt_desc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingBloodDraws_Lynn_RangeStrt_asc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingBloodDraws_Lynn_RangeStrt_desc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingBloodDraws_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingBloodDraws_Tacoma_RangeStrt_ASC_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingBloodDraws_Tacoma_RangeStrt_desc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingConsults_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingFollowUpsKirkland_asc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingFollowUpsKirkland_desc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingFollowUpsKirkland_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingFollowUpsLynn_asc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingFollowUpsLynn_desc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingFollowUpsLynn_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingFollowUpsTacoma_asc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingFollowUpsTacoma_desc_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingFollowUpsTacoma_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_PendingFollowUps_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_plan.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_rec.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="apt_Symtpoms.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoshipBundleProduct.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoshipCancelReason.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoShipEmailTEmplate.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoshipProduct.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoshipProductGroup.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Autoship_Discounts.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoShip_Patient_Count_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoTicket.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoTicketAlert.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarSettings_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar_Patients_FindIDinactive_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar_Patients_FindID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CallBack.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CallBackQuestion.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CallBackRespons.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Callbacks_old.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Client_log_tbl.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Clinic.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CommonRepository\ContextClass.cs" />
+    <Compile Include="CommonRepository\IRepositary.cs" />
+    <Compile Include="Confirm.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contact_Record_details_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contact_tbl.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contact_tbl_archive.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contact_Type_tbl.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRMWufooLink.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_Attendees.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_Campaigns.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_CampaignType.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_Events.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_Log.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_MarketingActivity.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_MarketingSources.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_MarketingSource_Campaigns.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_MarketingSource_Prospects.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_MarketsourceID.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_Prospects.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_Registrants.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRM_Status.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentStaff.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosisLab.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosisSupplement.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosis_tbl.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dictation_Diagnosis.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dictation_Plan.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dictation_PlanDiagnosis.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Drug.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DrugList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dr_console_rx_3rdParty_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dr_console_rx_active_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dr_console_rx_inactive_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dtproperty.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dt_getpropertiesbyid_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dt_getpropertiesbyid_u_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DUPES1.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplate.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmrdevModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmrdevModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmrdevModel.cs" />
+    <Compile Include="EmrdevModel.Designer.cs">
+      <DependentUpon>EmrdevModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EmrdevModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Event.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventProspect.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exception.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionArchive.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions_GetByDate_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions_GetByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalLab.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalLabList.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalPanel.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUps_GetByAptID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUps_GetByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUps_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUp_Cat.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUp_List_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Frequency.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralClasses\AcuitySchedulingDAL.cs" />
+    <Compile Include="GeneralClasses\AddProspectDAL.cs" />
+    <Compile Include="GeneralClasses\AdminAutoTicketDAL.cs" />
+    <Compile Include="GeneralClasses\AdminDictationDAL.cs" />
+    <Compile Include="GeneralClasses\AdminDrugListDAL.cs" />
+    <Compile Include="GeneralClasses\AdminLabImportDAL.cs" />
+    <Compile Include="GeneralClasses\AdminLabRemindersDAL.cs" />
+    <Compile Include="GeneralClasses\AdminMatchLabDAL.cs" />
+    <Compile Include="GeneralClasses\AdminResellerDAL.cs" />
+    <Compile Include="GeneralClasses\AdminSuppListDAL.cs" />
+    <Compile Include="GeneralClasses\AllergeDAL.cs" />
+    <Compile Include="GeneralClasses\AppointmentConsoleDAL.cs" />
+    <Compile Include="GeneralClasses\AppointmentsDAL.cs" />
+    <Compile Include="GeneralClasses\AptFollowUpsDAL.cs" />
+    <Compile Include="GeneralClasses\AutoshipCancelReasonDAL.cs" />
+    <Compile Include="GeneralClasses\AutoshipProductDAL.cs" />
+    <Compile Include="GeneralClasses\AutoshipReportUtilDAL.cs" />
+    <Compile Include="GeneralClasses\CalendarDAL.cs" />
+    <Compile Include="GeneralClasses\CampaignTypeDAL.cs" />
+    <Compile Include="GeneralClasses\ContactDAL.cs" />
+    <Compile Include="GeneralClasses\ContactPrintDAL.cs" />
+    <Compile Include="GeneralClasses\CriticalTaskDAL.cs" />
+    <Compile Include="GeneralClasses\CRMdashboardDAL.cs" />
+    <Compile Include="GeneralClasses\CRMEventsDAL.cs" />
+    <Compile Include="GeneralClasses\CrmProspectDAL.cs" />
+    <Compile Include="GeneralClasses\DepartmentDAL.cs" />
+    <Compile Include="GeneralClasses\DepartmentStaffDAL.cs" />
+    <Compile Include="GeneralClasses\EmailTemplateDAL.cs" />
+    <Compile Include="GeneralClasses\EndMedicalDAL.cs" />
+    <Compile Include="GeneralClasses\FollowupTypesDAL.cs" />
+    <Compile Include="GeneralClasses\IntakeDAL.cs" />
+    <Compile Include="GeneralClasses\IntakeHormoneDAL.cs" />
+    <Compile Include="GeneralClasses\LabAddDAL.cs" />
+    <Compile Include="GeneralClasses\LabLaunchDAL.cs" />
+    <Compile Include="GeneralClasses\LabLogDAL.cs" />
+    <Compile Include="GeneralClasses\LabPatientsDAL.cs" />
+    <Compile Include="GeneralClasses\LabReportDAL.cs" />
+    <Compile Include="GeneralClasses\LabScehduleGroupsDAL.cs" />
+    <Compile Include="GeneralClasses\LabsDAL.cs" />
+    <Compile Include="GeneralClasses\LandingPageDAL.cs" />
+    <Compile Include="GeneralClasses\LMCBaseDAL.cs" />
+    <Compile Include="GeneralClasses\MailChimpCampaignDAL.cs" />
+    <Compile Include="GeneralClasses\ManageDAL.cs" />
+    <Compile Include="GeneralClasses\NewTicketNoPatientDAL.cs" />
+    <Compile Include="GeneralClasses\OfficeVisitUpdate_ShortDAL.cs" />
+    <Compile Include="GeneralClasses\OldVisitDAL.cs" />
+    <Compile Include="GeneralClasses\OneTimeSaleDAL.cs" />
+    <Compile Include="GeneralClasses\OrderDAL.cs" />
+    <Compile Include="GeneralClasses\PanelDAL.cs" />
+    <Compile Include="GeneralClasses\PatientDAL.cs" />
+    <Compile Include="GeneralClasses\PatientInfoDAL.cs" />
+    <Compile Include="GeneralClasses\PatientVitalsDAL.cs" />
+    <Compile Include="GeneralClasses\PendingFollowupDAL.cs" />
+    <Compile Include="GeneralClasses\PendingMedRecordsDAL.cs" />
+    <Compile Include="GeneralClasses\PendingPrescriptionAproveDAL.cs" />
+    <Compile Include="GeneralClasses\PrescriptionDAL.cs" />
+    <Compile Include="GeneralClasses\ProblemListDAL.cs" />
+    <Compile Include="GeneralClasses\ProfileItemDAL.cs" />
+    <Compile Include="GeneralClasses\ProtocolDAL.cs" />
+    <Compile Include="GeneralClasses\ProviderDAL.cs" />
+    <Compile Include="GeneralClasses\QBCustMatchPatientDAL.cs" />
+    <Compile Include="GeneralClasses\RecurringAppointmentDAL.cs" />
+    <Compile Include="GeneralClasses\RenewalExceptionDAL.cs" />
+    <Compile Include="GeneralClasses\RenewalPackagesDAL.cs" />
+    <Compile Include="GeneralClasses\ScanUploadsDAL.cs" />
+    <Compile Include="GeneralClasses\SearchResultDAL.cs" />
+    <Compile Include="GeneralClasses\SeminarScheduleDAL.cs" />
+    <Compile Include="GeneralClasses\SiteDAL.cs" />
+    <Compile Include="GeneralClasses\SpecialAttentionDAL.cs" />
+    <Compile Include="GeneralClasses\StaffDAL.cs" />
+    <Compile Include="GeneralClasses\SurveyResultDAL.cs" />
+    <Compile Include="GeneralClasses\SymptomDAL.cs" />
+    <Compile Include="GeneralClasses\TicketManageDAL.cs" />
+    <Compile Include="GeneralClasses\XeroAPIDAL.cs" />
+    <Compile Include="GeneralClasses\XeroPatientsDAL.cs" />
+    <Compile Include="GetBlankTime_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPatientById_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProfileException_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Get_Lab_Drilldown_Record_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Get_lab_ObservationResultDetailSegments_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Get_Lab_Report_Short_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GoalItem.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GroupRange.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GroupRangeSupplement.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hospitalization.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InsertUpdateTicketClose_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_allergies.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_goals.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_habits.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_hormone_review.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_master_index.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_medical_history.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_personal_info.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_prescriptions.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_recent_tests.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_supplements.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_surgeries.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="intake_form_symptoms.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IVRTemplate.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Journal_Main.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Journal_tags.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabLog.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="labNotesAndCommentsSegmentsDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_ConditionDetails.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_Conditions.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_Data.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_GetGroupsByName_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_GetPanelsByName_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_GetResultsByName_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_GetTestsByStartLetter_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_Groups.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_GroupsGetByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_GroupsGetTests_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_GroupsGet_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_Panels.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_PanelsGetGroups_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_Panels_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_Results.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_Tests.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_Triggers.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports_TriggersGroups.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabRequests_RequestPanels.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabRequests_Requests.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabRequests_RequestTests.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabRequest_Panels.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabRequest_Tests.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabScehdule_Groups.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabSchedule_Tests.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Labs_UnmatchedLabs_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LabTicketLog.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_AcknowledgementSegments.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_AddressDetails.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_CommonOrderSegments.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_DiagnosisSegments.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_GetAllLabsForPatient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_GetAllLabsForPatient_w_Name_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_GuarantorSegments.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_InsuranceSegments.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_LabList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_Last35_Reports_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_Messages.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_NotesAndCommentsSegments.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_ObservationResultDetailSegments.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_OrderSegmentDetails.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_Patients.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_QuestPatient_Match_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lab_Weeks_Reports_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalHistory.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalNotes_All_History_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalNotes_All_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModifiedSupp.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="My_FollowUpList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NoMail.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeLocations_tbl.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OneTimeSale.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderItem.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderItems_GetBatch_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderItems_GetOrder_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_GetBatch_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_GetByPatient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_GetCancelled_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_GetOpenByPatient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_GetOpen_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_GetOrderbystatusAutoship_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_GetOrderbystatus_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_GetOrderForShipped_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_GetToClose_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_GetUnInvoiced_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientList.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientPackage.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientProgramManagementFee.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientQuestionAnwerSurvey.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsurveyQuestion.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patients_CriticalTasks.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patients_CriticalTasksGetOne_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patients_CriticalTasksGetTypes_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patients_CriticalTasksGet_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patients_CriticalTaskType.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patients_GetAllPatient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patients_GetByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patients_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patients_w_Contact_EntriesToday_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_Details_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_GoalItems.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_GoalItemType.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_Goals.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_List_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_mrkting_src.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_Vitals.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pending_Prescriptions_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Potential.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescipt_Details_PrintOut_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescipt_Details_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescipt_Last5Days_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescipt_Today_0_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescipt_Today_1_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescipt_Today_2_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescipt_Today_3_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescipt_Today_4_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescription.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescriptions_Todays_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PresscriptionSupp.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPrescriptions_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Problem_Diagnosis_Appointment.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Problem_Diagnosis_join.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Problem_MiscDiagnosis_join.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Problem_Symptom_join.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProbList_DiagLookup_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProbList_SympLookup_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileException.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileExceptions_GetByPatient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileException_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileItem.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileItemsOrders_GetByPatient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileItemsOrders_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileItems_GetFuture_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileItems_GetHoldFuture_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileItems_GetTree_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileItem_GetByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileItem_Ship_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressReview_Goals_list_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prospect.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Protocol.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Protocols_diagn_join.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Protocols_Show_DiagnosisID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Protocols_Show_Diagnosis_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Protocols_Show_SymptomID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Protocols_Show_Symptom_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Protocols_sympt_join.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Provider.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Providers_GetAllProviders_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Providers_GetManage_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Providers_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Provider_GetByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QBEmrSetting.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QB_CreditMemoLine.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QB_Customers.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QB_Invoice1.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QB_Invoices.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QB_Item.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QB_Match.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QB_NoMatch.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Recur.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Recur_GetByApptID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportList.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reseller.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResellerContact.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResellerEvent.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResellerMarketingSource.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResellerStatu.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Results_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAccountCode.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sat_Survey.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sat_SurveyResults_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler_Panels_Master_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler_Patient_Master_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler_Provider_Master_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Seminar_list.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShareFile.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SharePointPatients.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialAttentionFlag.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetAllEmployee_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SplitNew_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Split_Comma_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Split_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetDrugList1_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetDrugListNew_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetDrugList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_AdminImportTestList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_AnestheticDetail_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_Appointment_FollowUp_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_BindRangeListBox_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_CriticalTask_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_CRMDashBoardStatistic_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_DeleteDictationPlan_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetAdminLabReport_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetAdminResellersData_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetAllProspect_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetAnestheticFollowup_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetAppointments_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetAptdatesList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetAptWithAptIDforDoctorConsole_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_Getapt_Followups_Type_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetAutoshipOneTimeOrderDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetAutoShipPrescription_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetBundleProducts_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetCalStatusList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetCalStatusLogByPatient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetClosedSupplementsDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetClosePrescriptionDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetConditionBytriggerID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetContactDetailsFromMultipleTable_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetContactList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetContactPrints_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetContactTblByFollowupId_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetContactTblDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetCreatedClosedCal_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetCreatedClosed_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetCriticalTask_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetCrm_Campaign_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetCurrentAptFordoctorConsole_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetDepartmentStaffDetailsByDeptId_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetDepartmentStaff_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetDepartments_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetDiagnosisByProtocolId_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetDiagnosisDetailsList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetDiagnosisDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetDiagnosisList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetDictationPlanByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetDruglist_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetDruglist_Result1.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetEmployeebyDepartmentID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetEndMedicalList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetFollowupTypesList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetGroupsByPanelID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetGroupsTriggerByPanelID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetGroupTickets_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetICDCodesWithSuppliments_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetICDCodes_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_Getintakeprescription_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetInvoiceDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetLabAddress_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetLabDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetLabReminderDiagnosis_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetLabReminderSymptoms_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetLabReportPanel_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetLabReport_PanelsGroupsTests_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetLabScheduleDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetLast5DaysPrescriptions_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetMailChimpCampaign_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetManagementPrograms_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetMatchLab_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetMedNotesDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetMedNotes_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetModifiedPrescribedAutoshipList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetMyActiveCalendar_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetMyActive_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetNewSupplementDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetOfficeVistitDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetOrderById_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetOrderSuppDatePrescibed_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetOVUList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetOVUoldList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientAssIcdCodes_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientDetailById_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientIcdCodesSuppliments_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientIcdCodes_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientListForAppointmentDate_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientManagementProgramById_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientMiscDiag_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientQuickBookList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientSearchResult_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientSymptDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatientvitals_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatient_MiscDiag_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPatient_ProblemSymptoms_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPendingBloodDrawsListByClinic_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPendingBloodDrawsList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPendingConsultList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPendingConsults_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPendingFollowUpListByPatient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPendingFollowUpList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPendingMedRecords_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPendingPrescriptionList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPendingSupplementList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPostSeminarAppointments_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPrescriptionAprove_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPrescriptionDrugsDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPrescriptionSuppAprove_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetPrescription_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetProblemDiagByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetProblemDiagnosis_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetProblemMiscDiagByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetProblemSymtoms_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetProblem_Appointment_Diagnosis_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetProductDetailsForOrderitems_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetQBMatchByPatientId_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetQBMatch_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetQuickBookList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetRellersList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetReportList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetReportType_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetResellerDataForDropDown_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetSaleRep_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetSalesAccountCode_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetScheduleBloodDraw_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetScheduleConsult_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetScheduleFollowUp_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetSellerContacts_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetSharePointPatientsById_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetSpecial99Apt_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetSpecialAttentionByPatientId_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetstaffForDepartments_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetStaffLogins_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetStaffProtocolList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetSupplementsDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetSymptomsByProtocolId_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetSymptomsDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetTestByGroupID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetTestLabDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetTriggersByPanelID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetUploadDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetUploadDocs_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetVindex_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetVitalDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_GetXeroaccounts_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_Get_Attendent_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_grdMyTicketsDataCal_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_grdMyTicketsData_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_InsertLabReportTestForGroup_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ListSharePointPatients_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_lstApt_Goals_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_lstApt_Symptoms_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_lstGoals_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_lstSymptoms_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_PatientInfoByPatientId_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_PatientTicketByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_PendingFollowup_ByClinic_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_PopulateDiagList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_PopulateLabsList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_PopulateSymptomList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_PrescriptionHistory_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_PreviewRecurringAppointment_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ProfileItems_GetTree_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ReportDailyShipment_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ReportGraphCRmEventProspect_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ReportGraphCRmProspectPatient_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ReportGraphCRmProspect_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ReportProspectFollowup_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ReportProspect_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_Report_GetOVUForm_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_Report_GetOVUSymptomForm_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_Report_OpenInvoice_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_Report_PatientAll_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_Report_PatientInfo_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_SearchPatientDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ShortReportPage_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ShowGoalDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ShowQBInvoiceDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_ShowSymtomDetails_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_SouthPatientList_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_SupplementHistory_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_XEROGetOrderItemsbyOrderID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_XEROGetOrdersbyOrderIDnew_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_XEROGetpatientsnotMatch_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ssp_XEROpatientsMatchedSearch_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Staff_GetByID_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Staff_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Status.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusProvider.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Status_Get_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplement.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplement_Patient_RX_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplement_Patient_RX_todays_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplement_RX.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Symptom.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SymptomLab.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SymptomSupplement.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Symptom_Diagn_join.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEMP.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TestSP_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets_GetDepartmentAssigned_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets_Manage.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets_MyTickets_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trace_092007.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="train_module.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="train_profile.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="train_profile2module.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="train_user2profile.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="train_user_completed.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transcription.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UploadTag.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Upload_tbl.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Visit.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklyHours_Result.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wellness_quotient.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WordWrap.cs" />
+    <Compile Include="XeroAccount.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XeroCredential.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XeroLog.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XeroPatient.cs">
+      <DependentUpon>EmrdevModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="EmrdevModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EmrdevModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EmrdevModel.edmx.diagram">
+      <DependentUpon>EmrdevModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Emrdev.ViewModelLayer\Emrdev.ViewModelLayer.csproj">
+      <Project>{bacd1f94-12d7-464d-a7d6-d40c6bee92ca}</Project>
+      <Name>Emrdev.ViewModelLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EmrdevModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmrdevModel.edmx</DependentUpon>
+      <LastGenOutput>EmrdevModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EmrdevModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmrdevModel.edmx</DependentUpon>
+      <LastGenOutput>EmrdevModel1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

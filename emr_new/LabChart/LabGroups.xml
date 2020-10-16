@@ -1,0 +1,494 @@
+<groups>
+  <group SortOrder="10" name="[SEX HORMONES] FREE TESTOSTERONE">
+	<TestName>FREE TESTOSTERONE</TestName>
+	<TestName>TESTOSTERONE, FREE </TestName>
+	<TestName>TESTOSTERONE FREE </TestName>
+	<TestName>TESTOSTERONE FR</TestName>
+	<TestName>TESTOSTERONE,  FREE </TestName>
+	<TestName>Free Testosterone Panel</TestName>
+    <TestName>Free Testosterone Panel (Calculation)</TestName>
+  </group>
+  <group SortOrder="20" name="TESTOSTERONE, TOTAL">
+	<TestName>TESTOSTERONE TOT</TestName>
+	<TestName>TESTOSTERONE, TOTAL</TestName>
+	<TestName>TESTOSTERONE, TOTAL (MALE)</TestName>
+	<TestName>Testosterone,  Total</TestName>
+	<TestName>Testosterone, Total</TestName>
+	<TestName>Testosterone, Total c</TestName>
+  </group>
+  <group SortOrder="30" name="SEX HORMONE BINDING GLOBULIN">
+	<TestName>SEX HORMONE BINDING GLOBULIN</TestName>
+	<TestName>SHBG</TestName>
+	<TestName>Sex Horm Binding Glob, Serum</TestName>
+	<TestName>Sex Hormone Binding Globulin (SHBG)</TestName>
+  </group>
+  <group SortOrder="40" name="HP ALBUMIN">
+	<TestName>ALBUMIN (HP)</TestName>
+  </group>
+  <group SortOrder="50" name="DIHYDROTESTOSTERONE">
+	<TestName>DIHYDROSTESTOSTERONE</TestName>
+	<TestName>DHT</TestName>
+	<TestName>DIHYDROTESTOSTERONE</TestName>
+  </group>
+  <group SortOrder="60" name="PSA">
+	<TestName>PSA</TestName>
+	<TestName>PSA SCRN</TestName>
+	<TestName>PSA, TOTAL</TestName>
+	<TestName>PSA, total</TestName>
+	<TestName>TOTAL PSA</TestName>
+	<TestName>Prostate Specific Ag, Serum</TestName>
+
+  </group>
+  <group SortOrder="70" name="FREE PSA">
+	<TestName>PSA, FREE</TestName>
+	<TestName>PSA, Free</TestName>
+	<TestName>FREE PSA</TestName>
+  </group>
+  <group SortOrder="80" name="% FREE PSA">
+	<TestName>% Free PSA </TestName>
+	<TestName>PSA, % FREE</TestName>
+  </group>
+  <group SortOrder="90" name="DHEA SULFATE">
+	<TestName>DHEA S</TestName>
+	<TestName>DHEAS</TestName>
+	<TestName>DHEA S</TestName>
+	<TestName>DHEA-S</TestName>
+	<TestName>DHEA SULFATE</TestName>
+	<TestName>DHEA-Sulfate</TestName>
+  </group>
+  <group SortOrder="100" name="ESTRADIOL">
+	<TestName>ESTRADIOL, ADULT FEMALE</TestName>
+	<TestName>ESTRADIOL (MHP)</TestName>
+	<TestName>ESTRADIOL, ORAL HRT, RIA</TestName>
+	<TestName>ESTDL</TestName>
+	<TestName>ESTRADIOL (E2)</TestName>
+	<TestName>ESTRADIOL (FHP)</TestName>
+	<TestName>Estradiol (FHP)c</TestName>
+	<TestName>Estradiol</TestName>
+	<TestName>Estradiol (MHP)c</TestName>
+  </group>
+  <group SortOrder="110" name="PROGESTERONE">
+	<TestName>PROGESTERONE</TestName>
+	<TestName>Progesterone</TestName>
+  	<TestName>Progesterone (FHP)</TestName>
+  	<TestName>Progesterone (MHP)</TestName>
+  </group>
+  <group SortOrder="120" name="PREGNENOLONE">
+	<TestName>PREGNENOLONE</TestName>
+	<TestName>PREGNENOLONE, LC/MS/MS</TestName>
+	<TestName>Pregnenolone</TestName>
+	<TestName>Pregnenolone, MS</TestName>
+  </group>
+  <group SortOrder="130" name="IGF-1">
+	<TestName>IGF-1</TestName>
+  <TestName>Insulin-Like Growth Factor I</TestName>
+	<TestName>Insulin Like Growth Factor-1 (IGF-1)</TestName>
+	<TestName>IGF1</TestName>
+	<TestName>IGF-I</TestName>
+  </group>
+  <group SortOrder="135" name="IGF-1a">
+  <TestName>Insulin Like Growth Factor-1a  (IGF-1)</TestName>
+  </group>
+  <group SortOrder="136" name="IGF-1c">
+  <TestName>Insulin Like Growth Factor-1c (IGF-1)</TestName>
+  </group>
+  <group SortOrder="140" name="IGF BINDING PROTEIN 3 (IGFBP-3)">
+	<TestName>IGF BINDING PROTEIN 3 (IGFBP 3)</TestName>
+	<TestName>IGF BINDING PROTEIN-3</TestName>
+	<TestName>Insulin Like Growth Factor BP-3</TestName>
+  </group>
+  <group SortOrder="150" name="FSH">
+	<TestName>FSH</TestName>
+  </group>
+  <group SortOrder="160" name="PROLACTIN">
+	<TestName>PROLACTIN</TestName>
+	<TestName>Prolactin</TestName>
+  </group>
+  <group SortOrder="170" name="[THYROID HORMONES] TSH">
+	<TestName>TSH</TestName>
+	<TestName>TSH, 3RD GENERATION</TestName>
+	<TestName>Thyroid Stimulating Hormone</TestName>
+	<TestName>THYROID STIMULATING HORMONE</TestName>
+	<TestName>THYROID STIMULATING HORMONE, HIGHLY SENSITIVE</TestName>
+	<TestName>Thyroid Stimulating Hormone (TSH)</TestName>
+  </group>
+  <group SortOrder="190" name=" FREE T3">
+	<TestName>FREE T3</TestName>
+	<TestName>FT3</TestName>
+	<TestName>Free T3</TestName>
+	<TestName> T3, Free</TestName>
+	<TestName>T3, FREE</TestName>
+	<TestName>Triiodothyronine (T3), Free</TestName>
+  </group>
+  <group SortOrder="180" name=" FREE T4">
+	<TestName>FREE T4</TestName>
+	<TestName>T-4, FREE</TestName>
+	<TestName>FT4</TestName>
+	<TestName>Free T4</TestName>
+	<TestName>T-4, (THYROXINE) FREE</TestName>
+	<TestName>T-4, Free</TestName>
+	<TestName>Free T4 </TestName>
+	<TestName>T4,Free(Direct)</TestName>
+  </group>
+  <group SortOrder="200" name="ANTI THYROGLOBULIN ANTIBODIES">
+	<TestName>THYROGLOBULIN ANTIBODIES</TestName>
+        <TestName>Thyroglobulin Antibody</TestName>
+	<TestName>THYROGLOBULIN AB</TestName>
+	<TestName>Anti-TG</TestName>
+	<TestName>ANTI-TG</TestName>
+	<TestName>Anti-Thyroglobulin</TestName>
+	<TestName>Thyroglobulin, Antibody</TestName>
+  </group>
+  <group SortOrder="210" name="ANTI THYROPEROXIDASE ANTIBODIES">
+	<TestName>THYROID PEROXIDASE ANTIBODIES</TestName>
+	<TestName>Anti-TPO</TestName>
+	<TestName>ANTI-TPO</TestName>
+	<TestName>Thyroid Peroxidase (TPO) Ab</TestName>
+  </group>
+  <group SortOrder="220" name=" REVERSE T3">
+	<TestName>T3, REVERSE</TestName>
+	<TestName>REVERSE T3</TestName>
+	<TestName>Reverse T3, Serum</TestName>
+  </group>
+  <group SortOrder="230" name="[CARDIAC RISK] TRIGLYCERIDES">
+	<TestName>TRIGLYCERIDE</TestName>
+	<TestName>TRIGLYCERIDES</TestName>
+	<TestName>TRIGLYCERIDES-DIRECT</TestName>
+	<TestName>Triglyceride</TestName>
+	<TestName>Triglycerides</TestName>
+  </group>
+  <group SortOrder="240" name=" TOTAL CHOLESTEROL">
+	<TestName>CHOLESTEROL</TestName>
+	<TestName>CHOLESTEROL, TOTAL</TestName>
+	<TestName>SUM TOTAL CHOLESTEROL</TestName>
+	<TestName>Cholesterol</TestName>
+	<TestName>Total Cholesterol - CEQ</TestName>
+	<TestName>Total Cholesterol</TestName>
+  </group>
+  <group SortOrder="280" name="TOTAL LDL-CHOLESTEROL-MEASURED">
+	<TestName>TOTAL LDL-CHOLESTEROL DIRECT</TestName>
+	<TestName>LDL CHOLESTEROL, DIRECT</TestName>
+	<TestName>SUM TOTAL LDL-C</TestName>
+	<TestName>LDL, Direct</TestName>
+	<TestName>LDL DIRECT</TestName>
+	<TestName>LDL-CEQ</TestName>
+  </group>
+  <group SortOrder="260" name="HDL CHOLESTEROL">
+	<TestName>HDL CHOLESTEROL</TestName>
+	<TestName>HDL</TestName>
+	<TestName>HDL-Cholesterol</TestName>
+	<TestName>TOTAL HDL-CHOLESTEROL DIRECT</TestName>
+	<TestName>TOTAL HDL-C DIRECT</TestName>
+	<TestName>HDL - Cholesterol</TestName>
+	<TestName>HDL - CEQ</TestName>
+  </group>
+  <group SortOrder="270" name="LDL CHOLESTEROL (CALC)">
+	<TestName>LDL-CHOLESTEROL</TestName>
+	<TestName>LDL (Calculated)</TestName>
+	<TestName>LDL (Calc)</TestName>
+	<TestName>LDL CHOLESTEROL</TestName>
+	<TestName>LDL Cholesterol (Calc)</TestName>
+	<TestName>LDL</TestName>
+	<TestName>LDL (CALC)</TestName>
+	<TestName>LDL-Cholesterol (calc)</TestName>
+	<TestName>LDL Cholesterol Calc</TestName>
+  </group>
+  <group SortOrder="280" name="CHOL/HDL RATIO">
+	<TestName>CHOL/HDL RATIO (CALC)</TestName>
+	<TestName>CHOL/HDL RATIO</TestName>
+	<TestName>CHOL/HDLC RATIO</TestName>
+	<TestName>TC/HDL RATIO</TestName>
+	<TestName>CHL/H</TestName>
+	<TestName>CHOL/HDL Ratio (calc)</TestName>
+	<TestName>Cholesterol/HDL</TestName>
+  </group>
+  <group SortOrder="290" name="LP(a) CHOLESTEROL">
+	<TestName>LP(a) CHOLESTEROL</TestName>
+	<TestName>Liproprotein(a)</TestName>
+	<TestName>Liproprotein (a)</TestName>
+	<TestName>LIPOPROTEIN (a) </TestName>
+  </group>
+  <group SortOrder="300" name="Lp-PLA2">
+	<TestName>LP PLA2 (PLACTM)</TestName>
+	<TestName>LP-PLA2</TestName>
+	<TestName>PLAC </TestName>
+	<TestName>Lp-PLA2</TestName>
+  </group>
+  <group SortOrder="310" name="HOMOCYSTEINE">
+	<TestName>HOMOCYSTEINE, CARDIOVASCULAR</TestName>
+	<TestName>HOMOCYSTEINE-CARDIO</TestName>
+	<TestName>HOMOCYSTEINE SER</TestName>
+	<TestName>Homocysteine, plasma</TestName>
+	<TestName>Homocysteine-cardio</TestName>
+	<TestName>Homocysteine</TestName>
+	<TestName>HOMOCYSTEINE SERUM</TestName>
+	<TestName>HOMOCYSTEINE</TestName>
+	<TestName>Homocyst(e)ine</TestName>
+  </group>
+  <group SortOrder="320" name="H-S CRP">
+	<TestName>CARDIO CRP</TestName>
+	<TestName>HIGH SENSITIVITY CRP</TestName>
+	<TestName>C-REACTIVE PROTEIN</TestName>
+	<TestName>CRP</TestName>
+	<TestName>CRP, cardiac risk</TestName>
+	<TestName>CARDIO CRP(R)</TestName>
+	<TestName> CRP, CARD RISK</TestName>
+	<TestName>High Sensitivity CRP</TestName>
+	<TestName> CRP, High Sensitivity </TestName>
+	<TestName>CRPss</TestName>
+	<TestName>C-Reactive Protein, Cardiac</TestName>
+  </group>
+  <group SortOrder="330" name="FIBRINOGEN">
+	<TestName>FIBRINOGEN</TestName>
+	<TestName>Fibrinogen</TestName>
+  </group>
+  <group SortOrder="340" name="[SUGAR METABOLISM] GLUCOSE">
+	<TestName>GLUCOSE</TestName>
+	<TestName>GLUCOSE FASTING</TestName>
+	<TestName>Glucose, Fasting</TestName>
+	<TestName>GLUCOSE, FASTING</TestName>
+	<TestName>GLUCOSE, FASTING (P)</TestName>
+	<TestName>Glucose</TestName>
+  </group>
+  <group SortOrder="350" name="GL GLUCOSE">
+	<TestName>GL Glucose</TestName>
+        <TestName>Glucose Glucola</TestName>
+  </group>
+  <group SortOrder="360" name="INSULIN">
+	<TestName>INSULIN</TestName>
+	<TestName>Insulin</TestName>
+	<TestName>Insulin, Fasting</TestName>
+	<TestName>INSULIN, FASTING</TestName>
+  </group>
+  <group SortOrder="370" name="GL INSULIN">
+	<TestName>GL Insulin</TestName>
+	<TestName>Insulin Glucola</TestName>	
+  </group>
+  <group SortOrder="380" name="HEMOGLOBIN A1c">
+	<TestName>HBA1C</TestName>
+	<TestName>HA1c</TestName>
+	<TestName> HEMOGLOBIN A1c </TestName>
+	<TestName>HbA1c</TestName>
+	<TestName>Hgb A1c</TestName>
+	<TestName>Hb A1c</TestName>
+	<TestName>HgbA1c</TestName>
+	<TestName>HGB A1C</TestName>
+	<TestName>Hemoglobin A1c</TestName>
+  </group>
+  <group SortOrder="390" name="[CMP] BLOOD UREA NITROGEN">
+	<TestName>UREA NITROGEN</TestName>
+	<TestName>Bld Urea Nitrogen</TestName>
+	<TestName>UREA NITROGEN (BUN)</TestName>
+	<TestName>Blood Urea Nitrogen</TestName>
+  </group>
+  <group SortOrder="400" name="CREATININE">
+	<TestName>CREATININE</TestName>
+	<TestName>Creatinine</TestName>
+  </group>
+  <group SortOrder="410" name="EGFR">
+	<TestName>EGFR NON-AFR. AMERICAN</TestName>
+	<TestName>EST GFR</TestName>
+	<TestName>GFR FEMALE (EST)</TestName>
+	<TestName>GFR MALE (EST)</TestName>
+	<TestName>GLOMERULAR FILT.RATE ESTIMATE</TestName>
+	<TestName>eGFR</TestName>
+	<TestName> eGFR (Non-African Americans)</TestName>
+	<TestName>eGFR (African Americans)</TestName>
+	<TestName>EGFR AFRICAN AMERICAN</TestName>
+	<TestName>GFR FEMALE (AA)</TestName>
+	<TestName>GFR MALE (AA)</TestName>
+  </group>
+  <group SortOrder="420" name="SODIUM">
+	<TestName>SODIUM</TestName>
+	<TestName>Sodium</TestName>
+  </group>
+  <group SortOrder="430" name="POTASSIUM">
+	<TestName>POTASSIUM</TestName>
+	<TestName>Potassium</TestName>
+  </group>
+  <group SortOrder="440" name="CHLORIDE">
+	<TestName>CHLORIDE</TestName>
+	<TestName>Chloride</TestName>
+  </group>
+  <group SortOrder="450" name="CO2">
+	<TestName>CO2</TestName>
+	<TestName>CARBON DIOXIDE</TestName>
+  </group>
+  <group SortOrder="460" name="TOTAL CALCIUM">
+	<TestName>CALCIUM</TestName>
+	<TestName>CALCIUM (SERUM)</TestName>
+	<TestName>Calcium (Serum)</TestName>
+	<TestName>CALCIUM, SERUM</TestName>
+	<TestName>Calcium (Total)</TestName>
+	<TestName>Calcium</TestName>
+  </group>
+  <group SortOrder="470" name="IONIZED CALCIUM">
+	<TestName>CALCIUM, IONIZED, SERUM</TestName>
+	<TestName>CALCIUM, IONIZED</TestName>
+	<TestName>Ionized Calcium</TestName>
+  </group>
+  <group SortOrder="480" name=" TOTAL PROTEIN ">
+	<TestName>PROTEIN, TOTAL</TestName>
+	<TestName>Total Protein</TestName>
+	<TestName> Protein, Total</TestName>
+  </group>
+  <group SortOrder="490" name="ALBUMIN">
+	<TestName>ALBUMIN,SERUM</TestName>
+	<TestName>ALBUMIN</TestName>
+	<TestName>Albumin</TestName>
+  </group>
+  <group SortOrder="500" name="GLOBULIN">
+	<TestName>GLOBULIN</TestName>
+	<TestName>GLOBULIN, TOTAL</TestName>
+	<TestName>Globulin</TestName>
+  </group>
+  <group SortOrder="510" name="ALBUMIN/GLOBULIN RATIO">
+	<TestName>ALBUMIN/GLOBULIN RATIO</TestName>
+	<TestName>A/G RATIO</TestName>
+	<TestName>Albumin/Globulin RATIO</TestName>
+  </group>
+  <group SortOrder="520" name="TOTAL BILIRUBIN">
+	<TestName>BILIRUBIN, TOTAL</TestName>
+	<TestName>TOTAL BILIRUBIN</TestName>
+	<TestName>Total Bilirubin</TestName>
+	<TestName>BILI TOTAL </TestName>
+	<TestName> Bilirubin</TestName>
+	<TestName> BILIRUBIN</TestName>
+	<TestName>Bilirubin, Total </TestName>
+  </group>
+  <group SortOrder="530" name="ALKALINE PHOSPHATASE">
+	<TestName>ALK PHOS</TestName>
+	<TestName>ALKALINE PHOSPHATASE</TestName>
+	<TestName>ALK PHOSPH</TestName>
+	<TestName>Alkaline Phosphatase</TestName>
+  </group>
+  <group SortOrder="540" name="AST">
+	<TestName>AST</TestName>
+	<TestName>AST (SGOT)</TestName>
+	<TestName>SGOT (AST)</TestName>
+	<TestName>SGOT/AST</TestName>
+  </group>
+  <group SortOrder="550" name="ALT">
+	<TestName>ALT</TestName>
+	<TestName>ALT (SGPT)</TestName>
+	<TestName>SGPT (ALT)</TestName>
+	<TestName>SGPT/ALT</TestName>
+  </group>
+  <group SortOrder="560" name="[IRON STUDIES] FERRITIN">
+	<TestName> FERRITIN</TestName>
+	<TestName>Ferritin</TestName>
+  </group>
+  <group SortOrder="570" name="SERUM IRON">
+	<TestName>IRON, TOTAL</TestName>
+	<TestName>Iron</TestName>
+  </group>
+  <group SortOrder="580" name="% SATURATION">
+	<TestName>% SATURATION </TestName>
+	<TestName>% Iron Saturation</TestName>
+  </group>
+  <group SortOrder="590" name="TOTAL IRON BINDING CAPACITY">
+	<TestName>IRON BINDING CAPACITY</TestName>
+	<TestName>TIBC</TestName>
+  </group>
+  <group SortOrder="600" name="[CBC] HEMATOCRIT">
+	<TestName>HEMATOCRIT</TestName>
+	<TestName>HCT %</TestName>
+	<TestName>HCT</TestName>
+  </group>
+  <group SortOrder="610" name="HEMOGLOBIN">
+	<TestName>HEMOGLOBIN</TestName>
+	<TestName>HGB</TestName>
+  </group>
+  <group SortOrder="620" name=" RBC">
+	<TestName>RBC</TestName>
+	<TestName>RED BLOOD CELL COUNT</TestName>
+  </group>
+  <group SortOrder="630" name="MCV">
+	<TestName>MCV</TestName>
+  </group>
+  <group SortOrder="640" name="MCH">
+	<TestName>MCH</TestName>
+  </group>
+  <group SortOrder="650" name="MCHC">
+	<TestName>MCHC</TestName>
+  </group>
+  <group SortOrder="660" name="RDW">
+	<TestName>RDW</TestName>
+  </group>
+  <group SortOrder="670" name="PLATELETS">
+	<TestName>PLATELET COUNT</TestName>
+	<TestName>PLATELETS</TestName>
+  </group>
+  <group SortOrder="680" name="WBC">
+	<TestName>WBC</TestName>
+	<TestName>WHITE BLOOD CELL COUNT</TestName>
+  </group>
+  <group SortOrder="690" name="NEUTROPHILS, ABSOLUTE">
+	<TestName>NEUTROPHILS, ABSOLUTE</TestName>
+	<TestName>NEUTROPHILS</TestName>
+	<TestName>Neutrophils (Absolute)</TestName>
+  </group>
+  <group SortOrder="700" name="[CBC] LYMPHOCYTES, ABSOLUTE">
+	<TestName>LYMPHOCYTES, ABSOLUTE</TestName>
+	<TestName>Lymphs (Absolute)</TestName>
+  </group>
+  <group SortOrder="710" name="MONOCYTES, ABSOLUTE">
+	<TestName>MONOCYTES, ABSOLUTE</TestName>
+	<TestName>MONOCYTES</TestName>
+	<TestName>Monocytes(Absolute)</TestName>
+  </group>
+  <group SortOrder="720" name="EOSINOPHILS, ABSOLUTE">
+	<TestName>EOSINOPHILS, ABSOLUTE</TestName>
+	<TestName>EOSINOPHILS </TestName>
+	<TestName>Eos (Absolute)</TestName>
+  </group>
+  <group SortOrder="730" name="BASOPHILS, ABSOLUTE">
+	<TestName>BASOPHILS, ABSOLUTE</TestName>
+	<TestName>BASOPHILS</TestName>
+	<TestName>Baso (Absolute)</TestName>
+  </group>
+  <group SortOrder="740" name="[BONE METABOLISM] CTX">
+	<TestName>C-TELOPEPTIDE (CTX)</TestName>
+	<TestName>C-TELOPEPTIDE</TestName>
+	<TestName>CTx)</TestName>
+  </group>
+  <group SortOrder="750" name="VITAMIN D, 25-OH D2">
+	<TestName>VITAMIN D, 25-OH, D2</TestName>
+	<TestName>VITAMIN D, 25 OH, D2</TestName>
+  </group>
+  <group SortOrder="760" name="VITAMIN D, 25-OH D3">
+	<TestName>VITAMIN D, 25-OH, D3</TestName>
+  </group>
+  <group SortOrder="770" name="VITAMIN D, 25-OH TOTAL">
+	<TestName>VIT D, 25-OH</TestName>
+	<TestName>VIT D,25-OH</TestName>
+	<TestName>VITAMIN D, 25-OH TOTAL</TestName>
+	<TestName>VD25</TestName>
+	<TestName>VITAMIN D, 25 OH TOTAL</TestName>
+	<TestName>VITAMIN D, 25 OH TOT</TestName>
+	<TestName>VITAMIN D,25-OH</TestName>
+	<TestName>VITAMIN D, 25-HYDROXY</TestName>
+	<TestName>VIT D,25-HYDROXY</TestName>
+	<TestName>VIT D 25-HYDROXY</TestName>
+	<TestName>Vitamin D</TestName>
+  </group>
+  <group SortOrder="780" name="VITAMIN B12">
+	<TestName>Vitamin B12</TestName>
+	<TestName>Vit B12</TestName>
+	<TestName>VITAMIN B12</TestName>
+	<TestName>VIT B12</TestName>
+  </group>
+  <group SortOrder="790" name="FOLATE">
+	<TestName>Folate</TestName>
+	<TestName> FOLATE </TestName>
+	<TestName> FOLIC ACID </TestName>
+	<TestName> FOLATE, SERUM </TestName>
+  </group>
+  <group SortOrder="800" name="INTERLEUKIN-6">
+	<TestName> Interleukin-6, Serum</TestName>
+  </group>
+
+</groups>
+
+
+

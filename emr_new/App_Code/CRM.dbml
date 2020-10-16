@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="emr_dev" Class="CRMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=lmcsql;Initial Catalog=emr_dev;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="emr_devConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CRM_Attendees" Member="CRM_Attendees">
+    <Type Name="CRM_Attendee">
+      <Column Name="AttendeeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProspectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CRM_Event_CRM_Attendee" Member="CRM_Event" ThisKey="EventID" OtherKey="EventID" Type="CRM_Event" IsForeignKey="true" />
+      <Association Name="CRM_Prospect_CRM_Attendee" Member="CRM_Prospect" ThisKey="ProspectID" OtherKey="ProspectID" Type="CRM_Prospect" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRM_Status" Member="CRM_Status">
+    <Type Name="CRM_Status">
+      <Column Name="StatusID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatusName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CRM_Status_CRM_Prospect" Member="CRM_Prospects" ThisKey="StatusID" OtherKey="StatusID" Type="CRM_Prospect" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRM_MarketingSource_Campaigns" Member="CRM_MarketingSource_Campaigns">
+    <Type Name="CRM_MarketingSource_Campaign">
+      <Column Name="MarketingSource_CampaignID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MarketingSourceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampaignID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CRM_MarketingSource_CRM_MarketingSource_Campaign" Member="CRM_MarketingSource" ThisKey="MarketingSourceID" OtherKey="MarketingSourceID" Type="CRM_MarketingSource" IsForeignKey="true" />
+      <Association Name="CRM_Campaign_CRM_MarketingSource_Campaign" Member="CRM_Campaign" ThisKey="CampaignID" OtherKey="CampaignID" Type="CRM_Campaign" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRM_MarketingSource_Prospects" Member="CRM_MarketingSource_Prospects">
+    <Type Name="CRM_MarketingSource_Prospect">
+      <Column Name="MarketingSource_ProspectID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProspectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MarketingSourceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CRM_MarketingSource_CRM_MarketingSource_Prospect" Member="CRM_MarketingSource" ThisKey="MarketingSourceID" OtherKey="MarketingSourceID" Type="CRM_MarketingSource" IsForeignKey="true" />
+      <Association Name="CRM_Prospect_CRM_MarketingSource_Prospect" Member="CRM_Prospect" ThisKey="ProspectID" OtherKey="ProspectID" Type="CRM_Prospect" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRM_MarketingSources" Member="CRM_MarketingSources">
+    <Type Name="CRM_MarketingSource">
+      <Column Name="MarketingSourceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MarketingSourceName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CRM_MarketingSource_CRM_MarketingSource_Campaign" Member="CRM_MarketingSource_Campaigns" ThisKey="MarketingSourceID" OtherKey="MarketingSourceID" Type="CRM_MarketingSource_Campaign" />
+      <Association Name="CRM_MarketingSource_CRM_MarketingSource_Prospect" Member="CRM_MarketingSource_Prospects" ThisKey="MarketingSourceID" OtherKey="MarketingSourceID" Type="CRM_MarketingSource_Prospect" />
+      <Association Name="CRM_MarketingSource_CRM_MarketingActivity" Member="CRM_MarketingActivities" ThisKey="MarketingSourceID" OtherKey="SourceID" Type="CRM_MarketingActivity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRM_Registrants" Member="CRM_Registrants">
+    <Type Name="CRM_Registrant">
+      <Column Name="RegistrantID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProspectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CRM_Event_CRM_Registrant" Member="CRM_Event" ThisKey="EventID" OtherKey="EventID" Type="CRM_Event" IsForeignKey="true" />
+      <Association Name="CRM_Prospect_CRM_Registrant" Member="CRM_Prospect" ThisKey="ProspectID" OtherKey="ProspectID" Type="CRM_Prospect" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRM_Log" Member="CRM_Logs">
+    <Type Name="CRM_Log">
+      <Column Name="LogID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OldStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NewStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProspectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CRM_Prospect_CRM_Log" Member="CRM_Prospect" ThisKey="ProspectID" OtherKey="ProspectID" Type="CRM_Prospect" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRM_MarketingActivity" Member="CRM_MarketingActivities">
+    <Type Name="CRM_MarketingActivity">
+      <Column Name="MarketingActivityID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SourceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SourceType" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CapmpaignID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Money Spent]" Member="Money_Spent" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="CRM_MarketingSource_CRM_MarketingActivity" Member="CRM_MarketingSource" ThisKey="SourceID" OtherKey="MarketingSourceID" Type="CRM_MarketingSource" IsForeignKey="true" />
+      <Association Name="CRM_Campaign_CRM_MarketingActivity" Member="CRM_Campaign" ThisKey="CapmpaignID" OtherKey="CampaignID" Type="CRM_Campaign" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRM_Campaigns" Member="CRM_Campaigns">
+    <Type Name="CRM_Campaign">
+      <Column Name="CampaignID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CampaignName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MarketingBudget" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CampaignType" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MarketingSources" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CRM_Campaign_CRM_MarketingSource_Campaign" Member="CRM_MarketingSource_Campaigns" ThisKey="CampaignID" OtherKey="CampaignID" Type="CRM_MarketingSource_Campaign" />
+      <Association Name="CRM_Campaign_CRM_MarketingActivity" Member="CRM_MarketingActivities" ThisKey="CampaignID" OtherKey="CapmpaignID" Type="CRM_MarketingActivity" />
+      <Association Name="CRM_Campaign_CRM_Event" Member="CRM_Events" ThisKey="CampaignID" OtherKey="CampaignID" Type="CRM_Event" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRM_Events" Member="CRM_Events">
+    <Type Name="CRM_Event">
+      <Column Name="EventID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="EventDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Venue" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CampaignID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EventLength" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Walkins" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Appointments" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Callbacks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OverallPerformance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FacilityInteriorExterior" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VenueQuality" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Parking" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AudienceReaction" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AudienceQuality" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CRM_Event_CRM_Attendee" Member="CRM_Attendees" ThisKey="EventID" OtherKey="EventID" Type="CRM_Attendee" />
+      <Association Name="CRM_Event_CRM_Registrant" Member="CRM_Registrants" ThisKey="EventID" OtherKey="EventID" Type="CRM_Registrant" />
+      <Association Name="CRM_Campaign_CRM_Event" Member="CRM_Campaign" ThisKey="CampaignID" OtherKey="CampaignID" Type="CRM_Campaign" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRM_Prospects" Member="CRM_Prospects">
+    <Type Name="CRM_Prospect">
+      <Column Name="ProspectID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MainPhone" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="AltPhone" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ContactMethod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Flagged" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarketingSources" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AppointmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveYN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CRM_Prospect_CRM_Attendee" Member="CRM_Attendees" ThisKey="ProspectID" OtherKey="ProspectID" Type="CRM_Attendee" />
+      <Association Name="CRM_Prospect_CRM_MarketingSource_Prospect" Member="CRM_MarketingSource_Prospects" ThisKey="ProspectID" OtherKey="ProspectID" Type="CRM_MarketingSource_Prospect" />
+      <Association Name="CRM_Prospect_CRM_Registrant" Member="CRM_Registrants" ThisKey="ProspectID" OtherKey="ProspectID" Type="CRM_Registrant" />
+      <Association Name="CRM_Prospect_CRM_Log" Member="CRM_Logs" ThisKey="ProspectID" OtherKey="ProspectID" Type="CRM_Log" />
+      <Association Name="CRM_Status_CRM_Prospect" Member="CRM_Status" ThisKey="StatusID" OtherKey="StatusID" Type="CRM_Status" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

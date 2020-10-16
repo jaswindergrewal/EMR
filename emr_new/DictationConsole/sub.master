@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="sub.master.cs" Inherits="SiteMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html >
+<html  xml:lang="en">
+<head id="Head1" runat="server">
+     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<title></title>
+	<link href="../css/lmc_style.css" rel="stylesheet" type="text/css" />
+     <script src="../Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+     <script src="../Scripts/jquery.filter_input.js" type="text/javascript"></script>
+    
+	<meta http-equiv="EXPIRES" content="0"/>
+	<asp:ContentPlaceHolder ID="HeadContent" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body style="background-color:#EFE1C9;">
+	<form id="Form1" runat="server">
+	<div class="main">
+		<cc1:ToolkitScriptManager ID="ScriptManager" runat="Server" EnablePartialRendering="true"
+			ScriptMode="Release" CombineScriptsHandlerUrl="~/CombineScriptsHandler.ashx"
+			LoadScriptsBeforeUI="false" EnablePageMethods="true" />
+		<asp:ContentPlaceHolder ID="MainContent" runat="server" />
+	</div>
+	<div class="clear">
+	</div>
+	</form>
+</body>
+</html>

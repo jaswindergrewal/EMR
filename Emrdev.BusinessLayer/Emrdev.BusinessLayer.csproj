@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{552B39B0-B09B-4788-BDAB-EB97D6985DBF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Emrdev.BusinessLayer</RootNamespace>
+    <AssemblyName>Emrdev.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\Emrdev.DataLayer\bin\Debug\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeneralClasses\AcuitySchedulingBAL.cs" />
+    <Compile Include="GeneralClasses\AddProspectBAL.cs" />
+    <Compile Include="GeneralClasses\AdminAutoTicketBAL.cs" />
+    <Compile Include="GeneralClasses\AdminDictationBAL.cs" />
+    <Compile Include="GeneralClasses\AdminDrugListBAL.cs" />
+    <Compile Include="GeneralClasses\AdminLabImportBAL.cs" />
+    <Compile Include="GeneralClasses\AdminLabRemindersBAL.cs" />
+    <Compile Include="GeneralClasses\AdminMatchLabBAL.cs" />
+    <Compile Include="GeneralClasses\AdminResellerBAL.cs" />
+    <Compile Include="GeneralClasses\AdminSuppListBAL.cs" />
+    <Compile Include="GeneralClasses\AllergeBAL.cs" />
+    <Compile Include="GeneralClasses\AppointmentConsoleBAL.cs" />
+    <Compile Include="GeneralClasses\AppointmentsBAL.cs" />
+    <Compile Include="GeneralClasses\AptFollowUpsBAL.cs" />
+    <Compile Include="GeneralClasses\AutoshipCancelReasonBAL.cs" />
+    <Compile Include="GeneralClasses\AutoshipProductBAL.cs" />
+    <Compile Include="GeneralClasses\AutoshipReportUtilBAL.cs" />
+    <Compile Include="GeneralClasses\CalendarBAL.cs" />
+    <Compile Include="GeneralClasses\ContactBAL.cs" />
+    <Compile Include="GeneralClasses\ContactPrintBAL.cs" />
+    <Compile Include="GeneralClasses\CriticalTaskBAL.cs" />
+    <Compile Include="GeneralClasses\CRMdashboardBAL.cs" />
+    <Compile Include="GeneralClasses\CRMEventsBAL.cs" />
+    <Compile Include="GeneralClasses\CrmProspectBAL.cs" />
+    <Compile Include="GeneralClasses\DepartmentBAL.cs" />
+    <Compile Include="GeneralClasses\DepartmentStaffBAL.cs" />
+    <Compile Include="GeneralClasses\EmailTemplateBAL.cs" />
+    <Compile Include="GeneralClasses\EndMedicalBAL.cs" />
+    <Compile Include="GeneralClasses\FollowupTypesBAL.cs" />
+    <Compile Include="GeneralClasses\IntakeBAL.cs" />
+    <Compile Include="GeneralClasses\IntakeHormoneBAL.cs" />
+    <Compile Include="GeneralClasses\LabAddBAL.cs" />
+    <Compile Include="GeneralClasses\LabLaunchBAL.cs" />
+    <Compile Include="GeneralClasses\LabLogBAL.cs" />
+    <Compile Include="GeneralClasses\LabPatientsBAL.cs" />
+    <Compile Include="GeneralClasses\LabReportBAL.cs" />
+    <Compile Include="GeneralClasses\LabsBAL.cs" />
+    <Compile Include="GeneralClasses\LabScehduleGroupsBAL.cs" />
+    <Compile Include="GeneralClasses\LandingPageBAL.cs" />
+    <Compile Include="GeneralClasses\LMCBaseBAL.cs" />
+    <Compile Include="GeneralClasses\MailChimpCampaignBAL.cs" />
+    <Compile Include="GeneralClasses\ManageBAL.cs" />
+    <Compile Include="GeneralClasses\NewTicketNoPatientBAL.cs" />
+    <Compile Include="GeneralClasses\OfficeVisitUpdate_ShortBAL.cs" />
+    <Compile Include="GeneralClasses\OldVisitBAL.cs" />
+    <Compile Include="GeneralClasses\OneTimeSaleBAL.cs" />
+    <Compile Include="GeneralClasses\OrderBAL.cs" />
+    <Compile Include="GeneralClasses\PanelBAL.cs" />
+    <Compile Include="GeneralClasses\PatientBAL.cs" />
+    <Compile Include="GeneralClasses\PatientInfoBAL.cs" />
+    <Compile Include="GeneralClasses\PatientVitalsBAL.cs" />
+    <Compile Include="GeneralClasses\PendingFollowupBAL.cs" />
+    <Compile Include="GeneralClasses\PendingMedRecordsBAL.cs" />
+    <Compile Include="GeneralClasses\PendingPrescriptionAproveBAL.cs" />
+    <Compile Include="GeneralClasses\PrescriptionBAL.cs" />
+    <Compile Include="GeneralClasses\ProblemListBAL.cs" />
+    <Compile Include="GeneralClasses\ProfileItemBAL.cs" />
+    <Compile Include="GeneralClasses\ProtocolBAL.cs" />
+    <Compile Include="GeneralClasses\ProviderBAL.cs" />
+    <Compile Include="GeneralClasses\QBCustMatchPatientBAL.cs" />
+    <Compile Include="GeneralClasses\RecurringAppointmentBAL.cs" />
+    <Compile Include="GeneralClasses\RenewalExceptionBAL.cs" />
+    <Compile Include="GeneralClasses\RenewalPackagesBAL.cs" />
+    <Compile Include="GeneralClasses\ScanUploadsBAL.cs" />
+    <Compile Include="GeneralClasses\SearchResultBAL.cs" />
+    <Compile Include="GeneralClasses\SeminarScheduleBAL.cs" />
+    <Compile Include="GeneralClasses\SiteBAL.cs" />
+    <Compile Include="GeneralClasses\SpecialAttentionBAL.cs" />
+    <Compile Include="GeneralClasses\StaffBAL.cs" />
+    <Compile Include="GeneralClasses\SurveyResultBAL.cs" />
+    <Compile Include="GeneralClasses\SymptomBAL.cs" />
+    <Compile Include="GeneralClasses\TicketManageBAL.cs" />
+    <Compile Include="GeneralClasses\XeroAPIBAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Emrdev.DataLayer\Emrdev.DataLayer.csproj">
+      <Project>{8597d4cf-30cd-44aa-8f00-9de0c18ceaf7}</Project>
+      <Name>Emrdev.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Emrdev.ViewModelLayer\Emrdev.ViewModelLayer.csproj">
+      <Project>{bacd1f94-12d7-464d-a7d6-d40c6bee92ca}</Project>
+      <Name>Emrdev.ViewModelLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

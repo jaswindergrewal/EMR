@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 29.625, 30.625" name="CustTicket">
+  <DataContextMoniker Name="/EMRDataContext" />
+  <nestedChildShapes>
+    <classShape Id="eca8d534-d269-427c-81f6-fa25b382cdf2" isExpanded="false" absoluteBounds="0.75, 5.875, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ba22d81-86ba-46a7-85fe-439665167d71" absoluteBounds="0.76499999999999968, 6.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3bfffbb-6d27-42e3-b1fe-5abf4cfb1147" isExpanded="false" absoluteBounds="3.5, 7.875, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/DepartmentStaff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c33f685-d861-4342-a017-ddfb58418b94" absoluteBounds="3.5150000000000006, 8.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.19939697265625); (3.59375 : 6.19939697265625); (3.59375 : 7.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EMRDataContext/Department/Department_DepartmentStaff" />
+      <nodes>
+        <classShapeMoniker Id="eca8d534-d269-427c-81f6-fa25b382cdf2" />
+        <classShapeMoniker Id="a3bfffbb-6d27-42e3-b1fe-5abf4cfb1147" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5249d5c9-7fbd-4cca-ba73-40ac0eaadcff" isExpanded="false" absoluteBounds="0.75, 7.875, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31dc0f34-efbc-448b-82de-7c4cdf10db8d" absoluteBounds="0.76500000000000057, 8.335, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 8.1); (3.5 : 8.1)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EMRDataContext/Staff/Staff_DepartmentStaff" />
+      <nodes>
+        <classShapeMoniker Id="5249d5c9-7fbd-4cca-ba73-40ac0eaadcff" />
+        <classShapeMoniker Id="a3bfffbb-6d27-42e3-b1fe-5abf4cfb1147" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ba9d6b59-4a56-4a4c-8f12-666c990d1a75" isExpanded="false" absoluteBounds="8.75, 0.75, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/EMRDataContext/SpecialAttentionFlag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6964ba0-ddc0-4f57-8d84-0d7120d82d42" absoluteBounds="8.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1559028c-0cb7-4e3f-87e6-1bd776b02d0a" isExpanded="false" absoluteBounds="14.75, 11.875, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Patients_CriticalTaskType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4be3e16c-73f1-4fea-9f37-223200719a8a" absoluteBounds="14.765, 12.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f90d207f-a5d8-456b-9d2f-f5965c289c3e" isExpanded="false" absoluteBounds="17.5, 11.875, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Patients_CriticalTask" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20f845d9-33b7-4619-b554-11cfcc3a174c" absoluteBounds="17.515, 12.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.75 : 12.1); (17.5 : 12.1)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/Patients_CriticalTaskType/Patients_CriticalTaskType_Patients_CriticalTask" />
+      <nodes>
+        <classShapeMoniker Id="1559028c-0cb7-4e3f-87e6-1bd776b02d0a" />
+        <classShapeMoniker Id="f90d207f-a5d8-456b-9d2f-f5965c289c3e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2bb3c7a7-3780-4384-b0f7-49fd6970836a" isExpanded="false" absoluteBounds="12.75, 14.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Upload_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b4046a8-387d-43a3-b632-156481b610ae" absoluteBounds="12.765, 15.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6801da83-6e7e-4422-a10f-898b112e40c7" isExpanded="false" absoluteBounds="15.75, 13.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Prescription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55ebade9-fae6-4c97-a1c8-6ec7b00881c5" absoluteBounds="15.765, 14.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ebbcf2ba-e56d-4b88-8fc1-2e10035075ea" isExpanded="false" absoluteBounds="15.75, 15.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Contact_Type_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd53eb88-f73d-40f8-8f39-558482d42fd8" absoluteBounds="15.765, 16.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23959f14-c1ca-469b-b817-49b47dece9d3" isExpanded="false" absoluteBounds="0.75, 16.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/LabFreq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="756cff33-e423-4cba-a81e-b20134ecef7a" absoluteBounds="0.76499999999999968, 17.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="96a9ffb2-0afb-4578-ab89-d2dde5bf240d" isExpanded="false" absoluteBounds="3.75, 16.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/Diagnosis_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d44fa0c9-034b-4d92-9688-8df600398e35" absoluteBounds="3.7650000000000006, 17.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ec0a1996-109a-4121-a25a-ad2a8937b02a" isExpanded="false" absoluteBounds="6.25, 1.625, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/LabReports_Condition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e36d005c-999f-4a70-8efe-a607d487de3a" absoluteBounds="6.2650000000000006, 2.0850000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c61765bc-4bc3-4670-b345-43721d111be4" isExpanded="false" absoluteBounds="3.5, 1.625, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/LabReports_Trigger" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42c1168e-a661-4912-872a-3d7de85e5ad9" absoluteBounds="3.5150000000000006, 2.0850000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a9294cf-0465-4bfe-9789-e5e035a76280" isExpanded="false" absoluteBounds="6.25, 3.125, 2, 0.45">
+      <DataClassMoniker Name="/EMRDataContext/LabReports_TriggersGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1388fac-c2e2-49af-9247-f39057f71842" absoluteBounds="6.2650000000000006, 3.5850000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1173eb29-3588-4cbc-81aa-66c7a966d2ce" isExpanded="false" absoluteBounds="9, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/EMRDataContext/LabReports_ConditionDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bcc20a8f-f624-4534-9999-87820d19a2e2" absoluteBounds="9.015, 3.2100000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 1.85); (6.25 : 1.85)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/LabReports_Trigger/LabReports_Trigger_LabReports_Condition" />
+      <nodes>
+        <classShapeMoniker Id="c61765bc-4bc3-4670-b345-43721d111be4" />
+        <classShapeMoniker Id="ec0a1996-109a-4121-a25a-ad2a8937b02a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.40625 : 2.075); (5.40625 : 3.48125); (6.25 : 3.48125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/LabReports_Trigger/LabReports_Trigger_LabReports_TriggersGroup" />
+      <nodes>
+        <classShapeMoniker Id="c61765bc-4bc3-4670-b345-43721d111be4" />
+        <classShapeMoniker Id="7a9294cf-0465-4bfe-9789-e5e035a76280" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.075); (9 : 2.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/LabReports_Condition/LabReports_Condition_LabReports_ConditionDetail" />
+      <nodes>
+        <classShapeMoniker Id="ec0a1996-109a-4121-a25a-ad2a8937b02a" />
+        <classShapeMoniker Id="1173eb29-3588-4cbc-81aa-66c7a966d2ce" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8d161f16-6a16-4db0-8ac6-0546709df9d2" isExpanded="false" absoluteBounds="17.75, 8.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/AppointmentResult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8449d65d-2a59-4a36-b299-bc16625a66b0" absoluteBounds="17.765, 9.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ad58d76-1f1b-4053-b869-6103e25c4a1e" isExpanded="false" absoluteBounds="9.75, 17.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/Tickets_Manage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36620c51-cfef-4439-992d-c1820a8733a5" absoluteBounds="9.765, 18.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bedb8caf-c616-45f2-87e6-ffe3ad722566" absoluteBounds="12.75, 17.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/EMRDataContext/Problem_Diagnosis_join" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8584ed1d-0246-4390-8ee8-d5115be8ca3f" absoluteBounds="12.765, 18.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eed7bc1e-6df9-4baa-9dca-aff3868567d5" isExpanded="false" absoluteBounds="15.75, 17.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/Problem_MiscDiagnosis_join" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dcee1ada-1c4a-43b5-92d6-591bdfba8b7c" absoluteBounds="15.765, 18.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e6a5fcc-eea1-4ab4-a5c1-83748f804578" absoluteBounds="0.75, 18.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/EMRDataContext/Problem_Symptom_join" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0964d658-5f5a-4289-a299-aae4b05c5b6a" absoluteBounds="0.76500000000000012, 19.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="04254f2d-af55-46c9-942f-fdf0a7bd3813" isExpanded="false" absoluteBounds="18.75, 13.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Visit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76159922-07cd-4957-ba68-3337eb6150f7" absoluteBounds="18.765, 14.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="22809a67-3a72-4c1a-9448-d8fc549915cf" isExpanded="false" absoluteBounds="9.5, 9.25, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/ProfileException" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2d585f8-8077-4e3f-b351-1ebcb2da1dc3" absoluteBounds="9.515, 9.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e1ae49f-f0dc-4f78-8889-548181f5a72a" isExpanded="false" absoluteBounds="15.25, 9.875, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Exception" />
+      <nestedChildShapes>
+        <elementListCompartment Id="058573fa-a6fd-44ee-ab29-9838a415f691" absoluteBounds="15.265, 10.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ccccd559-0b96-479f-ba34-aee5a70edda7" isExpanded="false" absoluteBounds="18.75, 15.75, 2, 0.45000000000000107">
+      <DataClassMoniker Name="/EMRDataContext/AutoshipCancelReason" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e68344a-c12d-4ac0-a3f1-1ae3b732bebc" absoluteBounds="18.765, 16.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e8c37dbf-10b6-48ae-8d0a-e08950f50b5e" isExpanded="false" absoluteBounds="18.75, 17.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/Contact_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c28b1e7-090e-4264-9d87-b751a2e0bdaa" absoluteBounds="18.765, 18.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10a8a896-0cb1-47ce-9edc-1ac5af466a3d" isExpanded="false" absoluteBounds="15.75, 19.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/QB_Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c11b86bc-9543-4524-b0ed-1b6f265bae53" absoluteBounds="15.765, 20.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5fd54e20-09f9-4943-bdbf-9f77e52b98ee" isExpanded="false" absoluteBounds="18.75, 19.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/Patient_Vital" />
+      <nestedChildShapes>
+        <elementListCompartment Id="430d3860-1647-4477-9e8b-c48586788f43" absoluteBounds="18.765, 20.21, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c35eb86-f39a-4931-a520-77f4fe3253da" isExpanded="false" absoluteBounds="20.75, 0.75, 2, 0.45000000000000007">
+      <DataClassMoniker Name="/EMRDataContext/QB_Match" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5943c399-2df6-4559-96f3-09a457153476" absoluteBounds="20.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd080c82-4160-4a66-abec-b07caab7f0cb" isExpanded="false" absoluteBounds="3.75, 20.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/apt_Symtpom" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98f757ac-1393-40a8-83da-dca233077388" absoluteBounds="3.7650000000000006, 21.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1b9be17c-9b76-46d2-9999-b1000ae7d8e2" absoluteBounds="6.75, 20.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EMRDataContext/apt_Goal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7638e5c4-63da-401b-b297-53f1236d5f80" absoluteBounds="6.7650000000000006, 21.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="12c2cba3-c0ad-46d9-9c8d-792543548282" absoluteBounds="9.75, 21.75, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/EMRDataContext/apt_LisfeStyle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e04326d6-19f8-49f9-982d-7545773ac56a" absoluteBounds="9.765, 22.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d817d134-7441-4d9c-a3bd-0a22f3bf376c" isExpanded="false" absoluteBounds="21.75, 12.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Callbacks_old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98907894-7ba4-4db2-bd0f-083761ec5856" absoluteBounds="21.765, 13.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bcd82053-c3f7-44ed-b81a-9ae0da5f2a86" isExpanded="false" absoluteBounds="12.75, 21.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/CallBack" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e412b8e-edbc-4e1d-84b0-a4b4386b9888" absoluteBounds="12.765, 22.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f353368f-314d-443f-b627-7eaab26671c4" absoluteBounds="21.75, 14.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/EMRDataContext/CallBackResponse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ab493ee-05b7-4c1b-aa64-57dc860f4de6" absoluteBounds="21.765, 15.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a992fedf-0851-49c3-ba0f-64e0acded594" isExpanded="false" absoluteBounds="15.75, 21.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/Patient_mrkting_src" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba392fbb-11ee-4005-adb6-4159837639aa" absoluteBounds="15.765, 22.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f706f70c-2bec-4a8b-b6f9-02afdc5189ef" isExpanded="false" absoluteBounds="21.75, 18.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/Provider" />
+      <nestedChildShapes>
+        <elementListCompartment Id="934badc5-815d-46c5-99ef-3aa8507ee09f" absoluteBounds="21.765, 19.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eca675fd-73aa-4219-92ef-3dcfbbe2b50e" isExpanded="false" absoluteBounds="18.75, 21.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/AppointmentType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71cea823-25f6-4f89-b5b7-da53620bedd8" absoluteBounds="18.765, 22.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87c18f55-30f6-4e40-9503-fd098de73643" isExpanded="false" absoluteBounds="9.5, 6.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Patient_Goal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4475409-924e-43cf-824b-ad9b16cc8683" absoluteBounds="9.515, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="399358a2-75b3-4a9d-813b-789501ddd0ce" isExpanded="false" absoluteBounds="21.75, 20.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/Symptom" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8ac1be5-1fce-47e2-a3f9-2cf3a5548a52" absoluteBounds="21.765, 21.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c74a580-0a57-4ed1-8e08-a5ef3d8f02f8" isExpanded="false" absoluteBounds="0.75, 22.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/GoalItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db29a268-7bb9-4c8d-aa21-a1f36d7357bc" absoluteBounds="0.76499999999999968, 23.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="503e06ef-62eb-4ef8-aa3e-989b6a827eae" isExpanded="false" absoluteBounds="21.75, 22.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/CallBackQuestion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b27fba5-4c24-4e54-8f5f-69f3c4f37fb6" absoluteBounds="21.765, 23.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="144081ce-e208-4fc7-9c40-21262ed60197" isExpanded="false" absoluteBounds="23.75, 0.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/LabReports_Result" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ba85233-04fc-40fe-849c-7a33d690bdd7" absoluteBounds="23.765, 1.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb2ed20e-74c0-49e1-b3ed-816df2b2b9e0" absoluteBounds="0.75, 12.25, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/EMRDataContext/apt_FollowUp_type" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8125118-67b0-46c4-b08a-96b7fcaf5d41" absoluteBounds="0.76500000000000057, 12.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="478e2de7-0df1-4340-9d14-9bb0053b9ffb" absoluteBounds="18.25, 1.125, 2, 6.5784326171874987">
+      <DataClassMoniker Name="/EMRDataContext/lab_OrderSegmentDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="763ae5c8-8034-4426-9942-67e3a0b9ebb5" absoluteBounds="18.265, 1.585, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27bde8f3-f15f-4723-ab6c-017695dd67fe" absoluteBounds="21, 2.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/EMRDataContext/lab_ObservationResultDetailSegment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73a2ac9a-fd59-4f1a-93f4-f773eb76dc16" absoluteBounds="21.015, 3.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89940651-5eb5-481b-9d6f-aebcf2a8c78f" absoluteBounds="15.5, 2.625, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/EMRDataContext/lab_CommonOrderSegment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2fd9fcbf-f0ef-4c27-8d7c-cdb494804a90" absoluteBounds="15.515, 3.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33d30bc2-24cd-4154-ba4b-f69fa493e30a" absoluteBounds="12.75, 1.625, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/EMRDataContext/lab_Patient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a66dc322-5145-4f44-8e43-b26529d2bafd" absoluteBounds="12.765, 2.085, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20.25 : 4.50080485026042); (21 : 4.50080485026042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/lab_OrderSegmentDetail/lab_OrderSegmentDetail_lab_ObservationResultDetailSegment" />
+      <nodes>
+        <classShapeMoniker Id="478e2de7-0df1-4340-9d14-9bb0053b9ffb" />
+        <classShapeMoniker Id="27bde8f3-f15f-4723-ab6c-017695dd67fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.5 : 4.47195556640625); (18.25 : 4.47195556640625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/lab_CommonOrderSegment/lab_CommonOrderSegment_lab_OrderSegmentDetail" />
+      <nodes>
+        <classShapeMoniker Id="89940651-5eb5-481b-9d6f-aebcf2a8c78f" />
+        <classShapeMoniker Id="478e2de7-0df1-4340-9d14-9bb0053b9ffb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.75 : 4.47195556640625); (15.5 : 4.47195556640625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/lab_Patient/lab_Patient_lab_CommonOrderSegment" />
+      <nodes>
+        <classShapeMoniker Id="33d30bc2-24cd-4154-ba4b-f69fa493e30a" />
+        <classShapeMoniker Id="89940651-5eb5-481b-9d6f-aebcf2a8c78f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e38f4584-18c7-46c1-8fa6-789898bc0c65" isExpanded="false" absoluteBounds="23.75, 2.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/PresscriptionSupp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c8f208a-0d81-4582-a6f9-c86cd55f5034" absoluteBounds="23.765, 3.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="da9da3b0-da83-4929-99fc-04adfcf1faeb" absoluteBounds="12.25, 11.125, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/EMRDataContext/OrderItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58d559ad-d034-4938-910b-691a806af17b" absoluteBounds="12.265, 11.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10042acb-977b-4300-ab4e-4f4084a255b1" absoluteBounds="9.5, 10.375, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/EMRDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc5014ba-b7bc-4fd9-912f-a6c546ca570e" absoluteBounds="9.515, 10.835, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.5 : 11.707128499349); (11.9166666666667 : 11.707128499349 : JumpStart); (12.0833333333333 : 11.707128499349 : JumpEnd); (12.25 : 11.707128499349)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EMRDataContext/Order/Order_OrderItem" />
+      <nodes>
+        <classShapeMoniker Id="10042acb-977b-4300-ab4e-4f4084a255b1" />
+        <classShapeMoniker Id="da9da3b0-da83-4929-99fc-04adfcf1faeb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e2ef71a1-872a-42c3-bcc4-32a70cff2f3d" isExpanded="false" absoluteBounds="3.75, 23.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/AutoTicket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d614377-8c00-432d-92f8-2214a435709a" absoluteBounds="3.7650000000000006, 24.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b71f3bf-a20c-4019-ad1b-4d13d6eb409a" isExpanded="false" absoluteBounds="23.75, 4.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Drug" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1d51f69-c87a-4d78-8679-5380b9410af1" absoluteBounds="23.765, 5.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4276722e-0dad-4a1e-977b-156acb6b7154" isExpanded="false" absoluteBounds="23.75, 6.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/QB_Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9130dbfa-4d89-42a1-8f86-39bfff9d9346" absoluteBounds="23.765, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d5634e4b-18a9-49f6-aebf-59655cccf771" isExpanded="false" absoluteBounds="23.75, 8.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/QB_Invoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="071d3bdf-5eab-4c7f-bc47-c91180bbdf6f" absoluteBounds="23.765, 9.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17174e74-5291-45c4-8b90-3487569487c9" absoluteBounds="12.75, 23.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/EMRDataContext/apt_Misc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26977df7-dd51-4123-bf4f-51886f9b0b9f" absoluteBounds="12.765, 24.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="01c40780-31d6-45e4-a9ed-ef53fc479018" isExpanded="false" absoluteBounds="9.75, 15.875, 2, 0.45000000000000107">
+      <DataClassMoniker Name="/EMRDataContext/AutoshipProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19eabe3b-aace-4986-9d48-fa09b7a12541" absoluteBounds="9.765, 16.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.75 : 16.1); (11.956291370124 : 15.7651344444479 : JumpStart); (12.043708629876 : 15.6232330685729 : JumpEnd); (13.25 : 13.6651025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/AutoshipProduct/AutoshipProduct_OrderItem" />
+      <nodes>
+        <classShapeMoniker Id="01c40780-31d6-45e4-a9ed-ef53fc479018" />
+        <classShapeMoniker Id="da9da3b0-da83-4929-99fc-04adfcf1faeb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="925174f2-c48b-4aed-a945-48b7c2307bea" isExpanded="false" absoluteBounds="23.75, 10.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/EMRDataContext/Prospect" />
+      <nestedChildShapes>
+        <elementListCompartment Id="043fce62-8919-438d-9c87-39f53f78d1d7" absoluteBounds="23.765, 11.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e46e8827-d00b-4337-b1bc-eb48b46d8705" isExpanded="false" absoluteBounds="15.75, 23.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/ModifiedSupp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cdc87af-8c38-4bd6-a486-18a8d4f56614" absoluteBounds="15.765, 24.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7735c1ab-7838-44f8-bc5f-7a5de9fa3207" absoluteBounds="24.75, 12.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/EMRDataContext/Dictation_PlanDiagnosi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8352daa-6c2e-4f00-846d-918150ce5464" absoluteBounds="24.765, 13.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a48e1794-fe80-43bc-81fb-87e616d258d4" absoluteBounds="24.75, 15.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/EMRDataContext/Dictation_Diagnosi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9b8d367-cebe-4725-b49b-a9c3adef25d4" absoluteBounds="24.765, 16.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="22a02f36-1682-4574-a458-2ccbf4b2c418" absoluteBounds="24.75, 18.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/EMRDataContext/Dictation_Plan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="714c2975-aeae-413d-bc8c-0abdaff2bbab" absoluteBounds="24.765, 19.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4cbcde2c-f5e7-4904-8421-b2f2dba05208" absoluteBounds="18.75, 24.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EMRDataContext/apt_diag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc390e1d-2786-4c18-a170-a87d5894ceaf" absoluteBounds="18.765, 25.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="94b5de4d-65a9-4e98-bdf1-0c64f06c5ff2" absoluteBounds="24.75, 21.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EMRDataContext/apt_plan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac33689f-3f7a-48d6-a2b2-e74e68a84e99" absoluteBounds="24.765, 22.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e0c27054-e2c7-4aa6-ac1b-d69bdcf72312" isExpanded="false" absoluteBounds="21.75, 24.75, 2, 0.45000000000000284">
+      <DataClassMoniker Name="/EMRDataContext/ResellerContact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f541e467-1953-474f-950e-f035db8996c5" absoluteBounds="21.765, 25.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df1456e9-9e49-42a3-adc7-30ebb5626e17" absoluteBounds="24.75, 24.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EMRDataContext/ResellerEvent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f9ffc9d-f31e-4006-8c20-9f60d1654152" absoluteBounds="24.765, 25.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c836211a-ec1d-432b-b581-8cf5f333f49b" absoluteBounds="0.75, 25.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EMRDataContext/ResellerStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0a689e2-db00-4038-ade0-2170285572ac" absoluteBounds="0.76500000000000057, 26.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ee7a7bab-2dc6-4eab-a374-6ed00597bf82" isExpanded="false" absoluteBounds="12.875, 15.75, 2, 0.45">
+      <DataClassMoniker Name="/EMRDataContext/ProfileItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="096caf7e-fb47-4b26-8560-59c77c9beca3" absoluteBounds="12.89, 16.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.875 : 15.75); (13.875 : 15.45); (15 : 15.45); (15 : 13.9151025390625); (14.5 : 13.9151025390625); (14.5 : 10.1); (15.25 : 10.1)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/ProfileItem/ProfileItem_Exception" />
+      <nodes>
+        <classShapeMoniker Id="ee7a7bab-2dc6-4eab-a374-6ed00597bf82" />
+        <classShapeMoniker Id="4e1ae49f-f0dc-4f78-8889-548181f5a72a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 15.9220588235294); (11.7732897332129 : 15.9231548109747 : JumpStart); (11.9397721614188 : 15.9309892781844 : JumpEnd); (12.875 : 15.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/AutoshipProduct/AutoshipProduct_ProfileItem" />
+      <nodes>
+        <classShapeMoniker Id="01c40780-31d6-45e4-a9ed-ef53fc479018" />
+        <classShapeMoniker Id="ee7a7bab-2dc6-4eab-a374-6ed00597bf82" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9e918e4f-31e7-4a27-9ec2-4ae7f6236fd7" isExpanded="false" absoluteBounds="6.375, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/EMRDataContext/Autoship_Discount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f84f4d5-eea9-415d-9562-cce538800f53" absoluteBounds="6.39, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d73ff78-ab97-4796-a02e-b5ed80a318dd" isExpanded="false" absoluteBounds="7.25, 5.125, 2, 0.45">
+      <DataClassMoniker Name="/EMRDataContext/OneTimeSale" />
+      <nestedChildShapes>
+        <elementListCompartment Id="652414a1-a784-4580-a611-80a8e6abe763" absoluteBounds="7.265, 5.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="906b21eb-0ec3-4fd6-98bd-2018c19cfa4a" absoluteBounds="1.25, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EMRDataContext/Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8cea6b3b-a1a9-47e0-8d33-83cf34921d7b" absoluteBounds="1.2649999999999997, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34eb6050-f117-4fe4-94f6-8602a9802181" absoluteBounds="21.375, 8.375, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/EMRDataContext/apt_BloodWork" />
+      <nestedChildShapes>
+        <elementListCompartment Id="004de531-b079-4e1c-8008-e1258ebc10b6" absoluteBounds="21.39, 8.835, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="219153fb-a4a0-4246-bf47-595fd8f90c28" absoluteBounds="13, 7.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EMRDataContext/ResellerMarketingSource" />
+      <nestedChildShapes>
+        <elementListCompartment Id="177c21bf-ec36-4e0a-a703-416562c0a1de" absoluteBounds="13.015, 8.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e8af3dc-f279-4b62-b9ab-97120ebb5137" absoluteBounds="7.125, 24.125, 2, 6.1938297526041657">
+      <DataClassMoniker Name="/EMRDataContext/Reseller" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b07c7102-0ad5-4be7-945e-99c2e140c55c" absoluteBounds="7.14, 24.585, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89543a10-9b7b-430e-b1ef-bfb6f0974d08" absoluteBounds="7, 18.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EMRDataContext/LabReports_Test" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a4c31a0-5ecf-486b-9b29-c8ad050ef835" absoluteBounds="7.015, 18.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eda90cae-a86b-4e84-a657-f6a3d789293b" isExpanded="false" absoluteBounds="3.25, 2.875, 2, 0.45">
+      <DataClassMoniker Name="/EMRDataContext/LabReports_Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71d6b68e-651b-41ea-aaff-ff1706c852b1" absoluteBounds="3.2649999999999997, 3.335, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 3.225); (5.32291666666667 : 3.225 : JumpStart); (5.48958333333333 : 3.225 : JumpEnd); (6.25 : 3.225)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/LabReports_Group/LabReports_Group_LabReports_TriggersGroup" />
+      <nodes>
+        <classShapeMoniker Id="eda90cae-a86b-4e84-a657-f6a3d789293b" />
+        <classShapeMoniker Id="7a9294cf-0465-4bfe-9789-e5e035a76280" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 2.96875); (5.32291666666667 : 2.96875 : JumpStart); (5.48958333333333 : 2.96875 : JumpEnd); (9 : 2.96875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/LabReports_Group/LabReports_Group_LabReports_ConditionDetail" />
+      <nodes>
+        <classShapeMoniker Id="eda90cae-a86b-4e84-a657-f6a3d789293b" />
+        <classShapeMoniker Id="1173eb29-3588-4cbc-81aa-66c7a966d2ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.93419230769231 : 3.325); (3.93419230769231 : 3.575); (4.58084615384615 : 3.575); (4.58084615384615 : 3.325)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/LabReports_Group/LabReports_Group_LabReports_Group" />
+      <nodes>
+        <classShapeMoniker Id="eda90cae-a86b-4e84-a657-f6a3d789293b" />
+        <classShapeMoniker Id="eda90cae-a86b-4e84-a657-f6a3d789293b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="05730367-5329-4c18-8d81-a65038d56ea4" isExpanded="false" absoluteBounds="0.75, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/EMRDataContext/LabReports_Panel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b7c00b3-4567-4743-b0b3-6de0155b5a28" absoluteBounds="0.765, 3.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.96875 : 3.5); (0.96875 : 2.01189697265625); (3.5 : 2.01189697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EMRDataContext/LabReports_Panel/LabReports_Panel_LabReports_Trigger" />
+      <nodes>
+        <classShapeMoniker Id="05730367-5329-4c18-8d81-a65038d56ea4" />
+        <classShapeMoniker Id="c61765bc-4bc3-4670-b345-43721d111be4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.5); (3.25 : 3.325)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/LabReports_Panel/LabReports_Panel_LabReports_Group" />
+      <nodes>
+        <classShapeMoniker Id="05730367-5329-4c18-8d81-a65038d56ea4" />
+        <classShapeMoniker Id="eda90cae-a86b-4e84-a657-f6a3d789293b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4c609ed0-936f-4469-835e-a4d75fc6ecc0" absoluteBounds="0.875, 9, 2, 5.4246240234375">
+      <DataClassMoniker Name="/EMRDataContext/apt_rec" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6780f27d-1416-482e-b154-1a9828ac6648" absoluteBounds="0.89, 9.46, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="af8fd116-ca84-4e0f-8ff6-5388a7fb1aa9" absoluteBounds="5, 4.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/EMRDataContext/LabRequest_Panel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90814ddc-495f-43bc-891a-1e57d014704d" absoluteBounds="5.0150000000000006, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c12a3f4-e490-4297-89a0-a90f10a1c00c" absoluteBounds="8, 15.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/EMRDataContext/LabRequest_Test" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83508a54-3a1c-481c-8360-bf7dc954b2f6" absoluteBounds="8.015, 15.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df82b7e5-3b9f-4a97-9eaf-4a6ac61b859e" absoluteBounds="3.375, 25.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EMRDataContext/LabRequests_RequestPanel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="117eb215-28c4-4d52-a142-4774f6cf7e46" absoluteBounds="3.39, 26.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6bdc31fb-4810-4bf7-ab66-e43c9b2a3a8b" absoluteBounds="15.375, 25.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EMRDataContext/LabRequests_RequestTest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="413c0753-a6c5-4b55-8f82-6fcdd6e38771" absoluteBounds="15.39, 26.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7e7dd00-4e24-4573-92c2-1a43f94d5f38" absoluteBounds="26.375, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/EMRDataContext/LabRequests_Request" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7258da5c-efc5-47d0-96cf-255be5fe55d2" absoluteBounds="26.39, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d702821-4334-4a1b-a565-418f51f566b9" absoluteBounds="26.375, 3.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/EMRDataContext/LabScehdule_Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19b0f282-7fa6-47f4-b868-af4d757d140e" absoluteBounds="26.39, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0be8aacc-8878-4d0b-839b-7897b64363f5" absoluteBounds="26.375, 7.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/EMRDataContext/LabSchedule_Test" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c996327-6889-4101-a05c-c5c29a3ddf9a" absoluteBounds="26.39, 8.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e08faa37-677f-42b3-9cf8-8f16e1dcd159" absoluteBounds="9.875, 4.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EMRDataContext/SymptomSupplement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8b16bee-ede0-4240-8479-17f45c7637b0" absoluteBounds="9.89, 4.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c40668e-2c32-49c2-b522-7db4057021b1" absoluteBounds="6.625, 6.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EMRDataContext/DiagnosisSupplement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dfa4ae60-37a2-4887-8db7-9a5768653a7e" absoluteBounds="6.64, 7.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c9c2f7f-a28f-4847-87d8-db05718e5279" absoluteBounds="21.375, 26.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EMRDataContext/GroupRange" />
+      <nestedChildShapes>
+        <elementListCompartment Id="712f8312-87b6-4a9c-ab43-1f01814c2b74" absoluteBounds="21.39, 27.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fd66b490-5153-427f-8e0f-3c07ef5c121b" absoluteBounds="27.375, 10.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/EMRDataContext/GroupRangeSupplement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5b4774f-a841-42a9-8603-84d536156f31" absoluteBounds="27.39, 11.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4bc28010-745e-49be-96c6-142ddb1e5bda" absoluteBounds="3.75, 4.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EMRDataContext/DiagnosisLab" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db739fa4-9e78-4c76-904f-1c419369bd73" absoluteBounds="3.765, 5.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9747e25-aa18-4b22-9460-d94db280257d" absoluteBounds="5, 7, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EMRDataContext/SymptomLab" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8202d282-da9c-463f-8927-b3284e831e8f" absoluteBounds="5.015, 7.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3430bfd5-d424-4964-8f7e-bc924def5cb2" absoluteBounds="4.625, 9.875, 2, 5.8092268880208326">
+      <DataClassMoniker Name="/EMRDataContext/apt_FollowUp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf163665-5bec-4084-a402-cee25332cc61" absoluteBounds="4.64, 10.335, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 15.0232161458333); (4.625 : 15.0232161458333)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EMRDataContext/apt_FollowUp_type/apt_FollowUp_type_apt_FollowUp" />
+      <nodes>
+        <classShapeMoniker Id="cb2ed20e-74c0-49e1-b3ed-816df2b2b9e0" />
+        <classShapeMoniker Id="3430bfd5-d424-4964-8f7e-bc924def5cb2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b5e91770-3c59-4b3e-85ee-4c6fb85dbeda" absoluteBounds="3.375, 18.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/EMRDataContext/DoriNasserziayee_" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b08d7ae-04f0-4119-8cde-f5689cbae505" absoluteBounds="3.39, 19.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e745ff8-df9c-4c89-bfff-03ec6e652c9e" absoluteBounds="27.375, 13.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/EMRDataContext/JuliaWilson_" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02c4db58-224e-4a3d-af13-2fc31c82709a" absoluteBounds="27.39, 14.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd6a4dd3-3fa1-4c79-9244-f824974d4be4" isExpanded="false" absoluteBounds="9.375, 7.875, 2, 0.45">
+      <DataClassMoniker Name="/EMRDataContext/Patient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0863f471-16c3-4d32-965e-01f823f70fe4" absoluteBounds="9.39, 8.335, 1.9700000000000002, 18.902628580729164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.4375 : 8.325); (10.4375 : 9.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EMRDataContext/Patient/Patient_ProfileException" />
+      <nodes>
+        <classShapeMoniker Id="dd6a4dd3-3fa1-4c79-9244-f824974d4be4" />
+        <classShapeMoniker Id="22809a67-3a72-4c1a-9448-d8fc549915cf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.4375 : 7.875); (10.4375 : 7.2)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EMRDataContext/Patient/Patient_Patient_Goal" />
+      <nodes>
+        <classShapeMoniker Id="dd6a4dd3-3fa1-4c79-9244-f824974d4be4" />
+        <classShapeMoniker Id="87c18f55-30f6-4e40-9503-fd098de73643" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.375 : 8.325); (9 : 8.7); (9.125 : 8.7); (9.125 : 10); (9.5 : 10.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EMRDataContext/Patient/Patient_Order" />
+      <nodes>
+        <classShapeMoniker Id="dd6a4dd3-3fa1-4c79-9244-f824974d4be4" />
+        <classShapeMoniker Id="10042acb-977b-4300-ab4e-4f4084a255b1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.90625 : 8.325); (9.90625 : 9); (10.3541666666667 : 9 : JumpStart); (10.5208333333333 : 9 : JumpEnd); (12 : 9); (12 : 15.975); (12.875 : 15.975)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EMRDataContext/Patient/Patient_ProfileItem" />
+      <nodes>
+        <classShapeMoniker Id="dd6a4dd3-3fa1-4c79-9244-f824974d4be4" />
+        <classShapeMoniker Id="ee7a7bab-2dc6-4eab-a374-6ed00597bf82" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

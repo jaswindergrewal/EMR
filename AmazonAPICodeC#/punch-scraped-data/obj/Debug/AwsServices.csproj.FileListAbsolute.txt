@@ -1,0 +1,3 @@
+C:\Users\jaswinder\Downloads\AmazonAPICodeCSharp\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\bin\Debug\punch-scraped-data.exe.config
+C:\Users\jaswinder\Downloads\AmazonAPICodeCSharp\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\obj\Debug\punch-scraped-data.exe
+C:\Users\jaswinder\Downloads\AmazonAPICodeCSharp\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\obj\Debug\punch-scraped-data.pdb

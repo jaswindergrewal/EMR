@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A91BC95-F93C-4808-A503-DD869AF0C3CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Emrdev.ServiceLayer</RootNamespace>
+    <AssemblyName>Emrdev.ServiceLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcuitySchedulingService.cs" />
+    <Compile Include="AddProspectService.cs" />
+    <Compile Include="AdminAutoTicketService.cs" />
+    <Compile Include="AdminDictationService.cs" />
+    <Compile Include="AdminDrugListService.cs" />
+    <Compile Include="AdminLabImport.cs" />
+    <Compile Include="AdminLabRemindersService.cs" />
+    <Compile Include="AdminMatchLabService.cs" />
+    <Compile Include="AdminResellerService.cs" />
+    <Compile Include="AdminSuppListService.cs" />
+    <Compile Include="AllergieService.cs" />
+    <Compile Include="AppointmentConsole.cs" />
+    <Compile Include="AppointmentsService.cs" />
+    <Compile Include="AptFollowUpsService.cs" />
+    <Compile Include="AutoshipCancelReasonService.cs" />
+    <Compile Include="AutoshipProductService.cs" />
+    <Compile Include="AutoshipReportUtilService.cs" />
+    <Compile Include="CalendarService.cs" />
+    <Compile Include="ContactPrintService.cs" />
+    <Compile Include="ContactService.cs" />
+    <Compile Include="CriticalTaskService.cs" />
+    <Compile Include="CRMdashboardService.cs" />
+    <Compile Include="CRMEventsService.cs" />
+    <Compile Include="DepartmentService.cs" />
+    <Compile Include="DepartmentStaffService.cs" />
+    <Compile Include="EmailTemplateService.cs" />
+    <Compile Include="EndMedicalService.cs" />
+    <Compile Include="FollowUpTypeService.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IAcuitySchedulingService.cs" />
+    <Compile Include="IAddProspectService.cs" />
+    <Compile Include="IAdminAutoTicketService.cs" />
+    <Compile Include="IAdminDictationService.cs" />
+    <Compile Include="IAdminDrugListService.cs" />
+    <Compile Include="IAdminLabImport.cs" />
+    <Compile Include="IAdminLabRemindersService.cs" />
+    <Compile Include="IAdminMatchLabService.cs" />
+    <Compile Include="IAdminResellerService.cs" />
+    <Compile Include="IAdminSuppListService.cs" />
+    <Compile Include="IAllergieService.cs" />
+    <Compile Include="IAppointmentConsole.cs" />
+    <Compile Include="IAppointmentsService.cs" />
+    <Compile Include="IAptFollowUpsService.cs" />
+    <Compile Include="IAutoshipCancelReasonService.cs" />
+    <Compile Include="IAutoshipProductService.cs" />
+    <Compile Include="IAutoshipReportUtilService.cs" />
+    <Compile Include="ICalendarService.cs" />
+    <Compile Include="IContactPrintService.cs" />
+    <Compile Include="IContactService.cs" />
+    <Compile Include="ICriticalTaskService.cs" />
+    <Compile Include="ICRMdashboardService.cs" />
+    <Compile Include="ICRMEventsService.cs" />
+    <Compile Include="IDepartmentService.cs" />
+    <Compile Include="IDepartmentStaffService.cs" />
+    <Compile Include="IEmailTemplateService.cs" />
+    <Compile Include="IEndMedicalService.cs" />
+    <Compile Include="IFollowUpTypeService.cs" />
+    <Compile Include="IIntakeHormoneService.cs" />
+    <Compile Include="IIntakeService.cs" />
+    <Compile Include="IITicketManageService.cs" />
+    <Compile Include="ILabAddService.cs" />
+    <Compile Include="ILabLaunchService.cs" />
+    <Compile Include="ILabLogService.cs" />
+    <Compile Include="ILabPatientsService.cs" />
+    <Compile Include="ILabReportService.cs" />
+    <Compile Include="ILabScehduleService.cs" />
+    <Compile Include="ILabsService.cs" />
+    <Compile Include="ILandingPageService.cs" />
+    <Compile Include="ILMCBaseService.cs" />
+    <Compile Include="IMailChimpCampaignService.cs" />
+    <Compile Include="IManageService.cs" />
+    <Compile Include="INewTicketNoPatientService.cs" />
+    <Compile Include="IntakeHormoneService.cs" />
+    <Compile Include="IntakeService.cs" />
+    <Compile Include="IOfficeVisitService.cs" />
+    <Compile Include="IOldVisitService.cs" />
+    <Compile Include="IOneTimeSaleService.cs" />
+    <Compile Include="IOrderService.cs" />
+    <Compile Include="IPanelService.cs" />
+    <Compile Include="IPatientInfoService.cs" />
+    <Compile Include="IPatientSearch.cs" />
+    <Compile Include="IPatientService.cs" />
+    <Compile Include="IPatientVitalsService.cs" />
+    <Compile Include="IPendingFollowupService.cs" />
+    <Compile Include="IPendingMedRecordsService.cs" />
+    <Compile Include="IPendingPrescriptionAproveService.cs" />
+    <Compile Include="IPrescriptionService.cs" />
+    <Compile Include="IProblemListService.cs" />
+    <Compile Include="IProfileItemService.cs" />
+    <Compile Include="IProtocolService.cs" />
+    <Compile Include="IProviderService.cs" />
+    <Compile Include="IQBCustMatchPatientService.cs" />
+    <Compile Include="IRecurringApptService.cs" />
+    <Compile Include="IRenewalExceptionService.cs" />
+    <Compile Include="IRenewalPackagesService.cs" />
+    <Compile Include="ISearchResultService.cs" />
+    <Compile Include="ISeminarScheduleService.cs" />
+    <Compile Include="ISharepointPrescriptionDetailService.cs" />
+    <Compile Include="ISiteService.cs" />
+    <Compile Include="ISpecialAttentionService.cs" />
+    <Compile Include="IStaffService.cs" />
+    <Compile Include="ISurveyResultService.cs" />
+    <Compile Include="ISymptomService.cs" />
+    <Compile Include="ITicketManageService.cs" />
+    <Compile Include="IUploadScanService.cs" />
+    <Compile Include="IXeroAPIService.cs" />
+    <Compile Include="LabAddService.cs" />
+    <Compile Include="LabLaunchService.cs" />
+    <Compile Include="LabLogService.cs" />
+    <Compile Include="LabPatientsService.cs" />
+    <Compile Include="LabReportService.cs" />
+    <Compile Include="LabScehduleService.cs" />
+    <Compile Include="LabsService.cs" />
+    <Compile Include="LandingPageService.cs" />
+    <Compile Include="LMCBaseService.cs" />
+    <Compile Include="MailChimpCampaignService.cs" />
+    <Compile Include="ManageService.cs" />
+    <Compile Include="NewTicketNoPatientService.cs" />
+    <Compile Include="OfficeVisitService.cs" />
+    <Compile Include="OldVisitService.cs" />
+    <Compile Include="OneTimeSaleService.cs" />
+    <Compile Include="OrderService.cs" />
+    <Compile Include="PanelService.cs" />
+    <Compile Include="PatientInfoService.cs" />
+    <Compile Include="PatientSearch.cs" />
+    <Compile Include="PatientService.cs" />
+    <Compile Include="PatientVitalsService.cs" />
+    <Compile Include="PendingFollowupService.cs" />
+    <Compile Include="PendingMedRecordsService.cs" />
+    <Compile Include="PendingPrescriptionAproveService.cs" />
+    <Compile Include="PrescriptionService.cs" />
+    <Compile Include="ProblemListService.cs" />
+    <Compile Include="ProfileItemService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtocolService.cs" />
+    <Compile Include="ProviderService.cs" />
+    <Compile Include="QBCustMatchPatientService.cs" />
+    <Compile Include="RecurringApptService.cs" />
+    <Compile Include="RenewalExceptionService.cs" />
+    <Compile Include="RenewalPackagesService.cs" />
+    <Compile Include="SearchResultService.cs" />
+    <Compile Include="SeminarScheduleService.cs" />
+    <Compile Include="SharepointPrescriptionDetailService.cs" />
+    <Compile Include="SiteService.cs" />
+    <Compile Include="SpecialAttentionService.cs" />
+    <Compile Include="StaffService.cs" />
+    <Compile Include="SurveyResultService.cs" />
+    <Compile Include="SymptomService.cs" />
+    <Compile Include="TicketManageService.cs" />
+    <Compile Include="UploadScanService.cs" />
+    <Compile Include="XeroAPIService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Emrdev.BusinessLayer\Emrdev.BusinessLayer.csproj">
+      <Project>{552b39b0-b09b-4788-bdab-eb97d6985dbf}</Project>
+      <Name>Emrdev.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Emrdev.ViewModelLayer\Emrdev.ViewModelLayer.csproj">
+      <Project>{bacd1f94-12d7-464d-a7d6-d40c6bee92ca}</Project>
+      <Name>Emrdev.ViewModelLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

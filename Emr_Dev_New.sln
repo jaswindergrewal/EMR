@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emrdev.BusinessLayer", "Emrdev.BusinessLayer\Emrdev.BusinessLayer.csproj", "{552B39B0-B09B-4788-BDAB-EB97D6985DBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emrdev.DataLayer", "Emrdev.DataLayer\Emrdev.DataLayer.csproj", "{8597D4CF-30CD-44AA-8F00-9DE0C18CEAF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emrdev.ServiceLayer", "Emrdev.ServiceLayer\Emrdev.ServiceLayer.csproj", "{9A91BC95-F93C-4808-A503-DD869AF0C3CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emrdev.ViewModelLayer", "Emrdev.ViewModelLayer\Emrdev.ViewModelLayer.csproj", "{BACD1F94-12D7-464D-A7D6-D40C6BEE92CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emrdev.XeroAPI", "Emrdev.XeroAPI\Emrdev.XeroAPI.csproj", "{33DC7FBF-5502-4835-9AA3-54EE3756F3B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeroApi", "XeroApi\XeroApi.csproj", "{5E527CBB-0D34-47CB-9971-02320CEF3920}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "emr_new(1)", "emr_new\", "{7D4A2C35-99C2-47B5-80DA-B32762117619}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{9a91bc95-f93c-4808-a503-dd869af0c3ce}|Emrdev.ServiceLayer.dll;{BACD1F94-12D7-464D-A7D6-D40C6BEE92CA}|Emrdev.ViewModelLayer.dll;{33dc7fbf-5502-4835-9aa3-54ee3756f3b7}|Emrdev.XeroAPI.dll;{5E527CBB-0D34-47CB-9971-02320CEF3920}|XeroApi.dll;{552B39B0-B09B-4788-BDAB-EB97D6985DBF}|Emrdev.BusinessLayer.dll;{8597D4CF-30CD-44AA-8F00-9DE0C18CEAF7}|Emrdev.DataLayer.dll;{96034596-a539-4d84-8127-3970d4b30f23}|Emrdev.AmazonService.dll;{ee4dde8e-1a1a-4ec5-8a57-6ad737f1398a}|CalendarLib.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49173"
+		Debug.AspNetCompiler.PhysicalPath = "emr_new\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49173\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49173"
+		Release.AspNetCompiler.PhysicalPath = "emr_new\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49173\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49173"
+		SlnRelativePath = "emr_new\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emrdev.AmazonService", "Emrdev.AmazonService\Emrdev.AmazonService.csproj", "{96034596-A539-4D84-8127-3970D4B30F23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarLib", "CalendarLib\CalendarLib.csproj", "{EE4DDE8E-1A1A-4EC5-8A57-6AD737F1398A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{552B39B0-B09B-4788-BDAB-EB97D6985DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{552B39B0-B09B-4788-BDAB-EB97D6985DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{552B39B0-B09B-4788-BDAB-EB97D6985DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{552B39B0-B09B-4788-BDAB-EB97D6985DBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8597D4CF-30CD-44AA-8F00-9DE0C18CEAF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8597D4CF-30CD-44AA-8F00-9DE0C18CEAF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8597D4CF-30CD-44AA-8F00-9DE0C18CEAF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8597D4CF-30CD-44AA-8F00-9DE0C18CEAF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A91BC95-F93C-4808-A503-DD869AF0C3CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A91BC95-F93C-4808-A503-DD869AF0C3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A91BC95-F93C-4808-A503-DD869AF0C3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A91BC95-F93C-4808-A503-DD869AF0C3CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACD1F94-12D7-464D-A7D6-D40C6BEE92CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACD1F94-12D7-464D-A7D6-D40C6BEE92CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACD1F94-12D7-464D-A7D6-D40C6BEE92CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACD1F94-12D7-464D-A7D6-D40C6BEE92CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DC7FBF-5502-4835-9AA3-54EE3756F3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DC7FBF-5502-4835-9AA3-54EE3756F3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DC7FBF-5502-4835-9AA3-54EE3756F3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DC7FBF-5502-4835-9AA3-54EE3756F3B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E527CBB-0D34-47CB-9971-02320CEF3920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E527CBB-0D34-47CB-9971-02320CEF3920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E527CBB-0D34-47CB-9971-02320CEF3920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E527CBB-0D34-47CB-9971-02320CEF3920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D4A2C35-99C2-47B5-80DA-B32762117619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D4A2C35-99C2-47B5-80DA-B32762117619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D4A2C35-99C2-47B5-80DA-B32762117619}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D4A2C35-99C2-47B5-80DA-B32762117619}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{96034596-A539-4D84-8127-3970D4B30F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96034596-A539-4D84-8127-3970D4B30F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96034596-A539-4D84-8127-3970D4B30F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96034596-A539-4D84-8127-3970D4B30F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE4DDE8E-1A1A-4EC5-8A57-6AD737F1398A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4DDE8E-1A1A-4EC5-8A57-6AD737F1398A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4DDE8E-1A1A-4EC5-8A57-6AD737F1398A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4DDE8E-1A1A-4EC5-8A57-6AD737F1398A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

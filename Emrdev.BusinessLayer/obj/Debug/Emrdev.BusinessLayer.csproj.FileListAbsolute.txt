@@ -1,0 +1,36 @@
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\bin\Debug\Emrdev.BusinessLayer.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\bin\Debug\Emrdev.BusinessLayer.pdb
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\bin\Debug\AutoMapper.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\bin\Debug\Emrdev.DataLayer.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\bin\Debug\Emrdev.ViewModelLayer.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\bin\Debug\EntityFramework.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\bin\Debug\Emrdev.DataLayer.pdb
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\bin\Debug\Emrdev.DataLayer.dll.config
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\bin\Debug\Emrdev.ViewModelLayer.pdb
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\obj\Debug\Emrdev.BusinessLayer.csprojResolveAssemblyReference.cache
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\obj\Debug\Emrdev.BusinessLayer.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.BusinessLayer\obj\Debug\Emrdev.BusinessLayer.pdb
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\bin\Debug\Emrdev.BusinessLayer.dll
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\bin\Debug\Emrdev.BusinessLayer.pdb
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\bin\Debug\AutoMapper.dll
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\bin\Debug\Emrdev.DataLayer.dll
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\bin\Debug\Emrdev.ViewModelLayer.dll
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\bin\Debug\EntityFramework.dll
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\bin\Debug\Emrdev.DataLayer.pdb
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\bin\Debug\Emrdev.DataLayer.dll.config
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\bin\Debug\Emrdev.ViewModelLayer.pdb
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\obj\Debug\Emrdev.BusinessLayer.csprojResolveAssemblyReference.cache
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\obj\Debug\Emrdev.BusinessLayer.dll
+D:\CodeBase\EMR_Staging\Emrdev.BusinessLayer\obj\Debug\Emrdev.BusinessLayer.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\bin\Debug\Emrdev.BusinessLayer.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\bin\Debug\Emrdev.BusinessLayer.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\bin\Debug\AutoMapper.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\bin\Debug\Emrdev.DataLayer.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\bin\Debug\Emrdev.ViewModelLayer.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\bin\Debug\EntityFramework.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\bin\Debug\Emrdev.DataLayer.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\bin\Debug\Emrdev.DataLayer.dll.config
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\bin\Debug\Emrdev.ViewModelLayer.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\obj\Debug\Emrdev.BusinessLayer.csprojResolveAssemblyReference.cache
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\obj\Debug\Emrdev.BusinessLayer.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.BusinessLayer\obj\Debug\Emrdev.BusinessLayer.pdb

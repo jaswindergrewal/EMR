@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DevBackupModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin_ShippingValues">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShippingFee" Type="money" Nullable="false" />
+    <Property Name="OrderTotalLimit" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AdminManagementProgramFee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProgramName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="DateAdded" Type="datetime" Nullable="false" />
+    <Property Name="DateEdited" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AutoShipEmailTEmplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TemplateDesc" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="AutoshipProducts">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="AutoshipPrice" Type="money" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="QBId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="GroupID" Type="int" Nullable="false" />
+    <Property Name="Count" Type="int" />
+    <Property Name="Viewable" Type="bit" />
+    <Property Name="Reviewed" Type="bit" Nullable="false" />
+    <Property Name="Weight" Type="varchar" MaxLength="50" />
+    <Property Name="Height" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Width" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Length" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Sku" Type="varchar(max)" />
+    <Property Name="Bundle" Type="bit" />
+  </EntityType>
+  <EntityType Name="CRMWufooLink">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WufooFormLink" Type="varchar(max)" />
+    <Property Name="EmailDescription" Type="varchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmailTemplate">
+    <Key>
+      <PropertyRef Name="TemplateID" />
+    </Key>
+    <Property Name="TemplateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TemplateDesc" Type="varchar(max)" />
+    <Property Name="AppointmentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IVRTemplate">
+    <Key>
+      <PropertyRef Name="TemplateID" />
+    </Key>
+    <Property Name="TemplateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TemplateDesc" Type="varchar(max)" />
+    <Property Name="AppointmentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiddleInitial" Type="nvarchar" MaxLength="25" />
+    <Property Name="BillingStreet" Type="nvarchar" MaxLength="150" />
+    <Property Name="BillingCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingState" Type="nvarchar" MaxLength="20" />
+    <Property Name="BillingZip" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShippingStreet" Type="nvarchar" MaxLength="150" />
+    <Property Name="ShippingCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShippingState" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShippingZip" Type="nvarchar" MaxLength="50" />
+    <Property Name="Work_Detailed_info" Type="bit" />
+    <Property Name="Work_CB_only" Type="bit" />
+    <Property Name="Work_NoMessage" Type="bit" />
+    <Property Name="WorkPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cell_Detailed_info" Type="bit" />
+    <Property Name="Cell_CB_Only" Type="bit" />
+    <Property Name="Cell_NoMessage" Type="bit" />
+    <Property Name="CellPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Home_detailed_info" Type="bit" />
+    <Property Name="Home_CB_only" Type="bit" />
+    <Property Name="Home_NoMessage" Type="bit" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="FaxPone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax_auth_detailed_info" Type="bit" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email_auth_detailed_info" Type="bit" />
+    <Property Name="HIPPA_signed" Type="bit" />
+    <Property Name="HIPPA_signed_date" Type="datetime" />
+    <Property Name="Prefered_Pharm" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pager" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="smalldatetime" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="1" />
+    <Property Name="Clinic" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyFirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyRelationship" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyState" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactPreference" Type="nvarchar" MaxLength="500" />
+    <Property Name="Inactive" Type="bit" />
+    <Property Name="EntryDate" Type="smalldatetime" />
+    <Property Name="SpecialAttention" Type="bit" />
+    <Property Name="ActivityRating" Type="int" />
+    <Property Name="Notes" Type="varchar(max)" />
+    <Property Name="MedicalHistory" Type="varchar(max)" />
+    <Property Name="image" Type="varchar" MaxLength="200" />
+    <Property Name="PCP" Type="nvarchar" MaxLength="200" />
+    <Property Name="LMC_CP" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProvID" Type="int" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="NameAlert" Type="bit" />
+    <Property Name="ConciergeID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aesthetic_YN" Type="bit" />
+    <Property Name="NoShowPol_Signed_YN" Type="bit" />
+    <Property Name="Cancel_NoShow_frm_signed" Type="bit" />
+    <Property Name="Allergies" Type="nvarchar" MaxLength="500" />
+    <Property Name="AllowApptReassign" Type="bit" Nullable="false" />
+    <Property Name="Medical" Type="bit" Nullable="false" />
+    <Property Name="Aesthetics" Type="bit" Nullable="false" />
+    <Property Name="Autoship" Type="bit" Nullable="false" />
+    <Property Name="Retail" Type="bit" Nullable="false" />
+    <Property Name="Affiliate" Type="bit" Nullable="false" />
+    <Property Name="SOC" Type="bit" />
+    <Property Name="DiabetesSOC" Type="bit" Nullable="false" />
+    <Property Name="HeartSOC" Type="bit" Nullable="false" />
+    <Property Name="EmergencyContact" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Marketing_source" Type="int" Nullable="false" />
+    <Property Name="Seminar_attended" Type="int" />
+    <Property Name="Seminar_status" Type="int" />
+    <Property Name="AutoShipAlerts" Type="varchar(max)" Nullable="false" />
+    <Property Name="AutoshipNote" Type="varchar(max)" Nullable="false" />
+    <Property Name="MedicareOptOut_YN" Type="bit" Nullable="false" />
+    <Property Name="MedicareOptOut_Date" Type="smalldatetime" />
+    <Property Name="EatingPlanReceived_YN" Type="bit" Nullable="false" />
+    <Property Name="Nickname" Type="varchar" MaxLength="50" />
+    <Property Name="RenewalMonth" Type="varchar" MaxLength="50" />
+    <Property Name="Balance" Type="money" />
+    <Property Name="BalanceDueDate" Type="datetime" />
+    <Property Name="AutoshipEmail" Type="bit" Nullable="false" />
+    <Property Name="AutoshipCancelReasonID" Type="int" Nullable="false" />
+    <Property Name="AutoshipCancelOther" Type="varchar" MaxLength="2000" />
+    <Property Name="PaymentDue" Type="date" />
+    <Property Name="TermsInMonths" Type="int" />
+    <Property Name="StartMedical" Type="date" />
+    <Property Name="EndMedical" Type="date" />
+    <Property Name="InvoiceDueDate" Type="date" />
+    <Property Name="InvoicePaid" Type="bit" />
+    <Property Name="InvoiceDue" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ExpirationDate" Type="smalldatetime" />
+    <Property Name="MedicareB" Type="bit" />
+    <Property Name="RenewalException" Type="varchar" MaxLength="50" />
+    <Property Name="RenewalExcExpire" Type="date" />
+    <Property Name="AffiliateID" Type="int" />
+    <Property Name="AffiliateDate" Type="datetime" />
+    <Property Name="IsAffiliate" Type="bit" Nullable="false" />
+    <Property Name="LabsMailed" Type="bit" Nullable="false" />
+    <Property Name="ChinaPatientId" Type="int" />
+    <Property Name="BillingCountry" Type="varchar" MaxLength="250" />
+    <Property Name="ShippingCountry" Type="varchar" MaxLength="250" />
+    <Property Name="RenewalDate" Type="datetime" />
+    <Property Name="XeropatientId" Type="uniqueidentifier" />
+    <Property Name="AuthorisedPerson" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LMC_020505.dbo.QB_Invoice1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="QB_Invoice1">
+    <Key>
+      <PropertyRef Name="QBInvID" />
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="QBInvID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="IsPaid" Type="int" />
+    <Property Name="IsRecUpdate" Type="int" />
+  </EntityType>
+  <EntityType Name="Upload_tbl">
+    <Key>
+      <PropertyRef Name="UploadID" />
+    </Key>
+    <Property Name="UploadID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientID" Type="int" />
+    <Property Name="Upload_Path" Type="varchar" MaxLength="500" />
+    <Property Name="Upload_Title" Type="varchar" MaxLength="50" />
+    <Property Name="DateEntered" Type="smalldatetime" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pdf_Binary" Type="varbinary(max)" />
+    <Property Name="otherFormats_Binary" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UploadTags">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" Nullable="false" />
+    <Property Name="Disabled" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="XeroLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UpdatedDateUTC" Type="datetime" />
+    <Property Name="LogFor" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="XeroPatients">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiddleInitial" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="CellPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingZip" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingStreet" Type="nvarchar" MaxLength="150" />
+    <Property Name="BillingCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingCountry" Type="nvarchar" MaxLength="20" />
+    <Property Name="BillingState" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <Function Name="OrderItem_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderItemID" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Orders_GetOrderbystatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+    <Parameter Name="Status" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="productStatus" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Orders_GetOrderbystatusAutoship" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Orders_GetOrderForShipped" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="orderid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_AddBundleProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BundleId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_AddNewOrderItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderId" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="Weight" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_DeleteOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_DeleteOrderItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderItemId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_DeleteOrderWithReason" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderId" Type="int" Mode="In" />
+    <Parameter Name="XeroDelete" Type="bit" Mode="In" />
+    <Parameter Name="DeleteReason" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ssp_GetBundleProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BundleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_GetMailChimpCampaign" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ssp_GetManagementPrograms" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ssp_GetMedNotesDetailsByContactType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PatientID" Type="int" Mode="In" />
+    <Parameter Name="ContactType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_GetOrderById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_GetPatientDetailById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PatientId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_GetPatientListForAppointmentDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="startdate" Type="datetime" Mode="In" />
+    <Parameter Name="enddata" Type="datetime" Mode="In" />
+    <Parameter Name="apttype" Type="int" Mode="In" />
+    <Parameter Name="clinic" Type="varchar(max)" Mode="In" />
+    <Parameter Name="provider" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_GetPatientManagementProgramById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PatientId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_GetProductDetailsForOrderitems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_GetSalesAccountCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ssp_GetXeroaccounts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ssp_InsertLabReportGroups" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="groupName" Type="nvarchar" Mode="In" />
+    <Parameter Name="groupTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="sortOrder" Type="int" Mode="In" />
+    <Parameter Name="showGraph" Type="bit" Mode="In" />
+    <Parameter Name="chartBottom" Type="decimal" Mode="In" />
+    <Parameter Name="maleLongevityHigh" Type="decimal" Mode="In" />
+    <Parameter Name="maleLongevityLow" Type="decimal" Mode="In" />
+    <Parameter Name="femaleLongevityHigh" Type="decimal" Mode="In" />
+    <Parameter Name="femaleLongevityLow" Type="decimal" Mode="In" />
+    <Parameter Name="maleAcceptableHigh" Type="decimal" Mode="In" />
+    <Parameter Name="maleAcceptableLow" Type="decimal" Mode="In" />
+    <Parameter Name="femaleAcceptableHigh" Type="decimal" Mode="In" />
+    <Parameter Name="femaleAcceptableLow" Type="decimal" Mode="In" />
+    <Parameter Name="description" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="maleHighTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="maleLowTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="maleNormalTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="femHighTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="femLowTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="femNormalTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="PanelID" Type="int" Mode="In" />
+    <Parameter Name="ResultOut" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="ssp_InsertXeroAccounts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Code" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Name" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ssp_Orders_UpdateStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="orderid" Type="int" Mode="In" />
+    <Parameter Name="status" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ssp_Orders_UpdateStatusToggle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="orderid" Type="int" Mode="In" />
+    <Parameter Name="status" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ssp_PatientInfoByPatientId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PatientID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_SaveMailChimpCampaign" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MailChimpCampaignId" Type="varchar(max)" Mode="In" />
+    <Parameter Name="MailChimpCampaignName" Type="varchar(max)" Mode="In" />
+    <Parameter Name="MailChimpCampaignListId" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ssp_SavePatientManagementPrograms" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PatientId" Type="int" Mode="In" />
+    <Parameter Name="ProgramId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_SaveSalesAccountCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SalesAccountCode" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_UpdateAutoShipNote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderId" Type="int" Mode="In" />
+    <Parameter Name="AutoShipNote" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ssp_UpdateFreeShipping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_UpdateGroups" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="GroupName" Type="nvarchar" Mode="In" />
+    <Parameter Name="GroupTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="SortOrder" Type="int" Mode="In" />
+    <Parameter Name="ShowGraph" Type="bit" Mode="In" />
+    <Parameter Name="ChartBottom" Type="decimal" Mode="In" />
+    <Parameter Name="MaleLongevityHigh" Type="decimal" Mode="In" />
+    <Parameter Name="MaleLongevityLow" Type="decimal" Mode="In" />
+    <Parameter Name="FemaleLongevityHigh" Type="decimal" Mode="In" />
+    <Parameter Name="FemaleLongevityLow" Type="decimal" Mode="In" />
+    <Parameter Name="MaleAcceptableHigh" Type="decimal" Mode="In" />
+    <Parameter Name="MaleAcceptableLow" Type="decimal" Mode="In" />
+    <Parameter Name="FemaleAcceptableHigh" Type="decimal" Mode="In" />
+    <Parameter Name="FemaleAcceptableLow" Type="decimal" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MaleHighTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MaleLowTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MaleNormalTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FemHighTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FemLowTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FemNormalTxt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="PanelID" Type="int" Mode="In" />
+    <Parameter Name="ResultOut" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="ssp_UpdateOrderNote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderId" Type="int" Mode="In" />
+    <Parameter Name="Note" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ShipAddress" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ShipCity" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ShipState" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ShipZip" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ssp_UpdatePatientChinapatient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PatientId" Type="int" Mode="In" />
+    <Parameter Name="ChinaPatientId" Type="int" Mode="In" />
+    <Parameter Name="BillingCountry" Type="varchar" Mode="In" />
+    <Parameter Name="ShippingCountry" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ssp_XEROGetOrderItemsbyOrderID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ssp_XEROGetOrdersbyOrderIDnew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderIDs" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ssp_XEROGetpatientsnotMatch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="Sort" Type="varchar" Mode="In" />
+    <Parameter Name="SortOrder" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ssp_XEROpatientsMatchedSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="Sort" Type="varchar" Mode="In" />
+    <Parameter Name="SortOrder" Type="varchar" Mode="In" />
+    <Parameter Name="FirstName" Type="varchar" Mode="In" />
+    <Parameter Name="LastName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ssp_XEROUpdateInvoice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderID" Type="int" Mode="In" />
+    <Parameter Name="XeroInvId" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="ssp_XEROUpdateInvoicePaid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderID" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="DevBackupModel1StoreContainer">
+    <EntitySet Name="Admin_ShippingValues" EntityType="Self.Admin_ShippingValues" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdminManagementProgramFee" EntityType="Self.AdminManagementProgramFee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AutoShipEmailTEmplate" EntityType="Self.AutoShipEmailTEmplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AutoshipProducts" EntityType="Self.AutoshipProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CRMWufooLink" EntityType="Self.CRMWufooLink" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmailTemplate" EntityType="Self.EmailTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IVRTemplate" EntityType="Self.IVRTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Patients" EntityType="Self.Patients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Upload_tbl" EntityType="Self.Upload_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UploadTags" EntityType="Self.UploadTags" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XeroLog" EntityType="Self.XeroLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XeroPatients" EntityType="Self.XeroPatients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QB_Invoice1" EntityType="Self.QB_Invoice1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[QB_Invoice1].[QBInvID] AS [QBInvID], 
+[QB_Invoice1].[OrderID] AS [OrderID], 
+[QB_Invoice1].[IsPaid] AS [IsPaid], 
+[QB_Invoice1].[IsRecUpdate] AS [IsRecUpdate]
+FROM [dbo].[QB_Invoice1] AS [QB_Invoice1]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

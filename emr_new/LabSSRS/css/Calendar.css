@@ -1,0 +1,88 @@
+﻿/* general */
+p, body, td
+{
+	font-family: Tahoma;
+	font-size: 10pt;
+}
+
+a
+{
+	color: navy;
+}
+
+.Appt
+{
+	border-style:solid;
+	border-width:thin;
+	border-color:Gray;
+}
+/*  modal popup */
+.modalBackground
+{
+	background-color: Gray;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+
+.modalPopup
+{
+	background-color: #ffffff; /*background-color: #EFF3FB;*/
+	border-width: 3px;
+	border-style: solid;
+	border-color: Gray;
+	padding: 3px;
+	width: 250px;
+}
+
+.detail
+{
+	border-width: thin;
+	border-style: inset;
+	text-align: center;
+}
+
+.detail td
+{
+	padding: 5px;
+}
+
+/* calendar control (System.Web.UI.WebControls) */
+
+.calendar
+{
+	background-color: white;
+	font-family: Tahoma;
+	font-size: 8pt;
+}
+
+.calendar td
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	padding: 2px 2px 2px 2px;
+}
+
+.calendar table
+{
+	background-color: #9EBEF5;
+}
+
+.calendar tr td a
+{
+	text-decoration: none;
+}
+
+.calendar td a
+{
+	text-decoration: none;
+}
+
+.calendar td.today a
+{
+	border: solid 1px red;
+}
+
+.calendar td.selected
+{
+	background-color: #FBE694;
+}

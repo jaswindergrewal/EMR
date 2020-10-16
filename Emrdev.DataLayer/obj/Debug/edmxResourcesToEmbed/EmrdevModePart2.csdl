@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DevBackupModel1" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="devbackupEntitiesPart2" p1:LazyLoadingEnabled="true">
+    <FunctionImport Name="ssp_InsertLabReportGroups">
+      <Parameter Name="groupName" Mode="In" Type="String" />
+      <Parameter Name="groupTitle" Mode="In" Type="String" />
+      <Parameter Name="sortOrder" Mode="In" Type="Int32" />
+      <Parameter Name="showGraph" Mode="In" Type="Boolean" />
+      <Parameter Name="chartBottom" Mode="In" Type="Decimal" />
+      <Parameter Name="maleLongevityHigh" Mode="In" Type="Decimal" />
+      <Parameter Name="maleLongevityLow" Mode="In" Type="Decimal" />
+      <Parameter Name="femaleLongevityHigh" Mode="In" Type="Decimal" />
+      <Parameter Name="femaleLongevityLow" Mode="In" Type="Decimal" />
+      <Parameter Name="maleAcceptableHigh" Mode="In" Type="Decimal" />
+      <Parameter Name="maleAcceptableLow" Mode="In" Type="Decimal" />
+      <Parameter Name="femaleAcceptableHigh" Mode="In" Type="Decimal" />
+      <Parameter Name="femaleAcceptableLow" Mode="In" Type="Decimal" />
+      <Parameter Name="description" Mode="In" Type="String" />
+      <Parameter Name="maleHighTxt" Mode="In" Type="String" />
+      <Parameter Name="maleLowTxt" Mode="In" Type="String" />
+      <Parameter Name="maleNormalTxt" Mode="In" Type="String" />
+      <Parameter Name="femHighTxt" Mode="In" Type="String" />
+      <Parameter Name="femLowTxt" Mode="In" Type="String" />
+      <Parameter Name="femNormalTxt" Mode="In" Type="String" />
+      <Parameter Name="PanelID" Mode="In" Type="Int32" />
+      <Parameter Name="ResultOut" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_UpdateGroups">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="GroupName" Mode="In" Type="String" />
+      <Parameter Name="GroupTitle" Mode="In" Type="String" />
+      <Parameter Name="SortOrder" Mode="In" Type="Int32" />
+      <Parameter Name="ShowGraph" Mode="In" Type="Boolean" />
+      <Parameter Name="ChartBottom" Mode="In" Type="Decimal" />
+      <Parameter Name="MaleLongevityHigh" Mode="In" Type="Decimal" />
+      <Parameter Name="MaleLongevityLow" Mode="In" Type="Decimal" />
+      <Parameter Name="FemaleLongevityHigh" Mode="In" Type="Decimal" />
+      <Parameter Name="FemaleLongevityLow" Mode="In" Type="Decimal" />
+      <Parameter Name="MaleAcceptableHigh" Mode="In" Type="Decimal" />
+      <Parameter Name="MaleAcceptableLow" Mode="In" Type="Decimal" />
+      <Parameter Name="FemaleAcceptableHigh" Mode="In" Type="Decimal" />
+      <Parameter Name="FemaleAcceptableLow" Mode="In" Type="Decimal" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="MaleHighTxt" Mode="In" Type="String" />
+      <Parameter Name="MaleLowTxt" Mode="In" Type="String" />
+      <Parameter Name="MaleNormalTxt" Mode="In" Type="String" />
+      <Parameter Name="FemHighTxt" Mode="In" Type="String" />
+      <Parameter Name="FemLowTxt" Mode="In" Type="String" />
+      <Parameter Name="FemNormalTxt" Mode="In" Type="String" />
+      <Parameter Name="PanelID" Mode="In" Type="Int32" />
+      <Parameter Name="ResultOut" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Orders_GetOrderbystatus" ReturnType="Collection(DevBackupModel1.Orders_GetOrderbystatus_Result)">
+      <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Status" Mode="In" Type="String" />
+      <Parameter Name="ProductId" Mode="In" Type="Int32" />
+      <Parameter Name="productStatus" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_Orders_UpdateStatus">
+      <Parameter Name="orderid" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Orders_GetOrderForShipped" ReturnType="Collection(DevBackupModel1.Orders_GetOrderForShipped_Result)">
+      <Parameter Name="orderid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_UpdatePatientChinapatient">
+      <Parameter Name="PatientId" Mode="In" Type="Int32" />
+      <Parameter Name="ChinaPatientId" Mode="In" Type="Int32" />
+      <Parameter Name="BillingCountry" Mode="In" Type="String" />
+      <Parameter Name="ShippingCountry" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_PatientInfoByPatientId" ReturnType="Collection(DevBackupModel1.ssp_PatientInfoByPatientId_Result)">
+      <Parameter Name="PatientID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_XEROGetpatientsnotMatch" ReturnType="Collection(DevBackupModel1.ssp_XEROGetpatientsnotMatch_Result)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="Sort" Mode="In" Type="String" />
+      <Parameter Name="SortOrder" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_XEROpatientsMatchedSearch" ReturnType="Collection(DevBackupModel1.ssp_XEROpatientsMatchedSearch_Result)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="Sort" Mode="In" Type="String" />
+      <Parameter Name="SortOrder" Mode="In" Type="String" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="XeroLog" EntityType="DevBackupModel1.XeroLog" />
+    <EntitySet Name="XeroPatients" EntityType="DevBackupModel1.XeroPatients" />
+    <EntitySet Name="Patients" EntityType="DevBackupModel1.Patients" />
+    <FunctionImport Name="ssp_GetPatientDetailById" ReturnType="Collection(DevBackupModel1.ssp_GetPatientDetailById_Result)">
+      <Parameter Name="PatientId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="UploadTags" EntityType="DevBackupModel1.UploadTags" />
+    <EntitySet Name="Upload_tbl" EntityType="DevBackupModel1.Upload_tbl" />
+    <EntitySet Name="EmailTemplate" EntityType="DevBackupModel1.EmailTemplate" />
+    <EntitySet Name="CRMWufooLink" EntityType="DevBackupModel1.CRMWufooLink" />
+    <FunctionImport Name="ssp_GetMedNotesDetailsByContactType" ReturnType="Collection(DevBackupModel1.ssp_GetMedNotesDetailsByContactType_Result)">
+      <Parameter Name="PatientID" Mode="In" Type="Int32" />
+      <Parameter Name="ContactType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="AutoShipEmailTEmplate" EntityType="DevBackupModel1.AutoShipEmailTEmplate" />
+    <FunctionImport Name="ssp_GetPatientListForAppointmentDate" ReturnType="Collection(DevBackupModel1.ssp_GetPatientListForAppointmentDate_Result)">
+      <Parameter Name="startdate" Mode="In" Type="DateTime" />
+      <Parameter Name="enddata" Mode="In" Type="DateTime" />
+      <Parameter Name="apttype" Mode="In" Type="Int32" />
+      <Parameter Name="clinic" Mode="In" Type="String" />
+      <Parameter Name="provider" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_DeleteOrder">
+      <Parameter Name="OrderId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_DeleteOrderItem">
+      <Parameter Name="OrderItemId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_UpdateAutoShipNote">
+      <Parameter Name="OrderId" Mode="In" Type="Int32" />
+      <Parameter Name="AutoShipNote" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="OrderItem_Update">
+      <Parameter Name="OrderItemID" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_GetProductDetailsForOrderitems" ReturnType="Collection(DevBackupModel1.ssp_GetProductDetailsForOrderitems_Result)">
+      <Parameter Name="ProductId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_AddNewOrderItem">
+      <Parameter Name="OrderId" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="Weight" Mode="In" Type="String" />
+      <Parameter Name="ProductId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_Orders_UpdateStatusToggle">
+      <Parameter Name="orderid" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="IVRTemplate" EntityType="DevBackupModel1.IVRTemplate" />
+    <FunctionImport Name="Orders_GetOrderbystatusAutoship" ReturnType="Collection(DevBackupModel1.Orders_GetOrderbystatusAutoship_Result)">
+      <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_XEROGetOrdersbyOrderIDnew" ReturnType="Collection(DevBackupModel1.ssp_XEROGetOrdersbyOrderIDnew_Result)">
+      <Parameter Name="OrderIDs" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="QB_Invoice1" EntityType="DevBackupModel1.QB_Invoice1" />
+    <FunctionImport Name="ssp_XEROUpdateInvoice">
+      <Parameter Name="OrderID" Mode="In" Type="Int32" />
+      <Parameter Name="XeroInvId" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_InsertXeroAccounts">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_GetXeroaccounts" ReturnType="Collection(DevBackupModel1.ssp_GetXeroaccounts_Result)" />
+    <EntitySet Name="AutoshipProducts" EntityType="DevBackupModel1.AutoshipProducts" />
+    <FunctionImport Name="ssp_AddBundleProducts">
+      <Parameter Name="BundleId" Mode="In" Type="Int32" />
+      <Parameter Name="ProductId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_GetBundleProducts" ReturnType="Collection(DevBackupModel1.ssp_GetBundleProducts_Result)">
+      <Parameter Name="BundleId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_GetOrderById" ReturnType="Collection(DevBackupModel1.ssp_GetOrderById_Result)">
+      <Parameter Name="OrderId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_XEROUpdateInvoicePaid">
+      <Parameter Name="OrderID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Admin_ShippingValues" EntityType="DevBackupModel1.Admin_ShippingValues" />
+    <FunctionImport Name="ssp_UpdateOrderNote">
+      <Parameter Name="OrderId" Mode="In" Type="Int32" />
+      <Parameter Name="Note" Mode="In" Type="String" />
+      <Parameter Name="ShipAddress" Mode="In" Type="String" />
+      <Parameter Name="ShipCity" Mode="In" Type="String" />
+      <Parameter Name="ShipState" Mode="In" Type="String" />
+      <Parameter Name="ShipZip" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_GetManagementPrograms" ReturnType="Collection(DevBackupModel1.ssp_GetManagementPrograms_Result)" />
+    <EntitySet Name="AdminManagementProgramFee" EntityType="DevBackupModel1.AdminManagementProgramFee" />
+    <FunctionImport Name="ssp_SavePatientManagementPrograms">
+      <Parameter Name="PatientId" Mode="In" Type="Int32" />
+      <Parameter Name="ProgramId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_GetPatientManagementProgramById" ReturnType="Collection(DevBackupModel1.ssp_GetPatientManagementProgramById_Result)">
+      <Parameter Name="PatientId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_UpdateFreeShipping">
+      <Parameter Name="OrderID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_GetSalesAccountCode" ReturnType="Collection(DevBackupModel1.ssp_GetSalesAccountCode_Result)" />
+    <FunctionImport Name="ssp_SaveSalesAccountCode">
+      <Parameter Name="SalesAccountCode" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_GetMailChimpCampaign" ReturnType="Collection(DevBackupModel1.ssp_GetMailChimpCampaign_Result)" />
+    <FunctionImport Name="ssp_SaveMailChimpCampaign">
+      <Parameter Name="MailChimpCampaignId" Mode="In" Type="String" />
+      <Parameter Name="MailChimpCampaignName" Mode="In" Type="String" />
+      <Parameter Name="MailChimpCampaignListId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_DeleteOrderWithReason">
+      <Parameter Name="OrderId" Mode="In" Type="Int32" />
+      <Parameter Name="XeroDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="DeleteReason" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ssp_XEROGetOrderItemsbyOrderID" ReturnType="Collection(DevBackupModel1.ssp_XEROGetOrderItemsbyOrderID_Result)">
+      <Parameter Name="OrderID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Orders_GetOrderbystatus_Result">
+    <Property Type="Int32" Name="OrderID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="Date_Prepared" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="City" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="State" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Zip" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="PatientID" Nullable="false" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="2000" />
+  </ComplexType>
+  <ComplexType Name="Orders_GetOrderForShipped_Result">
+    <Property Type="Int32" Name="OrderID" Nullable="false" />
+    <Property Type="DateTime" Name="orderDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="orderStatus" Nullable="false" MaxLength="17" />
+    <Property Type="String" Name="orderKey" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="company" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="street1" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="street2" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="city" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="state" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PostalCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Weight" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Length" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Width" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Height" Nullable="false" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="ssp_PatientInfoByPatientId_Result">
+    <Property Type="Int32" Name="PatientID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MiddleInitial" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="BillingStreet" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="BillingCity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingState" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="BillingZip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ShippingStreet" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ShippingCity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ShippingState" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ShippingZip" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Work_Detailed_info" Nullable="true" />
+    <Property Type="Boolean" Name="Work_CB_only" Nullable="true" />
+    <Property Type="Boolean" Name="Work_NoMessage" Nullable="true" />
+    <Property Type="String" Name="WorkPhone" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Cell_Detailed_info" Nullable="true" />
+    <Property Type="Boolean" Name="Cell_CB_Only" Nullable="true" />
+    <Property Type="Boolean" Name="Cell_NoMessage" Nullable="true" />
+    <Property Type="String" Name="CellPhone" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Home_detailed_info" Nullable="true" />
+    <Property Type="Boolean" Name="Home_CB_only" Nullable="true" />
+    <Property Type="Boolean" Name="Home_NoMessage" Nullable="true" />
+    <Property Type="String" Name="HomePhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FaxPone" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Fax_auth_detailed_info" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Email_auth_detailed_info" Nullable="true" />
+    <Property Type="Boolean" Name="HIPPA_signed" Nullable="true" />
+    <Property Type="DateTime" Name="HIPPA_signed_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Prefered_Pharm" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Pager" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Birthday" Nullable="true" Precision="16" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Clinic" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmergencyFirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmergencyLastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmergencyPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmergencyRelationship" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmergencyState" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactPreference" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="Inactive" Nullable="true" />
+    <Property Type="DateTime" Name="EntryDate" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="SpecialAttention" Nullable="true" />
+    <Property Type="Int32" Name="ActivityRating" Nullable="true" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="String" Name="MedicalHistory" Nullable="true" />
+    <Property Type="String" Name="image" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PCP" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LMC_CP" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProvID" Nullable="true" />
+    <Property Type="DateTime" Name="LastUpdated" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="NameAlert" Nullable="true" />
+    <Property Type="String" Name="ConciergeID" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Aesthetic_YN" Nullable="true" />
+    <Property Type="Boolean" Name="NoShowPol_Signed_YN" Nullable="true" />
+    <Property Type="Boolean" Name="Cancel_NoShow_frm_signed" Nullable="true" />
+    <Property Type="String" Name="Allergies" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="AllowApptReassign" Nullable="false" />
+    <Property Type="Boolean" Name="Medical" Nullable="false" />
+    <Property Type="Boolean" Name="Aesthetics" Nullable="false" />
+    <Property Type="Boolean" Name="Autoship" Nullable="false" />
+    <Property Type="Boolean" Name="Retail" Nullable="false" />
+    <Property Type="Boolean" Name="Affiliate" Nullable="false" />
+    <Property Type="Boolean" Name="SOC" Nullable="true" />
+    <Property Type="Boolean" Name="DiabetesSOC" Nullable="false" />
+    <Property Type="Boolean" Name="HeartSOC" Nullable="false" />
+    <Property Type="String" Name="EmergencyContact" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Marketing_source" Nullable="false" />
+    <Property Type="Int32" Name="Seminar_attended" Nullable="true" />
+    <Property Type="Int32" Name="Seminar_status" Nullable="true" />
+    <Property Type="String" Name="AutoShipAlerts" Nullable="false" />
+    <Property Type="String" Name="AutoshipNote" Nullable="false" />
+    <Property Type="Boolean" Name="MedicareOptOut_YN" Nullable="false" />
+    <Property Type="DateTime" Name="MedicareOptOut_Date" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="EatingPlanReceived_YN" Nullable="false" />
+    <Property Type="String" Name="Nickname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RenewalMonth" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="19" />
+    <Property Type="DateTime" Name="BalanceDueDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="AutoshipEmail" Nullable="false" />
+    <Property Type="Int32" Name="AutoshipCancelReasonID" Nullable="false" />
+    <Property Type="String" Name="AutoshipCancelOther" Nullable="true" MaxLength="2000" />
+    <Property Type="DateTime" Name="PaymentDue" Nullable="true" />
+    <Property Type="Int32" Name="TermsInMonths" Nullable="true" />
+    <Property Type="DateTime" Name="StartMedical" Nullable="true" />
+    <Property Type="DateTime" Name="EndMedical" Nullable="true" />
+    <Property Type="DateTime" Name="InvoiceDueDate" Nullable="true" />
+    <Property Type="Boolean" Name="InvoicePaid" Nullable="true" />
+    <Property Type="Decimal" Name="InvoiceDue" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="ExpirationDate" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="MedicareB" Nullable="true" />
+    <Property Type="String" Name="RenewalException" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="RenewalExcExpire" Nullable="true" />
+    <Property Type="Int32" Name="AffiliateID" Nullable="true" />
+    <Property Type="DateTime" Name="AffiliateDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsAffiliate" Nullable="false" />
+    <Property Type="Boolean" Name="LabsMailed" Nullable="false" />
+    <Property Type="Int32" Name="ChinaPatientId" Nullable="true" />
+    <Property Type="String" Name="BillingCountry" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ShippingCountry" Nullable="true" MaxLength="250" />
+    <Property Type="DateTime" Name="RenewalDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="EventName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="AffiliatePatient" Nullable="true" MaxLength="304" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="ssp_XEROGetpatientsnotMatch_Result">
+    <Property Type="Int64" Name="Row" Nullable="true" />
+    <Property Type="Int32" Name="PatientID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MiddleInitial" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="BillingStreet" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="BillingCity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingCountry" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BillingState" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="BillingZip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="WorkPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HomePhone" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="RecordCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ssp_XEROpatientsMatchedSearch_Result">
+    <Property Type="Int64" Name="Row" Nullable="true" />
+    <Property Type="Guid" Name="ContactId" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MiddleInitial" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingStreet" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="BillingCity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingCountry" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="BillingState" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingZip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CellPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HomePhone" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="RecordCount" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="XeroLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UpdatedDateUTC" Type="DateTime" Precision="3" />
+    <Property Name="LogFor" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="XeroPatients">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="Guid" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleInitial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CellPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingZip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingStreet" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCountry" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BillingState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleInitial" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="BillingStreet" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingState" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BillingZip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingStreet" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingZip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Detailed_info" Type="Boolean" />
+    <Property Name="Work_CB_only" Type="Boolean" />
+    <Property Name="Work_NoMessage" Type="Boolean" />
+    <Property Name="WorkPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cell_Detailed_info" Type="Boolean" />
+    <Property Name="Cell_CB_Only" Type="Boolean" />
+    <Property Name="Cell_NoMessage" Type="Boolean" />
+    <Property Name="CellPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Home_detailed_info" Type="Boolean" />
+    <Property Name="Home_CB_only" Type="Boolean" />
+    <Property Name="Home_NoMessage" Type="Boolean" />
+    <Property Name="HomePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FaxPone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax_auth_detailed_info" Type="Boolean" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email_auth_detailed_info" Type="Boolean" />
+    <Property Name="HIPPA_signed" Type="Boolean" />
+    <Property Name="HIPPA_signed_date" Type="DateTime" Precision="3" />
+    <Property Name="Prefered_Pharm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Sex" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Clinic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyRelationship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactPreference" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Boolean" />
+    <Property Name="EntryDate" Type="DateTime" Precision="0" />
+    <Property Name="SpecialAttention" Type="Boolean" />
+    <Property Name="ActivityRating" Type="Int32" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MedicalHistory" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="image" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PCP" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="LMC_CP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProvID" Type="Int32" />
+    <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+    <Property Name="NameAlert" Type="Boolean" />
+    <Property Name="ConciergeID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aesthetic_YN" Type="Boolean" />
+    <Property Name="NoShowPol_Signed_YN" Type="Boolean" />
+    <Property Name="Cancel_NoShow_frm_signed" Type="Boolean" />
+    <Property Name="Allergies" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AllowApptReassign" Type="Boolean" Nullable="false" />
+    <Property Name="Medical" Type="Boolean" Nullable="false" />
+    <Property Name="Aesthetics" Type="Boolean" Nullable="false" />
+    <Property Name="Autoship" Type="Boolean" Nullable="false" />
+    <Property Name="Retail" Type="Boolean" Nullable="false" />
+    <Property Name="Affiliate" Type="Boolean" Nullable="false" />
+    <Property Name="SOC" Type="Boolean" />
+    <Property Name="DiabetesSOC" Type="Boolean" Nullable="false" />
+    <Property Name="HeartSOC" Type="Boolean" Nullable="false" />
+    <Property Name="EmergencyContact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Marketing_source" Type="Int32" Nullable="false" />
+    <Property Name="Seminar_attended" Type="Int32" />
+    <Property Name="Seminar_status" Type="Int32" />
+    <Property Name="AutoShipAlerts" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AutoshipNote" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MedicareOptOut_YN" Type="Boolean" Nullable="false" />
+    <Property Name="MedicareOptOut_Date" Type="DateTime" Precision="0" />
+    <Property Name="EatingPlanReceived_YN" Type="Boolean" Nullable="false" />
+    <Property Name="Nickname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RenewalMonth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Balance" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BalanceDueDate" Type="DateTime" Precision="3" />
+    <Property Name="AutoshipEmail" Type="Boolean" Nullable="false" />
+    <Property Name="AutoshipCancelReasonID" Type="Int32" Nullable="false" />
+    <Property Name="AutoshipCancelOther" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="PaymentDue" Type="DateTime" Precision="0" />
+    <Property Name="TermsInMonths" Type="Int32" />
+    <Property Name="StartMedical" Type="DateTime" Precision="0" />
+    <Property Name="EndMedical" Type="DateTime" Precision="0" />
+    <Property Name="InvoiceDueDate" Type="DateTime" Precision="0" />
+    <Property Name="InvoicePaid" Type="Boolean" />
+    <Property Name="InvoiceDue" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ExpirationDate" Type="DateTime" Precision="0" />
+    <Property Name="MedicareB" Type="Boolean" />
+    <Property Name="RenewalException" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RenewalExcExpire" Type="DateTime" Precision="0" />
+    <Property Name="AffiliateID" Type="Int32" />
+    <Property Name="AffiliateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsAffiliate" Type="Boolean" Nullable="false" />
+    <Property Name="LabsMailed" Type="Boolean" Nullable="false" />
+    <Property Name="ChinaPatientId" Type="Int32" />
+    <Property Name="BillingCountry" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingCountry" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="RenewalDate" Type="DateTime" Precision="3" />
+    <Property Name="XeropatientId" Type="Guid" />
+    <Property Name="AuthorisedPerson" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="ssp_GetPatientDetailById_Result">
+    <Property Type="Int32" Name="PatientID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MiddleInitial" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="BillingStreet" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="BillingCity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingState" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="BillingZip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ShippingStreet" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ShippingCity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ShippingState" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ShippingZip" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Work_Detailed_info" Nullable="true" />
+    <Property Type="Boolean" Name="Work_CB_only" Nullable="true" />
+    <Property Type="Boolean" Name="Work_NoMessage" Nullable="true" />
+    <Property Type="String" Name="WorkPhone" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Cell_Detailed_info" Nullable="true" />
+    <Property Type="Boolean" Name="Cell_CB_Only" Nullable="true" />
+    <Property Type="Boolean" Name="Cell_NoMessage" Nullable="true" />
+    <Property Type="String" Name="CellPhone" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Home_detailed_info" Nullable="true" />
+    <Property Type="Boolean" Name="Home_CB_only" Nullable="true" />
+    <Property Type="Boolean" Name="Home_NoMessage" Nullable="true" />
+    <Property Type="String" Name="HomePhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FaxPone" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Fax_auth_detailed_info" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Email_auth_detailed_info" Nullable="true" />
+    <Property Type="Boolean" Name="HIPPA_signed" Nullable="true" />
+    <Property Type="DateTime" Name="HIPPA_signed_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Prefered_Pharm" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Pager" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Birthday" Nullable="true" Precision="16" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Clinic" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmergencyFirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmergencyLastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmergencyPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmergencyRelationship" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmergencyState" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactPreference" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="Inactive" Nullable="true" />
+    <Property Type="DateTime" Name="EntryDate" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="SpecialAttention" Nullable="true" />
+    <Property Type="Int32" Name="ActivityRating" Nullable="true" />
+    <Property Type="String" Name="Notes" Nullable="true" />
+    <Property Type="String" Name="MedicalHistory" Nullable="true" />
+    <Property Type="String" Name="image" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PCP" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LMC_CP" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProvID" Nullable="true" />
+    <Property Type="DateTime" Name="LastUpdated" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="NameAlert" Nullable="true" />
+    <Property Type="String" Name="ConciergeID" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Aesthetic_YN" Nullable="true" />
+    <Property Type="Boolean" Name="NoShowPol_Signed_YN" Nullable="true" />
+    <Property Type="Boolean" Name="Cancel_NoShow_frm_signed" Nullable="true" />
+    <Property Type="String" Name="Allergies" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="AllowApptReassign" Nullable="false" />
+    <Property Type="Boolean" Name="Medical" Nullable="false" />
+    <Property Type="Boolean" Name="Aesthetics" Nullable="false" />
+    <Property Type="Boolean" Name="Autoship" Nullable="false" />
+    <Property Type="Boolean" Name="Retail" Nullable="false" />
+    <Property Type="Boolean" Name="Affiliate" Nullable="false" />
+    <Property Type="Boolean" Name="SOC" Nullable="true" />
+    <Property Type="Boolean" Name="DiabetesSOC" Nullable="false" />
+    <Property Type="Boolean" Name="HeartSOC" Nullable="false" />
+    <Property Type="String" Name="EmergencyContact" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Marketing_source" Nullable="false" />
+    <Property Type="Int32" Name="Seminar_attended" Nullable="true" />
+    <Property Type="Int32" Name="Seminar_status" Nullable="true" />
+    <Property Type="String" Name="AutoShipAlerts" Nullable="false" />
+    <Property Type="String" Name="AutoshipNote" Nullable="false" />
+    <Property Type="Boolean" Name="MedicareOptOut_YN" Nullable="false" />
+    <Property Type="DateTime" Name="MedicareOptOut_Date" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="EatingPlanReceived_YN" Nullable="false" />
+    <Property Type="String" Name="Nickname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RenewalMonth" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="19" />
+    <Property Type="DateTime" Name="BalanceDueDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="AutoshipEmail" Nullable="false" />
+    <Property Type="Int32" Name="AutoshipCancelReasonID" Nullable="false" />
+    <Property Type="String" Name="AutoshipCancelOther" Nullable="true" MaxLength="2000" />
+    <Property Type="DateTime" Name="PaymentDue" Nullable="true" />
+    <Property Type="Int32" Name="TermsInMonths" Nullable="true" />
+    <Property Type="DateTime" Name="StartMedical" Nullable="true" />
+    <Property Type="DateTime" Name="EndMedical" Nullable="true" />
+    <Property Type="DateTime" Name="InvoiceDueDate" Nullable="true" />
+    <Property Type="Boolean" Name="InvoicePaid" Nullable="true" />
+    <Property Type="Decimal" Name="InvoiceDue" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="ExpirationDate" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="MedicareB" Nullable="true" />
+    <Property Type="String" Name="RenewalException" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="RenewalExcExpire" Nullable="true" />
+    <Property Type="Int32" Name="AffiliateID" Nullable="true" />
+    <Property Type="DateTime" Name="AffiliateDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsAffiliate" Nullable="false" />
+    <Property Type="Boolean" Name="LabsMailed" Nullable="false" />
+    <Property Type="Int32" Name="ChinaPatientId" Nullable="true" />
+    <Property Type="String" Name="BillingCountry" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ShippingCountry" Nullable="true" MaxLength="250" />
+    <Property Type="DateTime" Name="RenewalDate" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="XeropatientId" Nullable="true" />
+    <Property Type="String" Name="AuthorisedPerson" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="PatientPackage" Nullable="true" />
+    <Property Type="Int32" Name="PackageDuration" Nullable="true" />
+    <Property Type="DateTime" Name="PackageDateentered" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="UploadTags">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Disabled" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Upload_tbl">
+    <Key>
+      <PropertyRef Name="UploadID" />
+    </Key>
+    <Property Name="UploadID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientID" Type="Int32" />
+    <Property Name="Upload_Path" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Upload_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateEntered" Type="DateTime" Precision="0" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pdf_Binary" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="otherFormats_Binary" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EmailTemplate">
+    <Key>
+      <PropertyRef Name="TemplateID" />
+    </Key>
+    <Property Name="TemplateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AppointmentId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CRMWufooLink">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WufooFormLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EmailDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="ssp_GetMedNotesDetailsByContactType_Result">
+    <Property Type="Int32" Name="PatientID" Nullable="false" />
+    <Property Type="DateTime" Name="value" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Firstname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Lastname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EnteredBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AptTypeDesc" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ContactID" Nullable="false" />
+    <Property Type="String" Name="MessageBody" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="AutoShipEmailTEmplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="ssp_GetPatientListForAppointmentDate_Result">
+    <Property Type="Int32" Name="PatientID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactPreference" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="WorkPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CellPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HomePhone" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Work_CB_Only" Nullable="true" />
+    <Property Type="Boolean" Name="Work_Nomessage" Nullable="true" />
+    <Property Type="Boolean" Name="Cell_CB_Only" Nullable="true" />
+    <Property Type="Boolean" Name="Cell_NoMessage" Nullable="true" />
+    <Property Type="Boolean" Name="Home_CB_Only" Nullable="true" />
+    <Property Type="Boolean" Name="Home_NoMessage" Nullable="true" />
+    <Property Type="String" Name="ApptStart" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ApptEnd" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="ssp_GetProductDetailsForOrderitems_Result">
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="Weight" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="AutoshipPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="Sku" Nullable="true" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="IVRTemplate">
+    <Key>
+      <PropertyRef Name="TemplateID" />
+    </Key>
+    <Property Name="TemplateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AppointmentId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="Orders_GetOrderbystatusAutoship_Result">
+    <Property Type="Int32" Name="OrderID" Nullable="false" />
+    <Property Type="String" Name="ShipName" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="DatePrep" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ShipAddress1" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ShipCity" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ShipState" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ShipZip" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="PatientID" Nullable="false" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="2000" />
+    <Property Type="DateTime" Name="ShipDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="BillingStreet" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="BillingCity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingState" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="BillingZip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AutoshipNote" Nullable="false" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="5" />
+    <Property Type="Boolean" Name="Invoiced" Nullable="false" />
+    <Property Type="Boolean" Name="Paid" Nullable="false" />
+    <Property Type="Guid" Name="XeropatientId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ssp_XEROGetOrdersbyOrderIDnew_Result">
+    <Property Type="Int32" Name="orderid" Nullable="false" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="2000" />
+    <Property Type="DateTime" Name="DatePrep" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="PatientID" Nullable="false" />
+    <Property Type="String" Name="ShipAddress1" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ShipAddress2" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ShipCity" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="ShipDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ShipState" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ShipZip" Nullable="false" MaxLength="50" />
+    <Property Type="Guid" Name="QBInvID" Nullable="true" />
+    <Property Type="Guid" Name="XeropatientId" Nullable="true" />
+    <Property Type="Decimal" Name="ShippingFee" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="OrderLimit" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="SalesAccountCode" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="QB_Invoice1">
+    <Key>
+      <PropertyRef Name="QBInvID" />
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="QBInvID" Type="Guid" Nullable="false" />
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="IsPaid" Type="Int32" />
+    <Property Name="IsRecUpdate" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="ssp_GetXeroaccounts_Result">
+    <Property Type="String" Name="AccountCode" Nullable="false" />
+    <Property Type="String" Name="AccountName" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="AutoshipProducts">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AutoshipPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="QBId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="Count" Type="Int32" />
+    <Property Name="Viewable" Type="Boolean" />
+    <Property Name="Reviewed" Type="Boolean" Nullable="false" />
+    <Property Name="Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Width" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Length" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Sku" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Bundle" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="ssp_GetBundleProducts_Result">
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="Decimal" Name="AutoshipPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="Sku" Nullable="true" />
+    <Property Type="String" Name="Weight" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="ssp_GetOrderById_Result">
+    <Property Type="Int32" Name="OrderID" Nullable="false" />
+    <Property Type="String" Name="ShipName" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="DatePrep" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ShipAddress1" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ShipCity" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ShipState" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ShipZip" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="PatientID" Nullable="false" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="ShipDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BillingStreet" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="BillingCity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingState" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="BillingZip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AutoshipNote" Nullable="false" />
+    <Property Type="Int32" Name="OrderItemID" Nullable="false" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Quantity" Nullable="false" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="19" />
+    <Property Type="String" Name="Sku" Nullable="true" />
+    <Property Type="String" Name="Weight" Nullable="true" MaxLength="50" />
+    <Property Type="Guid" Name="XeropatientId" Nullable="true" />
+    <Property Type="Boolean" Name="Paid" Nullable="false" />
+    <Property Type="Boolean" Name="Invoiced" Nullable="false" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="FreeShipping" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Admin_ShippingValues">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShippingFee" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="OrderTotalLimit" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <ComplexType Name="ssp_GetManagementPrograms_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ProgramName" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="DateTime" Name="DateAdded" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="DateEdited" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="AdminManagementProgramFee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProgramName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="DateAdded" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateEdited" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="ssp_GetPatientManagementProgramById_Result">
+    <Property Type="Int32" Name="PatientManagementProgramId" Nullable="false" />
+    <Property Type="String" Name="ProgramName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="ssp_GetSalesAccountCode_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="salesAccountCode" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ssp_GetMailChimpCampaign_Result">
+    <Property Type="String" Name="MailChimpCampaignId" Nullable="true" />
+    <Property Type="String" Name="MailChimpCampaignName" Nullable="true" />
+    <Property Type="String" Name="MailChimpCampaignListId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ssp_XEROGetOrderItemsbyOrderID_Result">
+    <Property Type="Int32" Name="OrderItemID" Nullable="false" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="512" />
+    <Property Type="Int32" Name="Quantity" Nullable="false" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="DiscountID" Nullable="false" />
+    <Property Type="String" Name="DiscountName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Dollar" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="Percent" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Sku" Nullable="true" />
+  </ComplexType>
+</Schema>

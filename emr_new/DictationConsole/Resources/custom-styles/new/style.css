@@ -1,0 +1,1654 @@
+/* Main Container */
+/* ----- */
+.new .ob_gMCont
+{
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.new .ob_gMCont_DT
+{
+    overflow: hidden;
+}
+
+/* Left Side (Border) - used when grouping is enabled */
+.new .ob_gBLSWG
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;    
+    width: 1px;
+    font-size: 1px;
+    background-color: #E3E2DE;
+    z-index: 31;
+}
+
+/* Left Side (Border) - used when grouping is disabled */
+.new .ob_gBLS
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;    
+    width: 1px;
+    font-size: 1px;
+    background-color: #E3E2DE;
+    z-index: 31;
+}
+
+/* Right Side (Border) - used when grouping is enabled */
+.new .ob_gBRSWG
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;    
+    width: 1px;
+    font-size: 1px;
+    background-color: #E3E2DE;
+    z-index: 31;
+}
+
+/* Right Side (Border) - used when grouping is disabled */
+.new .ob_gBRS
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;    
+    width: 1px;
+    font-size: 1px;
+    background-color: #E3E2DE;
+    z-index: 31;
+}
+
+
+
+
+
+/* Common */
+/* ------ */
+
+.new .ob_gC
+{
+    white-space: nowrap;
+    cursor: default;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+.new .ob_gC_I
+{
+    display: none;
+    white-space: nowrap;
+    cursor: default;
+    padding: 0px;
+    margin: 0px;
+}
+
+.new .ob_gCW
+{
+    white-space: normal;
+    cursor: default;
+    vertical-align: middle;
+}
+
+.new .ob_gCW_I
+{
+    display: none;
+    white-space: normal;
+    cursor: default;
+}
+
+.new .ob_gC div div
+{
+    white-space: nowrap;
+}
+
+.new .ob_gCW div div
+{
+    white-space: normal;
+}
+
+.new .ob_gCd
+{
+    display: none;
+}
+
+.new .ob_gD
+{
+    display: none;
+}
+
+/* Resize lines */
+.new .ob_gRL
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 1px;
+    background-color: #E3E2DE;
+    font-size: 1px;
+    z-index: 999;
+}
+
+/* Resize tooltip */
+.new .ob_gRT
+{
+	cursor: default;		
+	margin: 0px;
+	padding: 1px;
+	border: 1px solid #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;	
+	height: 12px;
+	margin-top: -10px;		
+	top: 0px;
+	vertical-align: middle;
+	background-color: #F5F5DC;
+	position: absolute;
+	z-index: 999;
+}
+.new .ob_gRT span
+{
+	padding-left: 3px;
+}
+
+
+
+
+
+/* Header */
+/* ------ */
+
+/* Container for the header - used when grouping is disabled */
+.new .ob_gHContWG
+{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Container for the header - used when grouping is enabled */
+.new .ob_gHCont
+{
+    position: relative;
+    overflow: hidden;
+    width: 100%;    
+}
+
+.new .ob_gHICont
+{
+    position: relative;
+    overflow: hidden;
+}
+
+* html .new  .ob_gHICont, .new .ob_gMCont_DT .ob_gHICont
+{
+    width: 100%;
+}
+
+.new .ob_gMCont_DT .ob_gHICont
+{
+    height: 33px;
+}
+
+.new .ob_gH
+{
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.new .ob_gHR
+{
+}
+
+.new .ob_gHContWG .ob_gH .ob_gC, .new .ob_gHContWG .ob_gH .ob_gCW
+{
+    background-image: url(header.gif);
+    height: 33px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #242500;
+	text-align: left;
+	cursor: pointer;
+}
+
+
+.new .ob_gHCont .ob_gH .ob_gC, .new .ob_gHCont .ob_gH .ob_gCW
+{
+    background-image: url(header.gif);
+    height: 33px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #242500;
+	text-align: left;
+	cursor: pointer;
+}
+
+.new .ob_gHContWG .ob_gH .ob_gC div.ob_gCc1, .new .ob_gHContWG .ob_gH .ob_gCW div.ob_gCc1
+{
+}
+
+.new .ob_gHContWG .ob_gH .ob_gC div.ob_gCc1_F, .new .ob_gHContWG .ob_gH .ob_gCW div.ob_gCc1_F
+{
+    _margin-top: 3px;
+}
+
+.new .ob_gHCont .ob_gH .ob_gC div.ob_gCc1, .new .ob_gHCont .ob_gH .ob_gCW div.ob_gCc1
+{
+}
+
+.new .ob_gH .ob_gC div.ob_gCc1, .new .ob_gH .ob_gCW div.ob_gCc1
+{
+    position: relative;
+}
+
+.new .ob_gH .ob_gC div.ob_gCc1_F, .new .ob_gH .ob_gCW div.ob_gCc1_F
+{
+    _margin-top: 6px;
+}
+
+.new .ob_gH .ob_gC div.ob_gCc2, .new .ob_gH .ob_gCW div.ob_gCc2
+{
+    padding: 0px;
+    padding-left: 20px;
+    margin-right: 3px;
+    position: static;
+    width: auto;
+    overflow: hidden;
+}
+
+.new .ob_gH .ob_gC div.ob_gCc2C, .new .ob_gH .ob_gCW div.ob_gCc2C
+{
+    padding: 0px;
+    padding-left: 20px;
+    margin-right: 3px;
+    position: static;
+    width: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.new .ob_gH .ob_gC div.ob_gCc2R, .new .ob_gH .ob_gCW div.ob_gCc2R
+{
+    padding: 0px;
+    padding-left: 20px;
+    margin-right: 16px;
+    position: static;
+    width: auto;
+    overflow: hidden;
+    text-align: right;
+}
+
+.new .ob_gMCont_DT .ob_gH div.ob_gCc1
+{
+    margin-top: -6px;
+}
+
+.new .ob_gHContWG .ob_gH .ob_gC div.ob_gHSI, .new .ob_gHContWG .ob_gH .ob_gCW div.ob_gHSI
+{
+}
+
+.new .ob_gHCont .ob_gH .ob_gC div.ob_gHSI, .new .ob_gHCont .ob_gH .ob_gCW div.ob_gHSI
+{
+    
+}
+
+.new .ob_gH .ob_gC div.ob_gHSI, .new .ob_gH .ob_gCW div.ob_gHSI
+{
+    position: absolute;
+    height: 16px;
+    right: 2px;
+    top: 50%;    
+    margin: 0px;
+    margin-bottom: auto;
+    margin-top: -6px;
+    _margin-top: -11px !important;
+}
+
+.new .ob_gH .ob_gC div.ob_gHSI_F, .new .ob_gH .ob_gCW div.ob_gHSI_F
+{
+    position: absolute;
+    height: 16px;
+    right: 2px;
+    top: 50%;    
+    margin: 0px;
+    margin-bottom: auto;
+    margin-top: -8spx;
+    _margin-top: -13px;
+}
+
+.new .ob_gH .ob_gC_Lc div.ob_gHSI
+{
+    right: 3px;
+}
+
+/* Cells separator */
+.new .ob_gHCont .ob_gCS, .ob_gHContWG .ob_gCS, .new .ob_gHCont .ob_gCS_F, .new .ob_gHContWG .ob_gCS_F
+{
+    position: absolute;
+    top: 0px;    
+    font-size: 1px;
+    cursor: e-resize;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: -1px;
+    background-color: Transparent !important;
+}
+
+.new .ob_gHCont .ob_gCS, .new .ob_gHContWG .ob_gCS
+{
+    bottom: 0px;
+}
+
+.new .ob_gHCont .ob_gCS div, .new .ob_gHCont .ob_gCS_F div
+{
+    background-color: #E3E2DE;
+}
+
+.new .ob_gHContWG .ob_gCS div, .new .ob_gHContWG .ob_gCS_F div
+{
+    background-color: #E3E2DE;
+}
+
+.new .ob_gHCont .ob_gCS div, .new .ob_gHContWG .ob_gCS div, .new .ob_gHCont .ob_gCS_F div, .new .ob_gHContWG .ob_gCS_F div
+{
+    width: 1px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    height: 100%;
+}
+
+
+
+
+
+/* Body */
+/* ------ */
+.new .ob_gBCont
+{
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.new .ob_gBICont
+{
+    position: relative;
+    overflow: hidden;
+}
+
+* html .new  .ob_gBICont, .new .ob_gMCont_DT .ob_gBICont
+{
+    width: 100%;
+}
+
+.new .ob_gBody
+{
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Row - Normal state */
+.new .ob_gR
+{
+	background-color: #F6F5F0;
+}
+
+/* Row - Alternate state */
+.new .ob_gRA
+{
+	background-color: #EFEDE2;
+}
+
+
+/* Row - Selected state */
+.new .ob_gRS
+{
+	background-color: #F5E4B8;
+}
+
+/* Row - Hover state */
+.new .ob_gRH
+{
+	background-color: #F3E9D0;
+}
+
+.new .ob_gBody .ob_gC, .new .ob_gBody .ob_gCW
+{
+    height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	color: #5E5E70;
+	border-top: 1px solid #E3E2DE;
+}
+
+.new .ob_gBody .ob_gC div.ob_gCc1, .new .ob_gBody .ob_gCW div.ob_gCc1
+{    
+    #overflow: visible;
+    #overflow-x: hidden;
+    /*position: relative;*/
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.new .ob_gBody .ob_gC div.ob_gCc2, .new .ob_gBody .ob_gCW div.ob_gCc2
+{
+    padding: 0px;
+    padding-left: 20px;
+    margin-right: 3px;
+    position: static;
+    width: auto;
+    overflow: hidden;
+}
+
+.new .ob_gBody .ob_gC div.ob_gCc2C, .new .ob_gBody .ob_gCW div.ob_gCc2C
+{
+    padding: 0px;
+    padding-left: 20px;
+    margin-right: 3px;
+    position: static;
+    width: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.new .ob_gBody .ob_gC div.ob_gCc2R, .new .ob_gBody .ob_gCW div.ob_gCc2R
+{
+    padding: 0px;
+    padding-left: 20px;
+    margin-right: 3px;
+    position: static;
+    width: auto;
+    overflow: hidden;
+    text-align: right;
+}
+
+.new .ob_gBCont .ob_gCS, .new .ob_gBCont .ob_gCS_F
+{
+    position: absolute;
+    top: 0px;
+    width: 1px;
+    background-color: #E3E2DE;
+    font-size: 1px;
+    z-index: 10;
+}
+
+.new .ob_gBCont .ob_gCS
+{
+    bottom: 0px;
+}
+
+/* Container for the loading message displayed during a callback */
+.new div.ob_gBLM, .new div.ob_gBLM_F
+{
+    position: absolute;
+	background-color: #F6F6F8;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	text-align: center;
+	z-index: 30;
+	width: 100%;
+
+}
+.new div.ob_gBLM
+{
+    bottom: 0px;
+}
+.new div.ob_gBLM div, .new div.ob_gBLM_F div
+{    
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#5E5E70 !important;
+	height: 10px;
+	top: 50%;	
+	margin-top: -5px;	
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 100%;
+}
+
+/* Action links */
+.new a.ob_gAL
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#D99E00;		
+	font-weight: bold;
+	text-decoration:none;
+}
+
+/* Action links - hover state */
+.new a.ob_gAL:hover
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#D99E00;
+	font-weight: bold;
+	text-decoration:underline;
+}
+
+/* Cell - temporary added (multi-record adding) */
+.new .ob_gCTA
+{
+    color: #2a8b03;
+}
+
+/* Cell - temporary edited (multi-record editing) */
+.new .ob_gCTE
+{
+    color: #b81336;
+}
+
+/* Cell - temporary deleted (multi-record deleting) */
+.new .ob_gCTD
+{
+    color: #777d81;			
+	text-decoration: line-through;
+}
+
+/* Group header - container */
+.new .ob_gRGH
+{
+	background-image: url(record_group_header.gif);
+	height: 24px;
+}
+
+/* Group header - inner container */
+.new .ob_gRGHI
+{
+    position: relative;
+    height: 24px;
+    z-index: 15;
+    background-image: url(record_group_header.gif);
+}
+
+/* Group header - content*/
+.new .ob_gRGHC
+{
+	cursor: default;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 1px;
+	border: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;	
+	height: 22px;	
+	vertical-align: middle;
+	font-weight: bold;
+	cursor: pointer;
+	border: 0px;
+	float: left;
+	line-height: 22px;
+}
+
+/* Group header - Expand/Collapse button */
+.new .ob_gRGHB 
+{	
+	padding: 0px;
+	padding-left: 3px;
+	padding-right: 3px;	
+	padding-top: 1px;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: top;
+	height: 22px;
+	font-size: 1px;
+	float: left;
+}	
+.new .ob_gRGHB img
+{
+	cursor: pointer;
+	margin-top: 3px;
+	font-size: 1px;
+	width: 16px;
+}
+
+/* Group header - Left side spacer */
+.new .ob_gRGBS
+{
+	width: 17px;
+	height: 25px;
+	font-size: 1px;
+	text-align: right;
+	background-image: url(record_group_header_padding.gif);
+	float: left;
+}
+.new .ob_gRGBS div
+{
+	background-image: url(record_group_header_padding_right.gif);
+	height: 25px;
+	width: 5px;
+	margin-left: 12px;
+}
+
+/* Group footer */
+.new .ob_gRGF
+{
+	background-color: #F5E4B8;
+    height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #5E5E70;
+	text-align: left;
+}
+
+/* Message displayed when grid has no records */
+.new .ob_gNRM
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 0px;			
+	background-color: #F6F6F8;
+	color: #5E5E70;
+	height: 25px;
+}
+
+..new ob_gNRM .ob_gCc1
+{
+    position: relative;
+    height: 25px;
+    z-index: 15;
+    background-color: #F6F6F8;
+    line-height: 25px;
+}
+
+/* Selection area */
+.new .ob_gSA
+{
+    position: absolute;
+    z-index: 999;
+    background-color: #F5E4B8;
+    border: 1px solid #F5E4B8;
+	font-size: 1px;
+}
+
+/* Edit control - backward compatibility */
+.new .ob_gEC
+{
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #202426;			
+	background-color: #FFFFFF;
+	width: 96%;
+	border: 1px solid #196585;
+}
+
+/* Row Edit Template container */
+.new .ob_gRETpl
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+	padding: 15px;
+	border-top: 1px solid #7BB8D9;
+	background-repeat:repeat-x;
+	background-position:top;
+	border-bottom:1px solid #dbdbe1;
+	border-top:1px solid #dbdbe1;
+	position: relative;
+	z-index: 11;
+	background-color: #EFEDE2;
+}
+
+/* Row in THead section of the body table */
+.new .ob_gBTLRV
+{
+    visibility: hidden;
+    *display: none;
+}
+.new .ob_gBTLRV td
+{
+    height: 0px !important;
+    font-size: 0px !important;
+    padding: 0px;
+	margin: 0px;
+	border: 0px;
+	visibility: hidden;
+}
+
+
+
+
+
+/* Footer */
+/* ------ */
+.new .ob_gFCont /*.ob_gridFooterContent*/
+{		
+	background-color: #F6F5F0;
+	padding: 0px;
+	margin-top: 0px;
+	border: 0px;
+	height: 27px;
+	padding-left: 20px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	vertical-align: middle;
+	position: relative;
+	cursor: default;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #5E5E70;
+	white-space: nowrap;
+	z-index: 0;	
+	text-align: left;
+}
+
+.new .ob_gFCont_F_D
+{		
+	background-color: #F6F5F0;
+	padding: 0px;
+	margin-top: 0px;
+	border: 0px;
+	height: 27px;
+	padding-left: 20px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	vertical-align: middle;
+	position: relative;
+	cursor: default;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #5E5E70;
+	white-space: nowrap;
+	z-index: 0;
+}
+
+.new .ob_gPSTT
+{
+	position: relative;
+	top:9px;
+	display:-moz-inline-stack;
+    display:inline-block;
+	height: 17px;
+	z-index: 2;
+}
+
+.new .ob_gFCont .ob_gPSTT
+{
+    zoom:1;
+    *display:inline;
+}
+
+.new .ob_gPSTD
+{
+	width: 67px;
+	position: absolute;
+	right: -74px;
+	top: -2px;
+}
+
+.new .ob_gPSTDIC
+{
+    width: 67px !important;
+}
+
+.new .ob_gFEC
+{
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    height: 23px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.new .ob_gFCont_F_D .ob_gFEC
+{
+    width: 100%;
+}
+
+/* Container for the action links */
+.new .ob_gFALC
+{
+    height: 19px;
+    line-height: 19px;
+    float: right;
+    #float: none;
+}
+
+.new .ob_gFCont_F_D .ob_gFALC
+{
+    float: none;
+}
+
+.new .ob_gFAL
+{
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    float: right;
+}
+
+.new a.ob_gALF /*a.ob_gridActionLinkFooter*/
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:red;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+.new a.ob_gALF:hover /*a.ob_gridActionLinkFooter:hover*/
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#D99E00;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.new .ob_gALFS /*.ob_gridAdd_FilterSpacer*/
+{
+	width: 30px;
+	text-align: center;
+	display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    float: right;
+}
+
+/* Container for the paging section */
+.new .ob_gFP
+{
+    float: right;
+    #float: none;
+    margin-right: 6px;
+}
+
+.new .ob_gFCont_F_D .ob_gFP
+{
+    width: 305px;
+}
+
+/* Container for the text in the paging section */
+.new .ob_gFPT
+{
+    float: right;
+    padding-top: 4px;
+}
+
+/* Container for navigation/paging buttons */
+.new .ob_gPBC
+{
+    float: right;
+    cursor: pointer;
+    margin-top: 7px;    
+    margin-left: 11px;
+}
+
+* html .new  .ob_gPBC
+{
+    margin-top: 4px;
+}
+
+/* Container for the page links */
+.new .ob_gPLC
+{        
+    float: right;
+    padding-top: 3px;
+    padding-left: 8px;
+    height: 22px;
+}
+
+/* Page link */
+.ob_gPLCL
+{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#D99E00;
+	font-weight: bold;
+	text-decoration:underline;
+	cursor: pointer;
+	padding-left: 2px;
+	padding-right: 2px;
+    float: left;
+    margin-top: 1px;
+}
+
+/* Page link - hover */
+.new .ob_gPLCLH
+{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#D99E00;
+	font-weight: bold;
+	text-decoration:underline;
+	cursor: pointer;
+	padding-left: 2px;
+	padding-right: 2px;
+    float: left;
+    margin-top: 1px;
+}
+
+/* Separator between page links */
+.new .ob_gPLS
+{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#D99E00;
+	font-weight: normal;
+	text-decoration:none;
+	cursor: default;
+	padding-left: 2px;
+	padding-right: 2px;
+    float: left;
+    margin-top: 1px;
+}
+
+/* Page link disabled */
+.new .ob_gPLD
+{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#D99E00;
+	font-weight: normal;
+	text-decoration:none;
+	cursor: pointer;
+	padding-left: 2px;
+	padding-right: 2px;
+    float: left;
+    margin-top: 1px;
+}
+
+/* Container for the total number of pages text */
+.new .ob_gTNOP
+{
+    float: right;
+    padding-top: 4px;
+    height: 20px;
+    margin-left: 3px;
+    margin-right: 0px;
+}
+
+/* Container for the manual paging section */
+.new .ob_gMPS
+{
+    float: right;
+    padding-top: 2px;
+    height: 20px;
+    margin-left: 3px;
+    margin-right: 0px;
+}
+
+/* Container for the manual paging textbox */
+.new .ob_gMPST
+{
+    float: left;
+    margin-left: 4px;
+}
+
+/* Container for the manual paging action link */
+.new .ob_gMPSL
+{
+    float: left;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+
+
+
+/* Grouping Area */
+/* ------------- */
+
+/* Grouping Area - Container */
+.new .ob_gGACont
+{
+	height: 34px;
+	position: relative;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+/* Grouping Area - Left corner */
+.new .ob_gGACnL
+{
+	width: 20px;
+	height: 24px;	
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: none;
+}
+
+/* main section for grouping area */
+.new .ob_gGA
+{
+	background-image: url(header.gif);
+	height: 34px;
+	position: absolute;
+	top: 0px;
+	line-height: 34px;	
+	left: 0px;
+	right: 0px;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 20px;
+}
+
+* html .new  .ob_gGA
+{
+    #width: 100%;
+}
+
+/* Grouping Area - Default text */
+.new .ob_gGADC
+{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;		
+	color: #242500;
+	text-align: left;				
+	border:0px solid #FFFFFF;
+	height: 34px;
+}
+
+/* Grouping Area - Right corner */
+.new .ob_gGACnR
+{
+	width: 20px;
+	height: 24px;	
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	display: none;
+}
+
+/* Grouping - Dragging column */
+.new .ob_gGDC
+{
+    position: absolute;
+    z-index: 999;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;		
+	color: #5E5E70;
+	text-align: left;				
+	border: 1px solid #D99E00;
+	background-color: #EFEDE2;
+	vertical-align: middle;
+	height: 24px;
+	line-height: 24px;
+	padding-left: 20px;
+}
+
+/* Grouping - Groupped dragging column */
+.new .ob_gGDC2
+{
+    position: absolute;
+    z-index: 999;
+    line-height: 21px;
+}
+
+/* Grouping - Header column highlighted */
+.new .ob_gHCHWG
+{
+	background-image: none !important;
+    background-color: #333333 !important;
+}
+
+/* Grouping - Top arrow */
+.new .ob_gGATA
+{
+	background-image: url(group_arrow_top.gif);
+	width: 9px;
+	height: 9px;
+	font-size: 1px;
+	padding: 0px;
+	z-index: 999 !important;
+}
+
+/* Grouping - Bottom arrow */
+.new .ob_gGABA
+{
+	background-image: url(group_arrow_bottom.gif);
+	width: 9px;
+	height: 9px;
+	font-size: 1px;
+	padding: 0px;
+	z-index: 999 !important;
+}
+
+/* Column in grouping area - container */
+.new .ob_gGAC
+{	
+	cursor: move;
+	float: left;
+    position: relative;
+}
+
+/* Column in grouping area - left side */
+.new .ob_gGACL
+{
+    display: none;
+}
+.ob_gGA .ob_gGACL
+{		
+}
+
+/* Column in grouping area - center */
+.new .ob_gGACM
+{
+	height: 15px;
+	line-height: 14px;
+	margin-top: 6px;
+	padding-left: 8px;
+	padding-right: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;		
+	color: #D99E00;
+	border: 1px solid #5E5E70;
+    background-image: none;
+	background-color: #EFEDE2;
+	overflow: visible;
+	white-space: nowrap;
+	text-align: center;
+	#zoom:1;
+    #display:inline;
+}
+.new .ob_gGA .ob_gGACM
+{
+}		
+
+/* Column in grouping area - right side */
+.new .ob_gGACR
+{
+    display: none;
+}
+.new .ob_gGA .ob_gGACR
+{
+}
+
+/* Column in grouping area - spacer/link between columns*/	
+.new .ob_gGACS
+{
+	margin-top: 14px;
+	height: 1px;
+	font-size: 1px;
+	width: 20px;
+	background-color: #000000;
+	float: left;
+}
+
+
+
+
+
+/* Horizontal Scroller */
+/* ------------------- */
+
+.new .ob_gSH
+{
+    position: relative;
+    overflow: hidden;
+    height: 20px;
+    height /*\**/: 16px\9;
+    #height: 16px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.new .ob_gSH div
+{
+    width: 100%;
+    height: 40px;
+    height /*\**/: 36px\9;
+    #height: 36px;
+	overflow: auto;
+	overflow-y: hidden;
+	position: absolute;
+	top: -20px;
+}
+
+.new .ob_gSH div div
+{
+    /*height: 20px;*/
+    visibility: hidden;
+}
+
+
+
+
+
+/* Filter */
+/* ------ */
+
+.new .ob_gFlCont
+{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.new .ob_gFlICont
+{
+    position: relative;
+    overflow: hidden;
+}
+
+* html .new  .ob_gFlICont, .new .ob_gMCont_DT .ob_gFlICont
+{
+    width: 100%;
+}
+
+.new .ob_gFl
+{
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.new .ob_gFl .ob_gC, .new .ob_gFl .ob_gCW
+{
+    background-color: #F3F3F3;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-align: left;
+}
+
+.new .ob_gFl .ob_gC div.ob_gCc1, .new .ob_gFl .ob_gCW div.ob_gCc1
+{    
+    overflow: visible;
+    position: relative;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.new .ob_gFl .ob_gC div.ob_gCc2, .new .ob_gFl .ob_gCW div.ob_gCc2
+{
+    padding: 0px;
+    padding-top: 2px;
+    padding-left: 20px;
+    margin-right: 3px;
+    position: static;
+    width: auto;
+    overflow: hidden;
+}
+
+/* Cells separator */
+.new .ob_gFlCont .ob_gCS, .new .ob_gFlCont .ob_gCS_F
+{
+    position: absolute;
+    top: 0px;
+    width: 1px;
+    background-color: #E3E2DE;
+    font-size: 1px;
+}
+
+.new .ob_gFlCont .ob_gCS
+{
+    bottom: 0px;
+}
+
+
+
+
+
+/* Columns Footer */
+/* ------ */
+
+.new .ob_gCFCont
+{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.new .ob_gCFICont
+{
+    position: relative;
+    overflow: hidden;
+}
+
+* html .new  .ob_gCFICont, .new .ob_gMCont_DT .ob_gCFICont
+{
+    width: 100%;
+}
+
+.new .ob_gCFR
+{
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.new .ob_gCFR .ob_gC, .new .ob_gCFR .ob_gCW
+{
+    background-color: #F5E4B8;
+    height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #5E5E70;
+	text-align: left;
+}
+
+.new .ob_gCFR .ob_gC div.ob_gCc1, .new .ob_gCFR .ob_gCW div.ob_gCc1
+{    
+    overflow: visible;
+    position: relative;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.new .ob_gCFR .ob_gC div.ob_gCc2, .new .ob_gCFR .ob_gCW div.ob_gCc2
+{
+    padding: 0px;
+    padding-top: 2px;
+    padding-left: 20px;
+    margin-right: 3px;
+    position: static;
+    width: auto;
+    overflow: hidden;
+}
+
+.new .ob_gCFR .ob_gC div.ob_gCc2C, .new .ob_gCFR .ob_gCW div.ob_gCc2C
+{
+    padding: 0px;
+    padding-top: 2px;
+    padding-left: 20px;
+    margin-right: 3px;
+    position: static;
+    width: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.new .ob_gCFR .ob_gC div.ob_gCc2R, ..new ob_gCFR .ob_gCW div.ob_gCc2R
+{
+    padding: 0px;
+    padding-top: 2px;
+    padding-left: 20px;
+    margin-right: 3px;
+    position: static;
+    width: auto;
+    overflow: hidden;
+    text-align: right;
+}
+
+/* Cells separator */
+.new .ob_gCFCont .ob_gCS, .new .ob_gCFCont .ob_gCS_F
+{
+    position: absolute;
+    top: 0px;
+    width: 1px;
+    background-color: #E3E2DE;
+    font-size: 1px;
+    display: none;
+}
+
+.new .ob_gCFCont .ob_gCS
+{
+    bottom: 0px;
+}
+
+
+
+
+
+/* Master/Detail */
+/* ------------------- */
+
+/* Row containing a detail grid */
+.new .ob_gDGC
+{
+}
+
+/* The container of a detail grid */
+.new .ob_gDGCCT
+{
+    background-color: #F3F3F3;
+    padding-left: 20px;
+    z-index: 15;
+    position: relative;
+    width: 100%;
+}
+
+.new .ob_gDGCCIT
+{
+    width: 100%;
+    position: relative;
+}
+
+/* Cell containing the +/- buttons for expanding/collapsing the detail grids */
+.new .ob_gDGE
+{
+}
+.new .ob_gDGE div.ob_gCc1
+{
+    position: relative !important;
+}
+
+/* Container for the +/- buttons for expanding/collapsing the detail grids */ 
+.new .ob_gDGEB
+{
+    position: absolute;
+    height: 24px;
+    width: 10px;
+    margin-left: 3px;
+    top: 50%;
+    overflow: visible;
+}
+
+.new .ob_gDGEB img
+{
+    margin-top: -8px;
+    position: absolute;
+    cursor: pointer;
+}
+
+/* Loading message displayed while a detail grid is loading (OnCallback)*/
+.new td.ob_gBLM
+{
+    background-color: #F6F6F8;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#5E5E70 !important;
+	height: 20px;
+}
+.new td.ob_gBLM div
+{
+    position: relative;
+    z-index: 15;
+    height: 20px;
+    line-height: 20px;
+    background-color: #F6F6F8;
+}
+
+
+
+
+
+/* Corners displayed at the top of the grid */
+/* ------ */
+
+/* Container for the top corners */
+.new .ob_gHCnC
+{
+	display: none;
+}
+
+/* Left corner */
+.new .ob_gHCnL
+{
+}
+
+/* Right corner */
+.new .ob_gHCnR
+{
+}
+
+
+
+
+
+/* Corners displayed at the bottom of the grid */
+/* ------ */
+
+/* Container for the bottom corners */
+.new .ob_gFCnC
+{
+	display: none;
+}
+
+/* Left corner */
+.new .ob_gFCnL
+{
+}
+
+/* Right corner */
+.new .ob_gFCnR
+{	
+}
+
+
+
+
+.new .ob_gFContT /*.ob_gridFooterContainerTop*/
+{		
+	background-color:#F6F5F0;
+	padding: 0px;
+	margin-top: 0px;	
+	border: 0px;
+	height: 27px;
+	padding-left: 20px;
+	padding-right: 00px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	vertical-align: middle;
+	position: relative;
+	cursor: default;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #2B2B3D;
+	white-space: nowrap;
+	z-index: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: left;
+}
+
+.new .ob_gFContTL
+{
+    display: none;
+}
+
+.new .ob_gFContTR
+{
+    display: none;
+}
+
+.new .ob_gFContT .ob_gPSTT, .new .ob_gFContTWT .ob_gPSTT
+{
+    zoom:1;
+    *display:inline;
+}
+
+.new .ob_gFContT .ob_gFP
+{
+    height: 21px;
+    #height: auto;
+    overflow: hidden;
+    #overflow: visible;
+}
+
+
+
+/* Heading */
+.new .ob_gHeadingCont
+{		
+	background-image: url(header.gif);
+	padding: 0px;
+	margin-top: 0px;	
+	border: 0px;
+	height: 25px;
+	padding-left: 20px;
+	padding-top: 0px;
+	line-height: 25px;
+	padding-bottom: 0px;
+	vertical-align: middle;
+	position: relative;
+	cursor: default;
+	font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #242500;
+	white-space: nowrap;
+	z-index: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: left;
+}
+
+.new .ob_gHCLS
+{
+    display: none;
+}
+
+.new .ob_gHCRS
+{
+    display: none;
+}
+
+.new .ob_gHeadingContWG, .new .ob_gHeadingContWG .ob_gHCLS, .new .ob_gHeadingContWG .ob_gHCRS
+{
+    height: 25px;
+    line-height: 25px;
+}
+
+* html .new  .ob_gHeadingCont, * html .new  .ob_gHeadingContWG, * html .new  .ob_gHeadingContWG .ob_gHCLS, * html .new  .ob_gHeadingContWG .ob_gHCRS
+{
+    -overflow-y: hidden;
+}
+
+
+/* Virtual Scrolling */
+.new .ob_gVSPIC
+{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    line-height: 18px;
+    border: 1px solid #DDD;
+    z-index: 999;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #080808;
+	text-align: center;
+    background-image: url(header.gif);
+}

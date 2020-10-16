@@ -1,0 +1,14 @@
+D:\CodeBase\Emr_Dev_New\XeroApi\bin\Debug\XeroApi.dll
+D:\CodeBase\Emr_Dev_New\XeroApi\bin\Debug\XeroApi.pdb
+D:\CodeBase\Emr_Dev_New\XeroApi\obj\Debug\XeroApi.dll
+D:\CodeBase\Emr_Dev_New\XeroApi\obj\Debug\XeroApi.pdb
+D:\CodeBase\Emr_Dev_New\XeroApi\obj\Debug\XeroApi.csprojResolveAssemblyReference.cache
+D:\CodeBase\EMR_Staging\XeroApi\bin\Debug\XeroApi.dll
+D:\CodeBase\EMR_Staging\XeroApi\bin\Debug\XeroApi.pdb
+D:\CodeBase\EMR_Staging\XeroApi\obj\Debug\XeroApi.csprojResolveAssemblyReference.cache
+D:\CodeBase\EMR_Staging\XeroApi\obj\Debug\XeroApi.dll
+D:\CodeBase\EMR_Staging\XeroApi\obj\Debug\XeroApi.pdb
+D:\CodeBase\Emr_Dev_New - Copy\XeroApi\bin\Debug\XeroApi.dll
+D:\CodeBase\Emr_Dev_New - Copy\XeroApi\bin\Debug\XeroApi.pdb
+D:\CodeBase\Emr_Dev_New - Copy\XeroApi\obj\Debug\XeroApi.dll
+D:\CodeBase\Emr_Dev_New - Copy\XeroApi\obj\Debug\XeroApi.pdb

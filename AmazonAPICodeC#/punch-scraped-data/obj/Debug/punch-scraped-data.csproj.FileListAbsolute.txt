@@ -1,0 +1,18 @@
+c:\users\internet\documents\visual studio 2013\Projects\punch-scraped-data\punch-scraped-data\bin\Debug\punch-scraped-data.exe.config
+c:\users\internet\documents\visual studio 2013\Projects\punch-scraped-data\punch-scraped-data\bin\Debug\punch-scraped-data.exe
+c:\users\internet\documents\visual studio 2013\Projects\punch-scraped-data\punch-scraped-data\bin\Debug\punch-scraped-data.pdb
+c:\users\internet\documents\visual studio 2013\Projects\punch-scraped-data\punch-scraped-data\bin\Debug\AWSSDK.dll
+c:\users\internet\documents\visual studio 2013\Projects\punch-scraped-data\punch-scraped-data\bin\Debug\AWSSDK.xml
+c:\users\internet\documents\visual studio 2013\Projects\punch-scraped-data\punch-scraped-data\obj\Debug\punch-scraped-data.exe
+c:\users\internet\documents\visual studio 2013\Projects\punch-scraped-data\punch-scraped-data\obj\Debug\punch-scraped-data.pdb
+c:\users\internet\documents\visual studio 2013\Projects\punch-scraped-data\punch-scraped-data\obj\Debug\punch-scraped-data.csprojResolveAssemblyReference.cache
+D:\amazonApiC#Code\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\bin\Debug\punch-scraped-data.exe.config
+D:\amazonApiC#Code\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\obj\Debug\punch-scraped-data.exe
+D:\amazonApiC#Code\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\obj\Debug\punch-scraped-data.pdb
+C:\Users\jaswinder\Downloads\AmazonAPICodeCSharp\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\bin\Debug\punch-scraped-data.exe.config
+C:\Users\jaswinder\Downloads\AmazonAPICodeCSharp\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\obj\Debug\punch-scraped-data.exe
+C:\Users\jaswinder\Downloads\AmazonAPICodeCSharp\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\obj\Debug\punch-scraped-data.pdb
+C:\Users\jaswinder\Downloads\AmazonAPICodeCSharp\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\bin\Debug\punch-scraped-data.exe
+C:\Users\jaswinder\Downloads\AmazonAPICodeCSharp\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\bin\Debug\punch-scraped-data.pdb
+C:\Users\jaswinder\Downloads\AmazonAPICodeCSharp\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\bin\Debug\AWSSDK.xml
+C:\Users\jaswinder\Downloads\AmazonAPICodeCSharp\AmazonAPICodeC#\punch-scraped-data\punch-scraped-data\obj\Debug\punch-scraped-data.csprojResolveAssemblyReference.cache

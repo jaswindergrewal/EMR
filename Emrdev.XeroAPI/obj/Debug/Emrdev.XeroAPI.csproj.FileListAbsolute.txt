@@ -1,0 +1,54 @@
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.XeroAPI.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.XeroAPI.pdb
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.ServiceLayer.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.ViewModelLayer.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\XeroApi.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.BusinessLayer.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.DataLayer.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\AutoMapper.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\EntityFramework.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.ServiceLayer.pdb
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.ViewModelLayer.pdb
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\XeroApi.pdb
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.BusinessLayer.pdb
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.DataLayer.pdb
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\bin\Debug\Emrdev.DataLayer.dll.config
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\obj\Debug\Emrdev.XeroAPI.csprojResolveAssemblyReference.cache
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\obj\Debug\Emrdev.XeroAPI.dll
+D:\CodeBase\Emr_Dev_New\Emrdev.XeroAPI\obj\Debug\Emrdev.XeroAPI.pdb
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.XeroAPI.dll
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.XeroAPI.pdb
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.ServiceLayer.dll
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.ViewModelLayer.dll
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\XeroApi.dll
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.BusinessLayer.dll
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.DataLayer.dll
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\AutoMapper.dll
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\EntityFramework.dll
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.ServiceLayer.pdb
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.ViewModelLayer.pdb
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\XeroApi.pdb
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.BusinessLayer.pdb
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.DataLayer.pdb
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\bin\Debug\Emrdev.DataLayer.dll.config
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\obj\Debug\Emrdev.XeroAPI.csprojResolveAssemblyReference.cache
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\obj\Debug\Emrdev.XeroAPI.dll
+D:\CodeBase\EMR_Staging\Emrdev.XeroAPI\obj\Debug\Emrdev.XeroAPI.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.XeroAPI.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.XeroAPI.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.ServiceLayer.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.ViewModelLayer.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\XeroApi.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.BusinessLayer.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.DataLayer.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\AutoMapper.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\EntityFramework.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.ServiceLayer.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.ViewModelLayer.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\XeroApi.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.BusinessLayer.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.DataLayer.pdb
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\bin\Debug\Emrdev.DataLayer.dll.config
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\obj\Debug\Emrdev.XeroAPI.csprojResolveAssemblyReference.cache
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\obj\Debug\Emrdev.XeroAPI.dll
+D:\CodeBase\Emr_Dev_New - Copy\Emrdev.XeroAPI\obj\Debug\Emrdev.XeroAPI.pdb

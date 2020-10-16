@@ -1,0 +1,148 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    
+    <title>EMR</title>
+   
+
+    
+
+    <link href="css/lmc_style.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="Scripts/Scrips.js" type="text/javascript"></script>
+     <script src="Scripts/jquery.maskedinput-1.2.2.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.filter_input.js" type="text/javascript"></script>
+    <script src="Scripts/Common.js" type="text/javascript"></script>
+
+    <script language="JavaScript" type="text/JavaScript">
+
+             
+        function MM_goToURL() { //v3.0
+            var i; args = MM_goToURL.arguments; document.MM_returnValue = false;
+            for (i = 0; i < (args.length - 1); i += 2) eval(args[i] + ".location='" + args[i + 1] + "'");
+        }
+   
+    </script>
+    <script language="JavaScript" type="text/JavaScript">
+    <!--
+    function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+        if (init == true) with (navigator) {
+            if ((appName == "Netscape") && (parseInt(appVersion) == 4)) {
+                document.MM_pgW = innerWidth; document.MM_pgH = innerHeight; onresize = MM_reloadPage;
+            }
+        }
+        else if (innerWidth != document.MM_pgW || innerHeight != document.MM_pgH) location.reload();
+    }
+    MM_reloadPage(true);
+    //-->
+    </script>
+
+    <meta http-equiv="EXPIRES" content="0" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background:url(images/export/beige_back.gif);">
+    <form id="Form1" runat="server">
+       
+        
+        <div id="Layer166" style="position: absolute; left: 10px; top: 10px; width: 22px; height: 22px; z-index: 1">
+            <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/export/layout1_r1_c1.gif"
+                Width="100" Height="97" border="0" alt="" />
+        </div>
+        <div id="Layer21" style="position: absolute; left: 121px; top: 13px; z-index: 2">
+            <img src="images/lmc_logo.gif" width="180" height="88" alt="" />
+        </div>
+        <div id="Layer1" style="position: absolute; left: 336px; top: 21px; z-index: 3;">
+            <table border="0" cellpadding="0" cellspacing="0" style="background:url(images/export/boxmenu_medium.gif);"
+                class="MenuBox">
+                <tr>
+                    <td nowrap="nowrap">
+                        <div align="right">
+                            <strong>&nbsp;Patient Search</strong>&nbsp;&nbsp;&nbsp;
+						<asp:TextBox runat="server" ID="txtPatient" CausesValidation="false" TabIndex="0"
+                            AutoPostBack="true" OnTextChanged="txtPatient_TextChanged" Width="273px" Height="15px"
+                            CssClass="regText" onkeydown="return (event.keyCode!=13);" />
+                            <cc1:AutoCompleteExtender ID="AutoCompleteExtender1" runat="server" MinimumPrefixLength="3"
+                                ServiceMethod="GetPatientList" ServicePath="~/PatientNamesServ.asmx" TargetControlID="txtPatient" 
+                                EnableCaching="true">
+                       
+                                
+                            </cc1:AutoCompleteExtender>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="Layer2" style="position: absolute; left: 750px; top: 21px; z-index: 4; width: 380px;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:url(images/export/boxmenu_large.gif);"
+                class="MenuBox">
+                <tr>
+                    <td nowrap="nowrap">&nbsp;<strong>Welcome
+						<%= Session["MM_Username"]%>&nbsp;</strong>&nbsp; <a href="LandingPage.aspx?StaffID=<%=Session["StaffID"] %>">
+                            <%= Session["TicketCount"]%>
+							open ticket(s)</a>
+                    </td>
+                    <td align="right">&nbsp;&nbsp;<input name="LIN" type="button" class="button" onclick="MM_goToURL('parent', 'Logout.aspx'); return document.MM_returnValue"
+                            value="Logout" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p>
+            &nbsp;
+        </p>
+        <p>
+            &nbsp;
+        </p>
+        <p>
+            &nbsp;
+        </p>
+        <br/>
+        <div class="main">
+            <div id="Layer16" style="position: absolute; left: 336px; top: 65px; z-index: 1; border: 1px none #000000; width: 794px;">
+               <table style="width:100%; height:20px; border:0; background-color:#D6B781!important;" cellpadding="0" cellspacing="0"                    class="MenuBox">
+                    <tr>
+                        <td align="center">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Button" type="button" class="button" onclick="MM_goToURL('parent','PatientSearch.aspx');return document.MM_returnValue"
+                            value="Add New Patient" />&nbsp;&nbsp;&nbsp;&nbsp;
+						<input name="Button" type="button" class="button" onclick="MM_goToURL('parent','admin_main.aspx');return document.MM_returnValue"
+                            value="Admin" />&nbsp;&nbsp;&nbsp;&nbsp;
+						<input name="Button" type="button" class="button" onclick="MM_goToURL('parent','LandingPage.aspx?StaffID=<%= Session["UserID"] %>    ');return document.MM_returnValue"
+                            value="My EMR" />&nbsp;&nbsp;&nbsp;&nbsp;
+						<input name="Button" type="button" class="button" onclick="MM_goToURL('parent','calendar/CalendarAppointment.aspx');return document.MM_returnValue"
+                            value="Calendar" />&nbsp;&nbsp;&nbsp;&nbsp;
+						<input name="Button" type="button" class="button" onclick="MM_goToURL('parent','Autoship/AutoShip.aspx');return document.MM_returnValue"
+                            value="Auto Ship" />&nbsp;&nbsp;&nbsp;&nbsp;
+						<input name="Button" type="button" class="button" onclick="MM_goToURL('parent','NewTicketNoPatient.aspx');return document.MM_returnValue"
+                            value="Staff Ticket" />&nbsp;&nbsp;&nbsp;&nbsp;
+						<input name="Button" type="button" class="button" onclick="MM_goToURL('parent','SearchResults.aspx');return document.MM_returnValue"
+                            value="Search Patients" />&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr id="devRow" runat="server">
+                        <td>
+                            <asp:Label ID="lblDev" runat="server" ForeColor="Red" CssClass="PageTitle" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <cc1:ToolkitScriptManager ID="ScriptManager" runat="Server" EnablePartialRendering="true"
+                ScriptMode="Release" CombineScriptsHandlerUrl="~/CombineScriptsHandler.ashx" CombineScripts="true"
+                LoadScriptsBeforeUI="false">
+            
+            </cc1:ToolkitScriptManager>
+            <p>&nbsp;</p>
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+        </div>
+        <div class="clear">
+        </div>
+       
+
+    </form>
+</body>
+</html>

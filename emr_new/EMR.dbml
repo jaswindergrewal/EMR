@@ -1,0 +1,1666 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="lmc_020505" Class="EMRDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=database01;Initial Catalog=emr_dev_new;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="lmc_020505ConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Departments" Member="Departments">
+    <Type Name="Department">
+      <Column Name="DepartmentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Department_DepartmentStaff" Member="DepartmentStaffs" ThisKey="DepartmentID" OtherKey="DepartmentID" Type="DepartmentStaff" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DepartmentStaff" Member="DepartmentStaffs">
+    <Type Name="DepartmentStaff">
+      <Column Name="DepartmentStaffID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Department_DepartmentStaff" Member="Department" ThisKey="DepartmentID" OtherKey="DepartmentID" Type="Department" IsForeignKey="true" />
+      <Association Name="Staff_DepartmentStaff" Member="Staff" ThisKey="StaffID" OtherKey="EmployeeID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DrugNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ExpirationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="access_level" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CanWritePrescript" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ActualStaff" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AutoshipAccess" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AllowRecurring" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Staff_DepartmentStaff" Member="DepartmentStaffs" ThisKey="EmployeeID" OtherKey="StaffID" Type="DepartmentStaff" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SpecialAttentionFlag" Member="SpecialAttentionFlags">
+    <Type Name="SpecialAttentionFlag">
+      <Column Name="SpecialAttentionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlagNotes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FlagYN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patients_CriticalTaskType" Member="Patients_CriticalTaskTypes">
+    <Type Name="Patients_CriticalTaskType">
+      <Column Name="TaskTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaskName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Patients_CriticalTaskType_Patients_CriticalTask" Member="Patients_CriticalTasks" ThisKey="TaskTypeID" OtherKey="TaskTypeID" Type="Patients_CriticalTask" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patients_CriticalTasks" Member="Patients_CriticalTasks">
+    <Type Name="Patients_CriticalTask">
+      <Column Name="TaskID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TaskTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Requested" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Received" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Reviewed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RequestedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ReceivedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ReviewedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UploadID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Patients_CriticalTaskType_Patients_CriticalTask" Member="Patients_CriticalTaskType" ThisKey="TaskTypeID" OtherKey="TaskTypeID" Type="Patients_CriticalTaskType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Upload_tbl" Member="Upload_tbls">
+    <Type Name="Upload_tbl">
+      <Column Name="UploadID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Upload_Path" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Upload_Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Prescriptions" Member="Prescriptions">
+    <Type Name="Prescription">
+      <Column Name="PrescriptionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Writer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Drug_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Drug_Dose" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Drug_Dispenses" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Drug_NumbRefills" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Drug_DatePrescibed" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Drug_EndDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Closed_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Closed_Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="viewable_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ThirdParty_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RePre_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RePre_PreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Printed_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Approved_Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contact_Type_tbl" Member="Contact_Type_tbls">
+    <Type Name="Contact_Type_tbl">
+      <Column Name="AptTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AptTypeDesc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Viewable_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="LabFreqs">
+    <Type Name="LabFreq" Id="ID1">
+      <Column Name="GroupName" Type="System.String" CanBeNull="false" />
+      <Column Name="InRange" Type="System.Boolean" CanBeNull="false" />
+      <Column Name="LastComplete" Type="System.String" CanBeNull="false" />
+      <Column Name="Days" Type="System.Int32" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Diagnosis_tbl" Member="Diagnosis_tbls">
+    <Type Name="Diagnosis_tbl">
+      <Column Name="Diagnosis_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Diag_Title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ICD9_Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Viewable_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabReports_Conditions" Member="LabReports_Conditions">
+    <Type Name="LabReports_Condition">
+      <Column Name="ConditionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ConditionName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ConditionDescrip" Type="System.String" DbType="VarChar(3000) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Sex" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TriggerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="LabReports_Condition_LabReports_ConditionDetail" Member="LabReports_ConditionDetails" ThisKey="ConditionID" OtherKey="ConditionID" Type="LabReports_ConditionDetail" />
+      <Association Name="LabReports_Trigger_LabReports_Condition" Member="LabReports_Trigger" ThisKey="TriggerID" OtherKey="TriggerID" Type="LabReports_Trigger" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabReports_Triggers" Member="LabReports_Triggers">
+    <Type Name="LabReports_Trigger">
+      <Column Name="TriggerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TriggerName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TriggerDescription" Type="System.String" DbType="VarChar(3000) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PanelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="LabReports_Trigger_LabReports_Condition" Member="LabReports_Conditions" ThisKey="TriggerID" OtherKey="TriggerID" Type="LabReports_Condition" />
+      <Association Name="LabReports_Trigger_LabReports_TriggersGroup" Member="LabReports_TriggersGroups" ThisKey="TriggerID" OtherKey="TriggerID" Type="LabReports_TriggersGroup" />
+      <Association Name="LabReports_Panel_LabReports_Trigger" Member="LabReports_Panel" ThisKey="PanelID" OtherKey="PanelID" Type="LabReports_Panel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabReports_TriggersGroups" Member="LabReports_TriggersGroups">
+    <Type Name="LabReports_TriggersGroup">
+      <Column Name="TriggerGroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TriggerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="LabReports_Trigger_LabReports_TriggersGroup" Member="LabReports_Trigger" ThisKey="TriggerID" OtherKey="TriggerID" Type="LabReports_Trigger" IsForeignKey="true" />
+      <Association Name="LabReports_Group_LabReports_TriggersGroup" Member="LabReports_Group" ThisKey="GroupID" OtherKey="GroupID" Type="LabReports_Group" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabReports_ConditionDetails" Member="LabReports_ConditionDetails">
+    <Type Name="LabReports_ConditionDetail">
+      <Column Name="ConditionDetailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Operator" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Value" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AndOperator" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AndValue" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ConditionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="LabReports_Condition_LabReports_ConditionDetail" Member="LabReports_Condition" ThisKey="ConditionID" OtherKey="ConditionID" Type="LabReports_Condition" IsForeignKey="true" />
+      <Association Name="LabReports_Group_LabReports_ConditionDetail" Member="LabReports_Group" ThisKey="GroupID" OtherKey="GroupID" Type="LabReports_Group" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AppointmentResults" Member="AppointmentResults">
+    <Type Name="AppointmentResult">
+      <Column Name="ResultID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ResultName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tickets_Manage" Member="Tickets_Manages">
+    <Type Name="Tickets_Manage">
+      <Column Name="ProcessID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProcessName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Interval" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Problem_Diagnosis_join" Member="Problem_Diagnosis_joins">
+    <Type Name="Problem_Diagnosis_join">
+      <Column Name="ProbDiagID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiagnosisID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Severity_num" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Priority_num" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Inactive_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BeingAddressed_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Problem_MiscDiagnosis_join" Member="Problem_MiscDiagnosis_joins">
+    <Type Name="Problem_MiscDiagnosis_join">
+      <Column Name="ProbDiagID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiagnosisID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Severity_num" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Priority_num" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Inactive_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BeingAddressed_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Problem_Symptom_join" Member="Problem_Symptom_joins">
+    <Type Name="Problem_Symptom_join">
+      <Column Name="ProbSymptID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SymptomID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Severity_num" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Priority_num" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Inactive_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BeingAddressed_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Dir" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Visits" Member="Visits">
+    <Type Name="Visit">
+      <Column Name="VisitID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeofVisit" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subjective" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VisitDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProfileExceptions" Member="ProfileExceptions">
+    <Type Name="ProfileException">
+      <Column Name="ProfileExceptionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShippingStreet" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ShippingState" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ShippingCity" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ShippingZip" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Patient_ProfileException" Member="Patient" ThisKey="PatientID" OtherKey="PatientID" Type="Patient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Exceptions" Member="Exceptions">
+    <Type Name="Exception">
+      <Column Name="ExceptionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProfileItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Frequency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DayToShip" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiscountID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="NextShipDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ProfileItem_Exception" Member="ProfileItem" ThisKey="ProfileItemID" OtherKey="ProfileItemID" Type="ProfileItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AutoshipCancelReasons" Member="AutoshipCancelReasons">
+    <Type Name="AutoshipCancelReason">
+      <Column Name="ReasonID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReasonName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contact_tbl" Member="Contact_tbls">
+    <Type Name="Contact_tbl">
+      <Column Name="ContactID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContactDateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AptType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReqsFollow_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FollowUpBody" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MessageBody" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FollowUp_Staff" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FollowUp_Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="FollowUp_Category" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FollowUp_ActualDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="FollowUP_Completed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apt_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FollowUp_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QB_Customers" Member="QB_Customers">
+    <Type Name="QB_Customer">
+      <Column Name="ListID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(209)" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="VarChar(41)" CanBeNull="true" />
+      <Column Name="Salutation" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(21)" CanBeNull="true" />
+      <Column Name="AltPhone" Type="System.String" DbType="VarChar(21)" CanBeNull="true" />
+      <Column Name="OpenBalance" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="OpenBalanceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CustomFieldRenewalmonth" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomFieldSupplementAutoship" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerTypeRefFullName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patient_Vitals" Member="Patient_Vitals">
+    <Type Name="Patient_Vital">
+      <Column Name="Vital_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Patient_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Wgt" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BloodPres" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Temperature" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pulse" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Respirations" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Waist_Circm" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Hip_Circm" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Perc_Body_fat" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Height" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="grip_r_lbs" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="grip_l_lbs" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bicep_r_cir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bicep_l_cir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thigh_r_cir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thigh_l_cir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="knee_r_cir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="knee_l_cir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="neck_cir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chest_cir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="midriff_cir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ma_Notes" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QB_Match" Member="QB_Matches">
+    <Type Name="QB_Match">
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QBid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apt_Symtpoms" Member="apt_Symtpoms">
+    <Type Name="apt_Symtpom">
+      <Column Name="apt_SymtpomsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SymptomID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dir" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apt_Goals" Member="apt_Goals">
+    <Type Name="apt_Goal">
+      <Column Name="apt_GoalID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GoalItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dir" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apt_LisfeStyle" Member="apt_LisfeStyles">
+    <Type Name="apt_LisfeStyle">
+      <Column Name="apt_LisfeStyleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WaterIntake" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WaterIntakeComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="IntakeType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WaterSource" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WaterSourceComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ExerciseFreq" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExerciseFreqComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ExerciseType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExerciseTypeCommnet" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="WorkoutLemgth" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WorkoutLemgthComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="SleepQuality" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SleepQualityComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="SleepHours" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Mealtonin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FruitVeggie" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FruitVeggieComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Diet" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DietComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="EnergeyLevel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EnergyComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Callbacks_old" Member="Callbacks_olds">
+    <Type Name="Callbacks_old">
+      <Column Name="CallID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StaffID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReasonForCallBack" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CallDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VisitDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Contact" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CallBacks" Member="CallBacks">
+    <Type Name="CallBack">
+      <Column Name="CallBackID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CallBackName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CallBackResponses" Member="CallBackResponses">
+    <Type Name="CallBackResponse">
+      <Column Name="CallBackResponseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CallBackID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CallBackQuestionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Response" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patient_mrkting_src" Member="Patient_mrkting_srcs">
+    <Type Name="Patient_mrkting_src">
+      <Column Name="SourceTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SourceTypeDesc" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Viewable_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Providers" Member="Providers">
+    <Type Name="Provider">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProviderName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MondayStart" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MondayEnd" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TuesdayStart" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TuesdayEnd" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="WednesdayStart" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="WednesdayEnd" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ThursdayStart" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ThursdayEnd" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FridayStart" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FridayEnd" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AppointmentType" Member="AppointmentTypes">
+    <Type Name="AppointmentType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ConfirmationEmail" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ConfirmationText" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailFromAddress" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailFromName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Attachment" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="OVU" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patient_Goals" Member="Patient_Goals">
+    <Type Name="Patient_Goal">
+      <Column Name="GoalID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Other" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="OtherTypeDiaplay" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Patient_Patient_Goal" Member="Patient" ThisKey="PatientID" OtherKey="PatientID" Type="Patient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Symptoms" Member="Symptoms">
+    <Type Name="Symptom">
+      <Column Name="SymptomID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SymptomName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="viewable_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Dictation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GoalItem" Member="GoalItems">
+    <Type Name="GoalItem">
+      <Column Name="GoalItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tag" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TextBoxName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CallBackQuestions" Member="CallBackQuestions">
+    <Type Name="CallBackQuestion">
+      <Column Name="CallBackQuestionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CallBackID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Question" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ResponseType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabReports_Results" Member="LabReports_Results">
+    <Type Name="LabReports_Result">
+      <Column Name="ObservationIdentifier" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="ObservationValue" Type="System.String" DbType="NVarChar(72) NOT NULL" CanBeNull="false" />
+      <Column Name="Units" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ObservationDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReceivedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReportedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TestID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TestName" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apt_FollowUp_types" Member="apt_FollowUp_types">
+    <Type Name="apt_FollowUp_type">
+      <Column Name="FollowUp_Type_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FollowUp_Type_Desc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Viewable_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ConsultType_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FollowUpType_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TicketType_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Appointment" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StaffTicketType_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CustomPage" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CustomHeader" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomParams" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ChangeColor" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="apt_FollowUp_type_apt_FollowUp" Member="apt_FollowUps" ThisKey="FollowUp_Type_ID" OtherKey="FollowUp_Cat" Type="apt_FollowUp" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lab_OrderSegmentDetails" Member="lab_OrderSegmentDetails">
+    <Type Name="lab_OrderSegmentDetail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LastChanged" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CommonOrderSegmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SetID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PlacerOrderNumber" Type="System.String" DbType="NVarChar(22) NOT NULL" CanBeNull="false" />
+      <Column Name="FillerOrderNumber" Type="System.String" DbType="NVarChar(22)" CanBeNull="true" />
+      <Column Name="UniversalServiceID" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ObservationDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SpecimenActionCode" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SpecimenReceivedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrderingProviderIDNumber" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="OrderingProviderLastName" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="OrderingProviderFirstName" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="OrderingProviderMiddleName" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="OrderingProviderSuffix" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="OrderingProviderPrefix" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="OrderingProviderDegree" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="PlacerField1" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="PlacerField2" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="FillerField1" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="CLIAProviderID" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LabName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LabAddress" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LabCity" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LabState" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LabZipCode" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LabDirector" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ResultsReportOrStatusDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ResultStatus" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="QuantityOrTiming" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="lab_OrderSegmentDetail_lab_ObservationResultDetailSegment" Member="lab_ObservationResultDetailSegments" ThisKey="ID" OtherKey="OrderSegmentDetailID" Type="lab_ObservationResultDetailSegment" />
+      <Association Name="lab_CommonOrderSegment_lab_OrderSegmentDetail" Member="lab_CommonOrderSegment" ThisKey="CommonOrderSegmentID" OtherKey="ID" Type="lab_CommonOrderSegment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lab_ObservationResultDetailSegments" Member="lab_ObservationResultDetailSegments">
+    <Type Name="lab_ObservationResultDetailSegment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LastChanged" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OrderSegmentDetailID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SetID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValueType" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ObservationIdentifier" Type="System.String" DbType="NVarChar(590) NOT NULL" CanBeNull="false" />
+      <Column Name="ObservationSubID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ObservationValue" Type="System.String" DbType="NVarChar(72) NOT NULL" CanBeNull="false" />
+      <Column Name="Units" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ReferencesRange" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="AbnormalFlags" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ObservationResultStatus" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ObservationDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProducerID" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Association Name="lab_OrderSegmentDetail_lab_ObservationResultDetailSegment" Member="lab_OrderSegmentDetail" ThisKey="OrderSegmentDetailID" OtherKey="ID" Type="lab_OrderSegmentDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lab_CommonOrderSegments" Member="lab_CommonOrderSegments">
+    <Type Name="lab_CommonOrderSegment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LastChanged" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderControl" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="PlacerOrderNumber" Type="System.String" DbType="NVarChar(22) NOT NULL" CanBeNull="false" />
+      <Column Name="FillerOrderNumber" Type="System.String" DbType="NVarChar(22)" CanBeNull="true" />
+      <Column Name="OrderStatus" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderingProviderIDNumber" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="OrderingProviderLastName" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="OrderingProviderFirstName" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="OrderingProviderMiddleName" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="OrderingProviderSuffix" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="OrderingProviderPrefix" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="OrderingProviderDegree" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="InActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="lab_CommonOrderSegment_lab_OrderSegmentDetail" Member="lab_OrderSegmentDetails" ThisKey="ID" OtherKey="CommonOrderSegmentID" Type="lab_OrderSegmentDetail" />
+      <Association Name="lab_Patient_lab_CommonOrderSegment" Member="lab_Patient" ThisKey="PatientID" OtherKey="ID" Type="lab_Patient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lab_Patients" Member="lab_Patients">
+    <Type Name="lab_Patient">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LastChanged" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CorrespondingPatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MessageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SetID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PatientExternalID" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="PatientInternalID" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="AlternatePatientID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PatientNameLastName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PatientNameFirstName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PatientNameMiddleName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PatientNameSuffix" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PatientNamePrefix" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PatientNameDegree" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Sex" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="PatientAddressStreetAddress" Type="System.String" DbType="NVarChar(106)" CanBeNull="true" />
+      <Column Name="PatientAddressOtherDesignation" Type="System.String" DbType="NVarChar(106)" CanBeNull="true" />
+      <Column Name="PatientAddressCity" Type="System.String" DbType="NVarChar(106)" CanBeNull="true" />
+      <Column Name="PatientAddressState" Type="System.String" DbType="NVarChar(106)" CanBeNull="true" />
+      <Column Name="PatientAddressZipCode" Type="System.String" DbType="NVarChar(106)" CanBeNull="true" />
+      <Column Name="PatientAddressCountry" Type="System.String" DbType="NVarChar(106)" CanBeNull="true" />
+      <Column Name="HomePhoneNumber" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="PatientAccountNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PatientSSN" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Association Name="lab_Patient_lab_CommonOrderSegment" Member="lab_CommonOrderSegments" ThisKey="ID" OtherKey="PatientID" Type="lab_CommonOrderSegment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PresscriptionSupp" Member="PresscriptionSupps">
+    <Type Name="PresscriptionSupp">
+      <Column Name="PresscriptionSuppID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Writer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SuppDose" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuppNumbRefills" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuppDispenses" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuppDatePrescibed" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SuppEndDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Closed_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Closed_Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="viewable_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RePre_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RePre_PreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Approved_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Approved_Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderItems" Member="OrderItems">
+    <Type Name="OrderItem">
+      <Column Name="OrderItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProfileItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CloseDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DiscountID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Order_OrderItem" Member="Order" ThisKey="OrderId" OtherKey="OrderID" Type="Order" IsForeignKey="true" />
+      <Association Name="AutoshipProduct_OrderItem" Member="AutoshipProduct" ThisKey="ProductID" OtherKey="ProductID" Type="AutoshipProduct" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Order">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DatePrep" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CloseDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ShipName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ShipAddress1" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ShipAddress2" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ShipCity" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ShipState" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ShipZip" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Batch" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShipDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Invoiced" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Order_OrderItem" Member="OrderItems" ThisKey="OrderID" OtherKey="OrderId" Type="OrderItem" />
+      <Association Name="Patient_Order" Member="Patient" ThisKey="PatientID" OtherKey="PatientID" Type="Patient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AutoTicket" Member="AutoTickets">
+    <Type Name="AutoTicket">
+      <Column Name="AutoTicketID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AutoticketName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="VarChar(5000) NOT NULL" CanBeNull="false" />
+      <Column Name="FollowUp_Type_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Assigned" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DeptAssign" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastSent" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CreatedID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Frequency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FrequencyType" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Drugs" Member="Drugs">
+    <Type Name="Drug">
+      <Column Name="DrugID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DrugName" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Viewable_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DrugType" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="DrugCategory" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Supplement_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Reviewed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QB_Item" Member="QB_Items">
+    <Type Name="QB_Item">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ListID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4500)" CanBeNull="true" />
+      <Column Name="SalesPrice" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QB_Invoices" Member="QB_Invoices">
+    <Type Name="QB_Invoice">
+      <Column Name="QBInvoiceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TxnID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerRefListID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerRefFullName" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Num" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PONumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Terms" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="OpenBalance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsPaid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InvoiceLineDesc" Type="System.String" DbType="VarChar(4500)" CanBeNull="true" />
+      <Column Name="InvoiceLineItemRefFullName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SalesRepRefListID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SalesRepRefFullName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Subtotal" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InvoiceLineQuantity" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InvoiceLineRate" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InvoiceLineAmount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InvoiceLineServiceDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InvoiceLineItemRefListID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apt_Misc" Member="apt_Miscs">
+    <Type Name="apt_Misc">
+      <Column Name="apt_MiscID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NewMedicationsYN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NewMedsNames" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="NewIllness" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IllnessNames" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="LastPhysical" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="LastPap" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="LastMammo" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="LastProstate" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="RealizeGoals" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="HappyProgram" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Other" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="SubjNote" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AutoshipProducts" Member="AutoshipProducts">
+    <Type Name="AutoshipProduct">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="AutoshipPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="QBId" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Viewable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Reviewed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="AutoshipProduct_OrderItem" Member="OrderItems" ThisKey="ProductID" OtherKey="ProductID" Type="OrderItem" />
+      <Association Name="AutoshipProduct_ProfileItem" Member="ProfileItems" ThisKey="ProductID" OtherKey="ProductID" Type="ProfileItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Prospect" Member="Prospects">
+    <Type Name="Prospect">
+      <Column Name="ProspectID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Seminar" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HowHear" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ModifiedSupp" Member="ModifiedSupps">
+    <Type Name="ModifiedSupp">
+      <Column Name="ModifiedSuppID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PrescriptionSuppID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dictation_PlanDiagnosis" Member="Dictation_PlanDiagnosis">
+    <Type Name="Dictation_PlanDiagnosi">
+      <Column Name="PlanDiagID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlanID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiagnosisID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dictation_Diagnosis" Member="Dictation_Diagnosis">
+    <Type Name="Dictation_Diagnosi">
+      <Column Name="DiagnosisID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiagnosisName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="DiagnosisDescrip" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="ICDCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KeyWords" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Viewable_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dictation_Plan" Member="Dictation_Plans">
+    <Type Name="Dictation_Plan">
+      <Column Name="PlanID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlanName" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PlanDescrip" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="KeyWords" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Viewable_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apt_diag" Member="apt_diags">
+    <Type Name="apt_diag">
+      <Column Name="apt_diagID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiagID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apt_plan" Member="apt_plans">
+    <Type Name="apt_plan">
+      <Column Name="apt_planID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlanID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResellerContact" Member="ResellerContacts">
+    <Type Name="ResellerContact">
+      <Column Name="ResellerContactID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ResellerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBody" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResellerEvent" Member="ResellerEvents">
+    <Type Name="ResellerEvent">
+      <Column Name="ResellerEventID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResellerStatus" Member="ResellerStatus">
+    <Type Name="ResellerStatus">
+      <Column Name="ResellerStatusID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatusName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProfileItems" Member="ProfileItems">
+    <Type Name="ProfileItem">
+      <Column Name="ProfileItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Frequency" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastShipped" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DayToShip" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NextShipDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Affliliate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ProfileItem_Exception" Member="Exceptions" ThisKey="ProfileItemID" OtherKey="ProfileItemID" Type="Exception" />
+      <Association Name="AutoshipProduct_ProfileItem" Member="AutoshipProduct" ThisKey="ProductID" OtherKey="ProductID" Type="AutoshipProduct" IsForeignKey="true" />
+      <Association Name="Patient_ProfileItem" Member="Patient" ThisKey="PatientID" OtherKey="PatientID" Type="Patient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Autoship_Discounts" Member="Autoship_Discounts">
+    <Type Name="Autoship_Discount">
+      <Column Name="DiscountID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiscountName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Dollar" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Percent]" Member="Percent" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OneTimeSale" Member="OneTimeSales">
+    <Type Name="OneTimeSale">
+      <Column Name="OneTimeSaleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Affiliate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Events" Member="Events">
+    <Type Name="Event">
+      <Column Name="EventID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="[Event Date]" Member="Event_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apt_BloodWork" Member="apt_BloodWorks">
+    <Type Name="apt_BloodWork">
+      <Column Name="apt_BloodWorkID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fasting" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FastingComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Creams" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreamComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="DHEA" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DHEAComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Pregenolone" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PregenoloneAMPM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PregenoloneComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Anastrozole" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AnastrozoleComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Testosterone" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TestosteroneComment" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResellerMarketingSource" Member="ResellerMarketingSources">
+    <Type Name="ResellerMarketingSource">
+      <Column Name="ResellerMarketingSourceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SourceName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Resellers" Member="Resellers">
+    <Type Name="Reseller">
+      <Column Name="ResellerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessName" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactFirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ContactLastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StreetAddress" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SalesRep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="StatusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AttendedDinner" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EventID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DateEnrolled" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CoManageAgreement" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CoManageDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ContractSigned" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ContractDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ResellerMarketingSourceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LeadStatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabReports_Tests" Member="LabReports_Tests">
+    <Type Name="LabReports_Test">
+      <Column Name="TestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestName" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="LastUsed" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Hidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabReports_Groups" Member="LabReports_Groups">
+    <Type Name="LabReports_Group">
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PanelID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupTitle" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HighText" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NormalText" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LowText" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HighFemale" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LowFemale" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NormalFemale" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LongevityHighValue" Type="System.Decimal" DbType="Decimal(18,4) NOT NULL" CanBeNull="false" />
+      <Column Name="LongevityLowValue" Type="System.Decimal" DbType="Decimal(18,4) NOT NULL" CanBeNull="false" />
+      <Column Name="AcceptableHighValue" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="AcceptableLowValue" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="FemaleLongevityHigh" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="FemaleLongevityLow" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="FemaleAcceptableHigh" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="FemaleAcceptableLow" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="Image1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Image2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Image3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShowGraph" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ChartBottom" Type="System.Decimal" DbType="Decimal(18,4) NOT NULL" CanBeNull="false" />
+      <Association Name="LabReports_Group_LabReports_TriggersGroup" Member="LabReports_TriggersGroups" ThisKey="GroupID" OtherKey="GroupID" Type="LabReports_TriggersGroup" />
+      <Association Name="LabReports_Group_LabReports_ConditionDetail" Member="LabReports_ConditionDetails" ThisKey="GroupID" OtherKey="GroupID" Type="LabReports_ConditionDetail" />
+      <Association Name="LabReports_Group_LabReports_Group" Member="LabReports_Group2" ThisKey="GroupID" OtherKey="GroupID" Type="LabReports_Group" Cardinality="One" />
+      <Association Name="LabReports_Group_LabReports_Group" Member="LabReports_Group1" ThisKey="GroupID" OtherKey="GroupID" Type="LabReports_Group" IsForeignKey="true" />
+      <Association Name="LabReports_Panel_LabReports_Group" Member="LabReports_Panel" ThisKey="PanelID" OtherKey="PanelID" Type="LabReports_Panel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabReports_Panels" Member="LabReports_Panels">
+    <Type Name="LabReports_Panel">
+      <Column Name="PanelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PanelName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PanelDescrip" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LabReports_Panel_LabReports_Trigger" Member="LabReports_Triggers" ThisKey="PanelID" OtherKey="PanelID" Type="LabReports_Trigger" />
+      <Association Name="LabReports_Panel_LabReports_Group" Member="LabReports_Groups" ThisKey="PanelID" OtherKey="PanelID" Type="LabReports_Group" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apt_rec" Member="apt_recs">
+    <Type Name="apt_rec">
+      <Column Name="apt_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="patient_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_entered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Arrived_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Seen_nurse_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Seen_dr_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="closed_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="prescriptprint_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="followUp_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="closed_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ApptStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ApptEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProviderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AppointmentTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AllDay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EmailOnChange" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Results" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(6000)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ActionNeeded" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SaleMade_yn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="LabsCheckedIn" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabRequest_Panels" Member="LabRequest_Panels">
+    <Type Name="LabRequest_Panel">
+      <Column Name="LabRequest_PanelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PanelName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabRequest_Tests" Member="LabRequest_Tests">
+    <Type Name="LabRequest_Test">
+      <Column Name="LabRequest_TestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Active_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabRequests_RequestPanels" Member="LabRequests_RequestPanels">
+    <Type Name="LabRequests_RequestPanel">
+      <Column Name="LabRequests_RequestPanelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RequesitID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PanelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabRequests_RequestTests" Member="LabRequests_RequestTests">
+    <Type Name="LabRequests_RequestTest">
+      <Column Name="LabRequests_RequestTestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RequestID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TestID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabRequests_Requests" Member="LabRequests_Requests">
+    <Type Name="LabRequests_Request">
+      <Column Name="LabRequests_RequestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fasting" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StartRange" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="EndRange" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabScehdule_Groups" Member="LabScehdule_Groups">
+    <Type Name="LabScehdule_Group">
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Descrip" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="SearchText" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FullTestName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Male" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Female" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InRange" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastComplete" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Days" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabSchedule_Tests" Member="LabSchedule_Tests">
+    <Type Name="LabSchedule_Test">
+      <Column Name="TestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TestName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SymptomSupplement" Member="SymptomSupplements">
+    <Type Name="SymptomSupplement">
+      <Column Name="SymptomSupplementID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SymptomID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SupplementID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiagnosisSupplement" Member="DiagnosisSupplements">
+    <Type Name="DiagnosisSupplement">
+      <Column Name="DiagnosisSupplementID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Diagnosis_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SupplementID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GroupRange" Member="GroupRanges">
+    <Type Name="GroupRange">
+      <Column Name="GroupRangeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HighRange" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="LowRange" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GroupRangeSupplement" Member="GroupRangeSupplements">
+    <Type Name="GroupRangeSupplement">
+      <Column Name="GroupRangeSupplementID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupRangeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SupplementID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiagnosisLab" Member="DiagnosisLabs">
+    <Type Name="DiagnosisLab">
+      <Column Name="DiagnosisLabID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiagnosisID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SymptomLab" Member="SymptomLabs">
+    <Type Name="SymptomLab">
+      <Column Name="SymptomLabID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SymptomID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apt_FollowUps" Member="apt_FollowUps">
+    <Type Name="apt_FollowUp">
+      <Column Name="FollowUp_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Apt_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AptAssigned" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FollowUp_Cat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FollowUp_Body" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FollowUp_Subject" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entered_By" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FollowUp_Completed_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FollowUp_Assigned_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Range_Start" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Range_End" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Severity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Assigned" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DepartmentAssign" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Private" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FirstCall" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstCallNote" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="SecondCall" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SeconCallNote" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="FinalCall" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FinalCallNote" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Letter" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LetterNote" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Association Name="apt_FollowUp_type_apt_FollowUp" Member="apt_FollowUp_type" ThisKey="FollowUp_Cat" OtherKey="FollowUp_Type_ID" Type="apt_FollowUp_type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoriNasserziayee$" Member="DoriNasserziayee_s">
+    <Type Name="DoriNasserziayee_">
+      <Column Name="[Date:]" Member="Date_" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Time:]" Member="Time_" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JuliaWilson$" Member="JuliaWilson_s">
+    <Type Name="JuliaWilson_">
+      <Column Name="[Date:]" Member="Date_" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Time:]" Member="Time_" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patients" Member="Patients">
+    <Type Name="Patient">
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MiddleInitial" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="BillingStreet" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BillingCity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BillingState" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BillingZip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingStreet" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ShippingCity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingZip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Work_Detailed_info" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Work_CB_only" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Work_NoMessage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WorkPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cell_Detailed_info" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Cell_CB_Only" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Cell_NoMessage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Home_detailed_info" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Home_CB_only" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Home_NoMessage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FaxPone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax_auth_detailed_info" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email_auth_detailed_info" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HIPPA_signed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HIPPA_signed_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Prefered_Pharm" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pager" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="Clinic" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmergencyFirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmergencyLastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmergencyPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmergencyRelationship" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmergencyState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactPreference" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Inactive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SpecialAttention" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ActivityRating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MedicalHistory" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="image" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PCP" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LMC_CP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProvID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NameAlert" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ConciergeID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Aesthetic_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NoShowPol_Signed_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Cancel_NoShow_frm_signed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Allergies" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AllowApptReassign" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Medical" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Aesthetics" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Autoship" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Retail" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Affiliate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SOC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DiabetesSOC" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HeartSOC" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EmergencyContact" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Marketing_source" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Seminar_attended" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Seminar_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AutoshipNote" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="AutoshipDiscounts" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MedicareOptOut_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MedicareOptOut_Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EatingPlanReceived_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Nickname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RenewalMonth" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BalanceDueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AutoshipEmail" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AutoshipCancelReasonID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AutoshipCancelOther" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="PaymentDue" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TermsInMonths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartMedical" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EndMedical" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InvoiceDueDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InvoicePaid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InvoiceDue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ExpirationDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MedicareB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RenewalException" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RenewalExcExpire" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AffiliateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AffiliateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsAffiliate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Patient_ProfileException" Member="ProfileExceptions" ThisKey="PatientID" OtherKey="PatientID" Type="ProfileException" />
+      <Association Name="Patient_Patient_Goal" Member="Patient_Goals" ThisKey="PatientID" OtherKey="PatientID" Type="Patient_Goal" />
+      <Association Name="Patient_Order" Member="Orders" ThisKey="PatientID" OtherKey="PatientID" Type="Order" />
+      <Association Name="Patient_ProfileItem" Member="ProfileItems" ThisKey="PatientID" OtherKey="PatientID" Type="ProfileItem" />
+    </Type>
+  </Table>
+  <Function Name="dbo.contact_tbl_Ticket_Insert" Method="contact_tbl_Ticket_Insert">
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MessageBody" Parameter="messageBody" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="EmployeeID" Parameter="employeeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FollowUp_ID" Parameter="followUp_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.apt_followUp_UpdateTicket" Method="apt_followUp_UpdateTicket">
+    <Parameter Name="FollowupID" Parameter="followupID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Assigned" Parameter="assigned" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Severity" Parameter="severity" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Patients_CriticalTasksInsert" Method="Patients_CriticalTasksInsert">
+    <Parameter Name="TaskTypeID" Parameter="taskTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Patients_CriticalTasksGetOne" Method="Patients_CriticalTasksGetOne">
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TaskTypeID" Parameter="taskTypeID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Patients_CriticalTasksGetOneResult">
+      <Column Name="TaskID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TaskName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Requested" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RequestedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Received" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ReceivedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Reviewed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ReviewedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Patients_CriticalTasksGetTypes" Method="Patients_CriticalTasksGetTypes">
+    <ElementType Name="Patients_CriticalTasksGetTypesResult">
+      <Column Name="TaskTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TaskName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Patients_CriticalTasksGet" Method="Patients_CriticalTasksGet">
+    <Parameter Name="PateintID" Parameter="pateintID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Patients_CriticalTasksGetResult">
+      <Column Name="TaskName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Requested" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RequestedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Received" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ReceivedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Reviewed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ReviewedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Tickets_GetCount" Method="Tickets_GetCount">
+    <Parameter Name="StafID" Parameter="stafID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Tickets_GetCountResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.dr_console_rx_active" Method="dr_console_rx_active">
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="dr_console_rx_activeResult">
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="firstname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ThirdParty_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DrugName" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Drug_Dose" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Drug_Dispenses" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Writer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Drug_NumbRefills" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Drug_DatePrescibed" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Drug_EndDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PrescriptionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Closed_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RePre_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RePre_PreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Closed_Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Supplement_Patient_RX" Method="Supplement_Patient_RX">
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Supplement_Patient_RXResult">
+      <Column Name="Supp_rx_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SupplementID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Supplement_Name" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Expired_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Date_Expired" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EnteredBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrescribingDR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DosePerDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AptID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.dr_console_rx_3rdParty" Method="dr_console_rx_3rdParty">
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="dr_console_rx_3rdPartyResult">
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="firstname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ThirdParty_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DrugName" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Drug_Dose" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Drug_Dispenses" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Writer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Drug_NumbRefills" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Drug_DatePrescibed" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Drug_EndDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PrescriptionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Closed_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RePre_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RePre_PreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Closed_Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Lab_LabList" Method="Lab_LabList">
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Lab_LabListResult">
+      <Column Name="MessageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ObservationDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastChanged" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PlacerOrderNumber" Type="System.String" DbType="NVarChar(22) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LabSchedule_GetSchedule" Method="LabSchedule_GetSchedule">
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.Tickets_MyTickets" Method="Tickets_MyTickets">
+    <Parameter Name="StaffID" Parameter="staffID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Tickets_MyTicketsResult">
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FollowUp_Type_Desc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Severity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FollowUp_Subject" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FollowUp_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Tickets_GetDepartmentAssigned" Method="Tickets_GetDepartmentAssigned">
+    <Parameter Name="StaffID" Parameter="staffID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Tickets_GetDepartmentAssignedResult">
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FollowUp_Type_Desc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Severity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FollowUp_Subject" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FollowUp_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LabReports_GetTestsByStartLetter" Method="LabReports_GetTestsByStartLetter">
+    <Parameter Name="Letter" Parameter="letter" Type="System.String" DbType="VarChar(1)" />
+    <ElementType Name="LabReports_GetTestsByStartLetterResult">
+      <Column Name="TestID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TestName" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="LastUsed" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Hidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.contact_tbl_EMR_Insert" Method="contact_tbl_EMR_Insert">
+    <Parameter Name="AptType" Parameter="aptType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MessageBody" Parameter="messageBody" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="EmployeeID" Parameter="employeeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Apt_ID" Parameter="apt_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.contact_tbl_Lab_Insert" Method="contact_tbl_Lab_Insert">
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FollowUp_Body" Parameter="followUp_Body" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="EmployeeID" Parameter="employeeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Apt_ID" Parameter="apt_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RangeStart" Parameter="rangeStart" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="RangeEnd" Parameter="rangeEnd" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.apt_followUp_UpdateTicketDept" Method="apt_followUp_UpdateTicketDept">
+    <Parameter Name="FollowupID" Parameter="followupID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Assigned" Parameter="assigned" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Severity" Parameter="severity" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.contact_tbl_FollowUp_Insert" Method="contact_tbl_FollowUp_Insert">
+    <Parameter Name="AptType" Parameter="aptType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MessageBody" Parameter="messageBody" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="EmployeeID" Parameter="employeeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FollowUpID" Parameter="followUpID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.apt_PendingConsults" Method="apt_PendingConsults">
+    <ElementType Name="apt_PendingConsultsResult">
+      <Column Name="Firstname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Lastname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Range_Start" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Range_End" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Clinic" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="followup_type_desc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="apt_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="patientid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="followup_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateentered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Apt_list_per_patient" Method="Apt_list_per_patient">
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Apt_list_per_patientResult">
+      <Column Name="TypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ResultName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ApptStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProviderName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="apt_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date_entered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="closed_yn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="patient_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OVU" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Patient_Details" Method="Patient_Details">
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Patient_DetailsResult">
+      <Column Name="PatientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="allergies" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Cancel_NoShow_frm_signed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Work_Detailed_info" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Work_CB_only" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cell_Detailed_info" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="namealert" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Cell_CB_Only" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Home_detailed_info" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="hippa_signed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="hippa_signed_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Home_CB_only" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fax_auth_detailed_info" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Email_auth_detailed_info" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="namealert1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MiddleInitial" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="AGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PCP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LMC_CP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BillingStreet" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BillingCity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BillingState" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BillingZip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingStreet" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ShippingCity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingZip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WorkPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FaxPone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EatingPlanReceived_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Pager" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="Clinic" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmergencyFirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmergencyLastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmeregencyContact" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="EmergencyPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmergencyRelationship" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmergencyState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactPreference" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Inactive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SpecialAttention" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ActivityRating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MedicalHistory" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Medical" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Aesthetics" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Autoship" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Retail" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AutoshipNote" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="AutoshipDiscounts" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MedicareOptOut_Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MedicareOptOut_YN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NickName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RenewalMonth" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MedicareB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.contact_tbl_AS_Insert" Method="contact_tbl_AS_Insert">
+    <Parameter Name="AptType" Parameter="aptType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MessageBody" Parameter="messageBody" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="EmployeeID" Parameter="employeeID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Contact_Record_details" Method="Contact_Record_details">
+    <Parameter Name="ContID" Parameter="contID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Contact_Record_detailsResult">
+      <Column Name="ContactID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AptTypeDesc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EnteredBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactDateEntered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PatientID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FollowUP_Completed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FollowUp_ActualDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="FollowUp_Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MessageBody" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReqsFollow_YN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FollowUpBody" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Cat_Desc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

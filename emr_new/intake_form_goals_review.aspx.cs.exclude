@@ -1,0 +1,153 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Emrdev.ServiceLayer;
+using Emrdev.ViewModelLayer;
+
+public partial class intake_form_goals_review : System.Web.UI.Page
+{
+    #region Global
+
+    int goalId;
+    IIntakeService objIIntakeService;
+    IntakeServiceViewModel objGoal;
+
+    #endregion
+
+
+    #region Page Load Event
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            if (int.TryParse(Convert.ToString(Request.QueryString["goalId"]), out goalId))
+            {
+
+                FillDetail();
+
+            }
+        }
+    }
+
+    #endregion
+
+
+    #region Update Form
+
+    /// <summary>
+    /// code for insert the intake form goals review details.
+    /// created by: Deepak Thakur[21.August.2013]
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void ButtonSubmit_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            int.TryParse(Convert.ToString(Request.QueryString["goalId"]), out goalId);
+            if (goalId > 0)
+            {
+
+                SaveForm();
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Elmah.ErrorSignal.FromCurrentContext().Raise(ex);
+            Response.Redirect("~/Error.aspx?message=" + ex.Message, false);
+        }
+        finally
+        {
+            objIIntakeService = null;
+        }
+    }
+
+    #endregion
+
+
+    #region Fill Detail By Goal Id
+
+    void FillDetail()
+    {
+        //objGoal = new IntakeService().GetByGoalId(goalId);
+        //if (objGoal != null)
+        //{
+        //    //Bind All Check Boxes and TextBox on Form
+        //    Chkbalance_hormones_YN.Checked = objGoal.BalanceHormones == null ? false : objGoal.BalanceHormones.Value;
+        //    Chkweight_loss_YN.Checked = objGoal.WeightLoss == null ? false : objGoal.BalanceHormones.Value;
+        //    Chkimprove_muscle_YN.Checked = objGoal.ImproveMuscle == null ? false : objGoal.ImproveMuscle.Value;
+        //    Chkstart_hormones_YN.Checked = objGoal.StartHormones == null ? false : objGoal.StartHormones.Value;
+        //    Chkstabalize_PMS_YN.Checked = objGoal.StabalizePMS == null ? false : objGoal.StabalizePMS.Value;
+        //    Chkimprove_memory_YN.Checked = objGoal.ImproveMemory == null ? false : objGoal.ImproveMemory.Value;
+        //    Chkimprove_energy_YN.Checked = objGoal.ImproveEnergy == null ? false : objGoal.ImproveEnergy.Value;
+        //    Chkstop_hair_loss_YN.Checked = objGoal.StopHairLoss == null ? false : objGoal.StopHairLoss.Value;
+        //    Chkbladder_control_YN.Checked = objGoal.BladderControl == null ? false : objGoal.BladderControl.Value;
+        //    Chkfeel_better_YN.Checked = objGoal.FeelBetter == null ? false : objGoal.FeelBetter.Value;
+        //    Chksense_of_well_being_YN.Checked = objGoal.SenseOfWellBeing == null ? false : objGoal.SenseOfWellBeing.Value;
+        //    Chkimprove_skin_YN.Checked = objGoal.ImproveSkin == null ? false : objGoal.ImproveSkin.Value;
+        //    Chkfeel_stronger_YN.Checked = objGoal.FeelStronger == null ? false : objGoal.FeelStronger.Value;
+        //    Chkenhance_immune_sys_YN.Checked = objGoal.EnhanceImmuneSys == null ? false : objGoal.EnhanceImmuneSys.Value;
+        //    Chkbetter_stamina_YN.Checked = objGoal.BetterStamina == null ? false : objGoal.BetterStamina.Value;
+        //    Chkimprove_sleep_YN.Checked = objGoal.ImproveSleep == null ? false : objGoal.ImproveSleep.Value;
+        //    Chkless_pain_YN.Checked = objGoal.LessPain == null ? false : objGoal.LessPain.Value;
+        //    txtless_pain_where.Text = objGoal.LessPainWhere == null ? string.Empty : objGoal.LessPainWhere.Trim();
+        //    Chkgeneral_wellness_YN.Checked = objGoal.GeneralWellness == null ? false : objGoal.GeneralWellness.Value;
+        //    Chkeliminate_hot_flashes_YN.Checked = objGoal.EliminateHotFlashes == null ? false : objGoal.EliminateHotFlashes.Value;
+        //    Chkimprove_libido_YN.Checked = objGoal.ImproveLibido == null ? false : objGoal.ImproveLibido.Value;
+        //    Chkreduce_stress_YN.Checked = objGoal.ReduceStress == null ? false : objGoal.ReduceStress.Value;
+        //    Chkeliminate_prescriptions_YN.Checked = objGoal.EliminatePrescriptions == null ? false : objGoal.EliminatePrescriptions.Value;
+        //    Chkimprove_sex_life_YN.Checked = objGoal.ImproveSexLife_YN == null ? false : objGoal.ImproveSexLife_YN.Value;
+        //    Chkimprove_metabolism_YN.Checked = objGoal.ImproveMetabolism == null ? false : objGoal.ImproveMetabolism.Value;
+        //    txtOther.Text = objGoal.other == null ? string.Empty : objGoal.other.Trim();
+        }
+    }
+
+    #endregion
+
+
+    #region  Save Intake Form Fields
+
+    void SaveForm()
+    {
+        //Update Intake Form Fields
+        objIIntakeService = new IntakeService();
+        objGoal = new IntakeServiceViewModel();
+        objGoal.GoalId = goalId;
+        objGoal.BalanceHormones = Chkbalance_hormones_YN.Checked;
+        objGoal.WeightLoss = Chkweight_loss_YN.Checked;
+        objGoal.ImproveMuscle = Chkimprove_muscle_YN.Checked;
+        objGoal.StabalizePMS = Chkstabalize_PMS_YN.Checked;
+        objGoal.StabalizePMS = Chkstabalize_PMS_YN.Checked;
+        objGoal.ImproveMemory = Chkimprove_memory_YN.Checked;
+        objGoal.ImproveEnergy = Chkimprove_energy_YN.Checked;
+        objGoal.StopHairLoss = Chkstop_hair_loss_YN.Checked;
+        objGoal.BladderControl = Chkbladder_control_YN.Checked;
+        objGoal.FeelBetter = Chkfeel_better_YN.Checked;
+        objGoal.SenseOfWellBeing = Chksense_of_well_being_YN.Checked;
+        objGoal.ImproveSkin = Chkimprove_skin_YN.Checked;
+        objGoal.FeelStronger = Chkfeel_stronger_YN.Checked;
+        objGoal.EnhanceImmuneSys = Chkenhance_immune_sys_YN.Checked;
+        objGoal.BetterStamina = Chkbetter_stamina_YN.Checked;
+        objGoal.ImproveSleep = Chkimprove_sleep_YN.Checked;
+        objGoal.LessPain = Chkless_pain_YN.Checked;
+        objGoal.LessPainWhere = txtless_pain_where.Text.Trim();
+        objGoal.GeneralWellness = Chkgeneral_wellness_YN.Checked;
+        objGoal.EliminateHotFlashes = Chkeliminate_hot_flashes_YN.Checked;
+        objGoal.ImproveLibido = Chkimprove_libido_YN.Checked;
+        objGoal.ReduceStress = Chkreduce_stress_YN.Checked;
+        objGoal.EliminatePrescriptions = Chkeliminate_prescriptions_YN.Checked;
+        objGoal.ImproveSexLife_YN = Chkimprove_sex_life_YN.Checked;
+        objGoal.ImproveMetabolism = Chkimprove_metabolism_YN.Checked;
+        objGoal.StartHormones = Chkstart_hormones_YN.Checked;
+        objGoal.other = txtOther.Text.Trim();
+        //objIIntakeService.UpdateIntakeForm(objGoal);
+        Response.Redirect("progress_review.asp");
+    }
+
+    #endregion
+
+}

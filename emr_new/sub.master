@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="sub.master.cs" Inherits="SiteMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <title></title>
+    <link href="css/lmc_style.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="Scripts/Common.js" type="text/javascript"></script>
+    
+    <script type="text/JavaScript">
+
+
+        function MM_goToURL() { //v3.0
+            var i, args = MM_goToURL.arguments; document.MM_returnValue = false;
+            for (i = 0; i < (args.length - 1) ; i += 2) eval(args[i] + ".location='" + args[i + 1] + "'");
+        }
+
+
+
+    </script>
+
+    <script language="JavaScript" type="text/JavaScript">
+    <!--
+    function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+        if (init == true) with (navigator) {
+            if ((appName == "Netscape") && (parseInt(appVersion) == 4)) {
+                document.MM_pgW = innerWidth; document.MM_pgH = innerHeight; onresize = MM_reloadPage;
+            }
+        }
+        else if (innerWidth != document.MM_pgW || innerHeight != document.MM_pgH) location.reload();
+    }
+    MM_reloadPage(true);
+    //-->
+    </script>
+    <meta http-equiv="EXPIRES" content="0" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body background="images/export/beige_back.gif">
+    <form id="Form1" runat="server">
+
+        <div class="main">
+            <cc1:ToolkitScriptManager ID="ScriptManager" runat="Server" EnablePartialRendering="true"
+                ScriptMode="Release" CombineScriptsHandlerUrl="~/CombineScriptsHandler.ashx" CombineScripts="true"
+                LoadScriptsBeforeUI="false">
+            </cc1:ToolkitScriptManager>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" >
+                
+
+            </asp:ContentPlaceHolder>
+        </div>
+         
+        <div class="clear">
+        </div>
+        <!-- Preloader -->
+       
+        </form>
+</body>
+</html>
+
